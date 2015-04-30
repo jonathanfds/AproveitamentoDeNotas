@@ -16,7 +16,7 @@ namespace AproveitamentoDeNotas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmCadastroMateria());
+            Application.Run(new frmLogin());
         }
     }
 }
