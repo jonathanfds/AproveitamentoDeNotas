@@ -71,6 +71,7 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(972, 367);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.btnCancelar.Name = "btnCancelar";
@@ -126,6 +127,7 @@
             // 
             // gpbMateriaReq
             // 
+            this.gpbMateriaReq.BackColor = System.Drawing.SystemColors.Control;
             this.gpbMateriaReq.Controls.Add(this.lblDescricaoReq);
             this.gpbMateriaReq.Controls.Add(this.lblCargaHorariaReq);
             this.gpbMateriaReq.Controls.Add(this.lblCursoReq);
@@ -195,6 +197,7 @@
             // 
             // btnReprovar
             // 
+            this.btnReprovar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReprovar.Location = new System.Drawing.Point(854, 367);
             this.btnReprovar.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.btnReprovar.Name = "btnReprovar";
@@ -205,6 +208,7 @@
             // 
             // btnAprovar
             // 
+            this.btnAprovar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAprovar.Location = new System.Drawing.Point(736, 367);
             this.btnAprovar.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.btnAprovar.Name = "btnAprovar";

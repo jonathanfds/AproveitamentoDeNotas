@@ -32,6 +32,7 @@
             this.btnCadastrarMateria = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // btnCadastrarMateria
@@ -39,7 +40,7 @@
             this.btnCadastrarMateria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrarMateria.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrarMateria.Image")));
             this.btnCadastrarMateria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastrarMateria.Location = new System.Drawing.Point(12, 12);
+            this.btnCadastrarMateria.Location = new System.Drawing.Point(6, 12);
             this.btnCadastrarMateria.Name = "btnCadastrarMateria";
             this.btnCadastrarMateria.Size = new System.Drawing.Size(182, 42);
             this.btnCadastrarMateria.TabIndex = 0;
@@ -53,7 +54,7 @@
             this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultar.Image")));
             this.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultar.Location = new System.Drawing.Point(200, 12);
+            this.btnConsultar.Location = new System.Drawing.Point(6, 60);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(182, 42);
             this.btnConsultar.TabIndex = 1;
@@ -66,16 +67,25 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(12, 60);
+            this.panel1.Location = new System.Drawing.Point(194, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1100, 446);
+            this.panel1.Size = new System.Drawing.Size(493, 406);
             this.panel1.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Location = new System.Drawing.Point(6, 108);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(182, 48);
+            this.panel2.TabIndex = 3;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1119, 511);
+            this.ClientSize = new System.Drawing.Size(688, 418);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnCadastrarMateria);
@@ -92,6 +102,7 @@
         private System.Windows.Forms.Button btnCadastrarMateria;
         private System.Windows.Forms.Button btnConsultar;
         public System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
 
     }
 }
