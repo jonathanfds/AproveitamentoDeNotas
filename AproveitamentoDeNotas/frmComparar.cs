@@ -26,5 +26,10 @@ namespace AproveitamentoDeNotas
         {
 
         }
+
+        private void lblDescricaoInfo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

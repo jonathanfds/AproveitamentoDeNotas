@@ -29,8 +29,8 @@ namespace AproveitamentoDeNotas
             formCadastro.TopLevel = false;
             formCadastro.AutoScroll = true;
             formCadastro.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.panel1.Size = new Size(493, 406);//493; 406
-            this.Size = new Size(704, 456);//704; 456
+            this.panel1.Size = new Size(478, 383);//504; 416
+            this.Size = new Size(704, 434);//729; 467
             this.panel1.Controls.Add(formCadastro);
             formCadastro.Show();
         }
@@ -42,8 +42,8 @@ namespace AproveitamentoDeNotas
             formComparar.TopLevel = false;
             formComparar.AutoScroll = true;
             formComparar.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.panel1.Size = new Size(1100, 446);
-            this.Size = new Size(1311, 496);//1311; 496
+            this.panel1.Size = new Size(665, 684);//678; 717
+            this.Size = new Size(885, 735);//903; 768
             this.panel1.Controls.Add(formComparar);
             formComparar.Show();
         }

@@ -62,6 +62,7 @@
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(297, 27);
             this.txtUser.TabIndex = 2;
+            this.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtSenha
             // 
@@ -70,14 +71,16 @@
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(297, 27);
             this.txtSenha.TabIndex = 3;
+            this.txtSenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnEntrar
             // 
             this.btnEntrar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnEntrar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnEntrar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnEntrar.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntrar.Location = new System.Drawing.Point(94, 157);
+            this.btnEntrar.Location = new System.Drawing.Point(89, 157);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(107, 32);
             this.btnEntrar.TabIndex = 4;
@@ -88,10 +91,11 @@
             // btnSair
             // 
             this.btnSair.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSair.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnSair.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnSair.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(207, 157);
+            this.btnSair.Location = new System.Drawing.Point(202, 157);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(107, 32);
             this.btnSair.TabIndex = 5;
@@ -101,10 +105,12 @@
             // 
             // frmLogin
             // 
+            this.AcceptButton = this.btnEntrar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(325, 200);
+            this.CancelButton = this.btnSair;
+            this.ClientSize = new System.Drawing.Size(317, 196);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.txtSenha);
