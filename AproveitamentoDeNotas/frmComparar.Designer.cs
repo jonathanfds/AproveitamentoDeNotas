@@ -71,7 +71,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(972, 424);
+            this.btnCancelar.Location = new System.Drawing.Point(972, 367);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(108, 35);
@@ -139,7 +139,7 @@
             this.gpbMateriaReq.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpbMateriaReq.Location = new System.Drawing.Point(12, 12);
             this.gpbMateriaReq.Name = "gpbMateriaReq";
-            this.gpbMateriaReq.Size = new System.Drawing.Size(531, 406);
+            this.gpbMateriaReq.Size = new System.Drawing.Size(531, 349);
             this.gpbMateriaReq.TabIndex = 35;
             this.gpbMateriaReq.TabStop = false;
             this.gpbMateriaReq.Text = "Matéria Requerida";
@@ -149,7 +149,7 @@
             this.lblDescricaoReq.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescricaoReq.Location = new System.Drawing.Point(120, 205);
             this.lblDescricaoReq.Name = "lblDescricaoReq";
-            this.lblDescricaoReq.Size = new System.Drawing.Size(405, 173);
+            this.lblDescricaoReq.Size = new System.Drawing.Size(405, 136);
             this.lblDescricaoReq.TabIndex = 38;
             this.lblDescricaoReq.Text = resources.GetString("lblDescricaoReq.Text");
             // 
@@ -195,7 +195,7 @@
             // 
             // btnReprovar
             // 
-            this.btnReprovar.Location = new System.Drawing.Point(854, 424);
+            this.btnReprovar.Location = new System.Drawing.Point(854, 367);
             this.btnReprovar.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.btnReprovar.Name = "btnReprovar";
             this.btnReprovar.Size = new System.Drawing.Size(108, 35);
@@ -205,13 +205,14 @@
             // 
             // btnAprovar
             // 
-            this.btnAprovar.Location = new System.Drawing.Point(736, 424);
+            this.btnAprovar.Location = new System.Drawing.Point(736, 367);
             this.btnAprovar.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.btnAprovar.Name = "btnAprovar";
             this.btnAprovar.Size = new System.Drawing.Size(108, 35);
             this.btnAprovar.TabIndex = 37;
             this.btnAprovar.Text = "Aprovar";
             this.btnAprovar.UseVisualStyleBackColor = true;
+            this.btnAprovar.Click += new System.EventHandler(this.btnAprovar_Click);
             // 
             // gpbMateriaInfo
             // 
@@ -228,7 +229,7 @@
             this.gpbMateriaInfo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpbMateriaInfo.Location = new System.Drawing.Point(549, 12);
             this.gpbMateriaInfo.Name = "gpbMateriaInfo";
-            this.gpbMateriaInfo.Size = new System.Drawing.Size(531, 406);
+            this.gpbMateriaInfo.Size = new System.Drawing.Size(531, 349);
             this.gpbMateriaInfo.TabIndex = 39;
             this.gpbMateriaInfo.TabStop = false;
             this.gpbMateriaInfo.Text = "Matéria Informada";
@@ -238,7 +239,7 @@
             this.lblDescricaoInfo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescricaoInfo.Location = new System.Drawing.Point(120, 205);
             this.lblDescricaoInfo.Name = "lblDescricaoInfo";
-            this.lblDescricaoInfo.Size = new System.Drawing.Size(405, 173);
+            this.lblDescricaoInfo.Size = new System.Drawing.Size(405, 136);
             this.lblDescricaoInfo.TabIndex = 38;
             this.lblDescricaoInfo.Text = resources.GetString("lblDescricaoInfo.Text");
             // 
@@ -341,7 +342,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1093, 470);
+            this.ClientSize = new System.Drawing.Size(1084, 408);
             this.Controls.Add(this.gpbMateriaInfo);
             this.Controls.Add(this.btnReprovar);
             this.Controls.Add(this.btnAprovar);
