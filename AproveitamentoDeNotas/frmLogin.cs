@@ -16,5 +16,19 @@ namespace AproveitamentoDeNotas
         {
             InitializeComponent();
         }
+
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+            if (txtUser.Text.ToLower() == "adm" && txtSenha.Text.ToLower() == "123")
+            {
+                new frmMain().Show();
+                this.Visible = false;
+            }
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

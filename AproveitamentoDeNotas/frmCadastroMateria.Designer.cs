@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroMateria));
             this.button2 = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -45,24 +44,24 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(386, 327);
+            this.button2.Location = new System.Drawing.Point(371, 327);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(81, 27);
+            this.button2.Size = new System.Drawing.Size(96, 27);
             this.button2.TabIndex = 19;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(297, 327);
+            this.btnSalvar.Location = new System.Drawing.Point(267, 327);
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(81, 27);
+            this.btnSalvar.Size = new System.Drawing.Size(96, 27);
             this.btnSalvar.TabIndex = 18;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
-            this.btnSalvar.Click += new System.EventHandler(this.button1_Click);
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // textBox4
             // 
@@ -72,7 +71,6 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(355, 140);
             this.textBox4.TabIndex = 17;
-            this.textBox4.Text = resources.GetString("textBox4.Text");
             // 
             // label4
             // 
@@ -91,7 +89,6 @@
             this.txtCargaHoraria.Name = "txtCargaHoraria";
             this.txtCargaHoraria.Size = new System.Drawing.Size(55, 25);
             this.txtCargaHoraria.TabIndex = 15;
-            this.txtCargaHoraria.Text = "80";
             // 
             // label3
             // 
@@ -120,7 +117,6 @@
             this.txtNomeMateria.Name = "txtNomeMateria";
             this.txtNomeMateria.Size = new System.Drawing.Size(353, 25);
             this.txtNomeMateria.TabIndex = 11;
-            this.txtNomeMateria.Text = "PROGRAMAÇÃO EM MICROINFORMÁTICA";
             // 
             // label1
             // 
@@ -139,7 +135,6 @@
             this.cmbInstituicao.Name = "cmbInstituicao";
             this.cmbInstituicao.Size = new System.Drawing.Size(353, 25);
             this.cmbInstituicao.TabIndex = 20;
-            this.cmbInstituicao.Text = "FATEC - Carapicuíba";
             // 
             // label5
             // 
@@ -158,13 +153,12 @@
             this.cmbCurso.Name = "cmbCurso";
             this.cmbCurso.Size = new System.Drawing.Size(273, 25);
             this.cmbCurso.TabIndex = 22;
-            this.cmbCurso.Text = "Análise e desenvolvimento de sistemas";
             // 
             // frmCadastroMateria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 366);
+            this.ClientSize = new System.Drawing.Size(477, 363);
             this.Controls.Add(this.cmbCurso);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cmbInstituicao);

@@ -17,9 +17,10 @@ namespace AproveitamentoDeNotas
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSalvar_Click(object sender, EventArgs e)
         {
 
         }
+
     }
 }
