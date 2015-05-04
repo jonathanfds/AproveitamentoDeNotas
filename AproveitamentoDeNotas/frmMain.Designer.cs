@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.btnCadastrarMateria = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlOpenForms = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -64,13 +64,13 @@
             this.btnConsultar.UseVisualStyleBackColor = true;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
-            // panel1
+            // pnlOpenForms
             // 
-            this.panel1.AutoScroll = true;
-            this.panel1.Location = new System.Drawing.Point(208, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(478, 383);
-            this.panel1.TabIndex = 2;
+            this.pnlOpenForms.AutoScroll = true;
+            this.pnlOpenForms.Location = new System.Drawing.Point(208, 12);
+            this.pnlOpenForms.Name = "pnlOpenForms";
+            this.pnlOpenForms.Size = new System.Drawing.Size(478, 383);
+            this.pnlOpenForms.TabIndex = 2;
             // 
             // panel2
             // 
@@ -89,7 +89,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(688, 396);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlOpenForms);
             this.Font = new System.Drawing.Font("Segoe UI", 9.25F);
             this.Name = "frmMain";
             this.ShowIcon = false;
@@ -104,7 +104,7 @@
 
         private System.Windows.Forms.Button btnCadastrarMateria;
         private System.Windows.Forms.Button btnConsultar;
-        public System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Panel pnlOpenForms;
         public System.Windows.Forms.Panel panel2;
 
     }

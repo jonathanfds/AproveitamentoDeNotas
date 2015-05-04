@@ -10,6 +10,12 @@ using System.Windows.Forms;
 
 namespace AproveitamentoDeNotas
 {
+    public enum ListaDeForms
+    {
+        Form_Consultar_Materia,
+        Form_Adicionar_Materia,
+        Form_Comparar_Materias
+    };
     public partial class frmMain : Form
     {
         public frmMain()
@@ -24,28 +30,39 @@ namespace AproveitamentoDeNotas
 
         private void btnCadastrarMateria_Click(object sender, EventArgs e)
         {
-            this.panel1.Controls.Clear();
-            frmCadastroMateria formCadastro = new frmCadastroMateria();
-            formCadastro.TopLevel = false;
-            formCadastro.AutoScroll = true;
-            formCadastro.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.panel1.Size = new Size(478, 383);//504; 416
-            this.Size = new Size(704, 434);//729; 467
-            this.panel1.Controls.Add(formCadastro);
-            formCadastro.Show();
+            AbrirFormNoPanel(ListaDeForms.Form_Adicionar_Materia, 478, 383, 704, 434);
+        }
+
+        public void AbrirFormNoPanel(ListaDeForms FormParaAbrir, int WidthPanel, int HeightPanel, int WidthForm, int HeightForm)
+        {
+            pnlOpenForms.Controls.Clear();
+            Form AbrirForm = null;
+
+            if (FormParaAbrir == ListaDeForms.Form_Consultar_Materia)
+            {
+                AbrirForm = new frmConsultarRequerimentos(this);
+            }
+            else if (FormParaAbrir == ListaDeForms.Form_Adicionar_Materia)
+            {
+                AbrirForm = new frmCadastroMateria();
+            }
+            else if (FormParaAbrir == ListaDeForms.Form_Comparar_Materias)
+            {
+                AbrirForm = new frmComparar();
+            }
+            AbrirForm.TopLevel = false;
+            AbrirForm.AutoScroll = true;
+            AbrirForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.pnlOpenForms.Size = new Size(WidthPanel, HeightPanel);
+            this.Size = new Size(WidthForm, HeightForm);
+            this.pnlOpenForms.Controls.Add(AbrirForm);
+            AbrirForm.Show();
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            this.panel1.Controls.Clear();
-            frmComparar formComparar = new frmComparar();
-            formComparar.TopLevel = false;
-            formComparar.AutoScroll = true;
-            formComparar.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.panel1.Size = new Size(665, 684);//678; 717
-            this.Size = new Size(885, 735);//903; 768
-            this.panel1.Controls.Add(formComparar);
-            formComparar.Show();
+            AbrirFormNoPanel(ListaDeForms.Form_Consultar_Materia, 824, 450, 1035, 465);
+            //824; 456
         }
     }
 }

@@ -56,6 +56,12 @@
     <Compile Include="frmComparar.Designer.cs">
       <DependentUpon>frmComparar.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmConsultarRequerimentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultarRequerimentos.Designer.cs">
+      <DependentUpon>frmConsultarRequerimentos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmComparar.resx">
       <DependentUpon>frmComparar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultarRequerimentos.resx">
+      <DependentUpon>frmConsultarRequerimentos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
