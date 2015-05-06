@@ -30,10 +30,10 @@ namespace AproveitamentoDeNotas
 
         private void btnCadastrarMateria_Click(object sender, EventArgs e)
         {
-            AbrirFormNoPanel(ListaDeForms.Form_Adicionar_Materia, 478, 383, 704, 434);
+            AbrirFormNoPanel(ListaDeForms.Form_Adicionar_Materia, 478, 383, 704, 434).Show();
         }
 
-        public void AbrirFormNoPanel(ListaDeForms FormParaAbrir, int WidthPanel, int HeightPanel, int WidthForm, int HeightForm)
+        public Form AbrirFormNoPanel(ListaDeForms FormParaAbrir, int WidthPanel, int HeightPanel, int WidthForm, int HeightForm)
         {
             pnlOpenForms.Controls.Clear();
             Form AbrirForm = null;
@@ -56,13 +56,12 @@ namespace AproveitamentoDeNotas
             this.pnlOpenForms.Size = new Size(WidthPanel, HeightPanel);
             this.Size = new Size(WidthForm, HeightForm);
             this.pnlOpenForms.Controls.Add(AbrirForm);
-            AbrirForm.Show();
+            return AbrirForm;
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            AbrirFormNoPanel(ListaDeForms.Form_Consultar_Materia, 824, 450, 1035, 465);
-            //824; 456
+            AbrirFormNoPanel(ListaDeForms.Form_Consultar_Materia, 830, 460, 1030, 480).Show();
         }
     }
 }

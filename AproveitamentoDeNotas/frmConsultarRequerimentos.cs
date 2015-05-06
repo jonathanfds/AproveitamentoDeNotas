@@ -22,20 +22,17 @@ namespace AproveitamentoDeNotas
         private void frmConsultarRequerimentos_Load(object sender, EventArgs e)
         {
             string[] ArraytoGrid = new string[] { "1430481423035", "Jonathan Freire da Silva",
-                "Análise e Desenvolvimento de Sistemas","Finalizada" };
-            DataGridViewRow dr = new DataGridViewRow(); 
-            foreach(string cellvalue in ArraytoGrid)
-            {
-                DataGridViewTextBoxCell currentcell= new DataGridViewTextBoxCell();
-                currentcell.Value=cellvalue;
-                dr.Cells.Add(currentcell);
-            }            
-            this.dataGridView1.Rows.Add(dr);
+                "Análise e Desenvolvimento de Sistemas","Finalizada" };             
+            this.dataGridView1.Rows.Add(ArraytoGrid);
         }
         
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            _FormPrincipal.AbrirFormNoPanel(ListaDeForms.Form_Comparar_Materias, 665, 684, 885, 735);
+            this.Visible = false;
+            if (_FormPrincipal.AbrirFormNoPanel(ListaDeForms.Form_Comparar_Materias, 665, 684, 885, 735).DialogResult == System.Windows.Forms.DialogResult.OK) ;
+            {
+                this.Visible = true;    
+            }
         }
     }
 }
