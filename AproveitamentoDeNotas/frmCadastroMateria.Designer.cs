@@ -40,12 +40,14 @@
             this.cmbInstituicao = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbCurso = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(363, 337);
+            this.button2.Location = new System.Drawing.Point(363, 384);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(108, 35);
@@ -56,7 +58,7 @@
             // btnSalvar
             // 
             this.btnSalvar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(247, 337);
+            this.btnSalvar.Location = new System.Drawing.Point(247, 384);
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(108, 35);
@@ -67,7 +69,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(116, 191);
+            this.textBox4.Location = new System.Drawing.Point(116, 238);
             this.textBox4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
@@ -78,7 +80,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 191);
+            this.label4.Location = new System.Drawing.Point(13, 238);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 17);
@@ -161,11 +163,32 @@
             this.cmbCurso.Size = new System.Drawing.Size(273, 25);
             this.cmbCurso.TabIndex = 22;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(118, 184);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(55, 25);
+            this.textBox1.TabIndex = 24;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(13, 187);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(99, 17);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "Ano/Semestre:";
+            // 
             // frmCadastroMateria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(478, 378);
+            this.ClientSize = new System.Drawing.Size(478, 450);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.txtNomeMateria);
             this.Controls.Add(this.cmbCurso);
             this.Controls.Add(this.label1);
@@ -202,5 +225,7 @@
         private System.Windows.Forms.ComboBox cmbInstituicao;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbCurso;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label6;
     }
 }

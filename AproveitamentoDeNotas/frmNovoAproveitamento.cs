@@ -16,5 +16,10 @@ namespace AproveitamentoDeNotas
         {
             InitializeComponent();
         }
+
+        private void frmNovoAproveitamento_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

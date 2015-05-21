@@ -117,10 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="lblDescricaoReq.Text" xml:space="preserve">
+  <data name="lblDescricaoInfo.Text" xml:space="preserve">
     <value>Programação e personalização de aplicações em processador de texto, planilha eletrônica e banco de dados. Criação e uso de variáveis, configuração de componentes: botões, caixas de texto, botões de opção, </value>
   </data>
-  <data name="lblDescricaoInfo.Text" xml:space="preserve">
+  <data name="lblDescricaoReq.Text" xml:space="preserve">
     <value>Programação e personalização de aplicações em processador de texto, planilha eletrônica e banco de dados. Criação e uso de variáveis, configuração de componentes: botões, caixas de texto, botões de opção, </value>
   </data>
 </root>
