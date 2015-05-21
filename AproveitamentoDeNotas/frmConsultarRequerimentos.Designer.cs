@@ -188,7 +188,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmConsultarRequerimentos";
             this.ShowIcon = false;
-            this.Text = "Consultar Requerimentos";
+            this.Text = "Consultar Aproveitamentos";
             this.Load += new System.EventHandler(this.frmConsultarRequerimentos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
