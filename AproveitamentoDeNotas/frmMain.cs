@@ -47,10 +47,28 @@ namespace AproveitamentoDeNotas
 
         private void materiaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void CadDisciplinasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             frmCadastroMateria frmCadMateria = new frmCadastroMateria();
             frmCadMateria.MdiParent = this;
             frmCadMateria.StartPosition = FormStartPosition.CenterScreen;
             frmCadMateria.Show();
+        }
+
+        private void usuárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CadAproveitamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmNovoAproveitamento frmNovoAprov = new frmNovoAproveitamento();
+            frmNovoAprov.MdiParent = this;
+            frmNovoAprov.StartPosition = FormStartPosition.CenterScreen;
+            frmNovoAprov.Show();
         }
     }
 }

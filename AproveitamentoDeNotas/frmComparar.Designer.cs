@@ -33,6 +33,8 @@
             this.btnReprovar = new System.Windows.Forms.Button();
             this.btnAprovar = new System.Windows.Forms.Button();
             this.gpbMateriaInfo = new System.Windows.Forms.GroupBox();
+            this.lblAnoSemestreInfo = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.lblDescricaoInfo = new System.Windows.Forms.Label();
             this.lblCargaHorariaInfo = new System.Windows.Forms.Label();
             this.lblCursoInfo = new System.Windows.Forms.Label();
@@ -43,8 +45,6 @@
             this.lblInstituicaoInfo_text = new System.Windows.Forms.Label();
             this.lblCargaHorariaInfo_text = new System.Windows.Forms.Label();
             this.lblDescricaoInfo_text = new System.Windows.Forms.Label();
-            this.lblAnoSemestreInfo = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.lblDescricaoReq_text = new System.Windows.Forms.Label();
             this.lblCargaHorariaReq_text = new System.Windows.Forms.Label();
             this.lblInstituicaoReq_text = new System.Windows.Forms.Label();
@@ -118,6 +118,27 @@
             this.gpbMateriaInfo.TabIndex = 39;
             this.gpbMateriaInfo.TabStop = false;
             this.gpbMateriaInfo.Text = "Disciplina Informada";
+            // 
+            // lblAnoSemestreInfo
+            // 
+            this.lblAnoSemestreInfo.AutoSize = true;
+            this.lblAnoSemestreInfo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnoSemestreInfo.Location = new System.Drawing.Point(120, 210);
+            this.lblAnoSemestreInfo.Name = "lblAnoSemestreInfo";
+            this.lblAnoSemestreInfo.Size = new System.Drawing.Size(48, 17);
+            this.lblAnoSemestreInfo.TabIndex = 40;
+            this.lblAnoSemestreInfo.Text = "2013/1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(8, 210);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 17);
+            this.label2.TabIndex = 39;
+            this.label2.Text = "Ano/Semestre:";
             // 
             // lblDescricaoInfo
             // 
@@ -223,27 +244,6 @@
             this.lblDescricaoInfo_text.Size = new System.Drawing.Size(71, 17);
             this.lblDescricaoInfo_text.TabIndex = 28;
             this.lblDescricaoInfo_text.Text = "Descrição:";
-            // 
-            // lblAnoSemestreInfo
-            // 
-            this.lblAnoSemestreInfo.AutoSize = true;
-            this.lblAnoSemestreInfo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnoSemestreInfo.Location = new System.Drawing.Point(120, 210);
-            this.lblAnoSemestreInfo.Name = "lblAnoSemestreInfo";
-            this.lblAnoSemestreInfo.Size = new System.Drawing.Size(48, 17);
-            this.lblAnoSemestreInfo.TabIndex = 40;
-            this.lblAnoSemestreInfo.Text = "2014/2";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(8, 210);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 17);
-            this.label2.TabIndex = 39;
-            this.label2.Text = "Ano/Semestre:";
             // 
             // lblDescricaoReq_text
             // 

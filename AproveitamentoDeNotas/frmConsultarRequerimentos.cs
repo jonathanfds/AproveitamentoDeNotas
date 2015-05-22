@@ -20,14 +20,15 @@ namespace AproveitamentoDeNotas
 
         private void frmConsultarRequerimentos_Load(object sender, EventArgs e)
         {
-            string[] ArraytoGrid = new string[] { "1430481423035", "Jonathan Freire da Silva",
+            string[] ArraytoGrid = new string[] { "132054","1430481423035", "Jonathan Freire da Silva",
                 "Análise e Desenvolvimento de Sistemas","Finalizada" };             
             this.dataGridView1.Rows.Add(ArraytoGrid);
         }
         
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            frmComparar FormCompare = new frmComparar();
+            FormCompare.Show();
         }
     }
 }

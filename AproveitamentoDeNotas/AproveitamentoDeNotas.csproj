@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PictureBoxZoom">
+      <HintPath>..\..\..\..\Documents\Visual Studio 2013\Projects\PictureBoxZoom\PictureBoxZoom\bin\Debug\PictureBoxZoom.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -79,6 +82,9 @@
     </Compile>
     <Compile Include="frmNovoAproveitamento.Designer.cs">
       <DependentUpon>frmNovoAproveitamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PictureBoxZoom.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
