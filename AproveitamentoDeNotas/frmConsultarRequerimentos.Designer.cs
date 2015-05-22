@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.clmCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmRa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmCurso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmSituacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtRA = new System.Windows.Forms.TextBox();
@@ -38,16 +43,12 @@
             this.cmbCurso = new System.Windows.Forms.ComboBox();
             this.cmbSituacao = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.clmCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmRa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmCurso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmSituacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmCodigo,
@@ -63,6 +64,38 @@
             this.dataGridView1.Size = new System.Drawing.Size(884, 324);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
+            // 
+            // clmCodigo
+            // 
+            this.clmCodigo.HeaderText = "Código";
+            this.clmCodigo.Name = "clmCodigo";
+            // 
+            // clmRa
+            // 
+            this.clmRa.HeaderText = "RA";
+            this.clmRa.Name = "clmRa";
+            this.clmRa.ReadOnly = true;
+            this.clmRa.Width = 130;
+            // 
+            // clmNome
+            // 
+            this.clmNome.HeaderText = "Nome";
+            this.clmNome.Name = "clmNome";
+            this.clmNome.ReadOnly = true;
+            this.clmNome.Width = 280;
+            // 
+            // clmCurso
+            // 
+            this.clmCurso.HeaderText = "Curso";
+            this.clmCurso.Name = "clmCurso";
+            this.clmCurso.ReadOnly = true;
+            this.clmCurso.Width = 270;
+            // 
+            // clmSituacao
+            // 
+            this.clmSituacao.HeaderText = "Situação";
+            this.clmSituacao.Name = "clmSituacao";
+            this.clmSituacao.ReadOnly = true;
             // 
             // label1
             // 
@@ -143,38 +176,6 @@
             this.label4.Size = new System.Drawing.Size(68, 17);
             this.label4.TabIndex = 8;
             this.label4.Text = "Situação :";
-            // 
-            // clmCodigo
-            // 
-            this.clmCodigo.HeaderText = "Código";
-            this.clmCodigo.Name = "clmCodigo";
-            // 
-            // clmRa
-            // 
-            this.clmRa.HeaderText = "RA";
-            this.clmRa.Name = "clmRa";
-            this.clmRa.ReadOnly = true;
-            this.clmRa.Width = 130;
-            // 
-            // clmNome
-            // 
-            this.clmNome.HeaderText = "Nome";
-            this.clmNome.Name = "clmNome";
-            this.clmNome.ReadOnly = true;
-            this.clmNome.Width = 280;
-            // 
-            // clmCurso
-            // 
-            this.clmCurso.HeaderText = "Curso";
-            this.clmCurso.Name = "clmCurso";
-            this.clmCurso.ReadOnly = true;
-            this.clmCurso.Width = 270;
-            // 
-            // clmSituacao
-            // 
-            this.clmSituacao.HeaderText = "Situação";
-            this.clmSituacao.Name = "clmSituacao";
-            this.clmSituacao.ReadOnly = true;
             // 
             // frmConsultarRequerimentos
             // 

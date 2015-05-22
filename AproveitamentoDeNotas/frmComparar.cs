@@ -36,5 +36,17 @@ namespace AproveitamentoDeNotas
         {
 
         }
+
+        private void btnReprovar_Click(object sender, EventArgs e)
+        {
+            formMotivoRecusa frmMotivo = new formMotivoRecusa();
+            frmMotivo.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            formMotivoExame frmMotivo = new formMotivoExame();
+            frmMotivo.Show();
+        }
     }
 }

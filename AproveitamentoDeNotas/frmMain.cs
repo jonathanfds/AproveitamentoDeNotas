@@ -22,34 +22,6 @@ namespace AproveitamentoDeNotas
         {
             InitializeComponent();
         }
-
-        private void frmMain_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCadastrarMateria_Click(object sender, EventArgs e)
-        {
-
-        }
-    
-        private void btnConsultar_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmConsultarRequerimentos frmConsulta = new frmConsultarRequerimentos();
-            frmConsulta.MdiParent = this;
-            frmConsulta.StartPosition = FormStartPosition.CenterScreen;
-            frmConsulta.Show();
-        }
-
-        private void materiaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void CadDisciplinasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCadastroMateria frmCadMateria = new frmCadastroMateria();
@@ -58,17 +30,31 @@ namespace AproveitamentoDeNotas
             frmCadMateria.Show();
         }
 
-        private void usuárioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void CadAproveitamentoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmNovoAproveitamento frmNovoAprov = new frmNovoAproveitamento();
             frmNovoAprov.MdiParent = this;
             frmNovoAprov.StartPosition = FormStartPosition.CenterScreen;
             frmNovoAprov.Show();
+        }
+
+        private void aproveitamentosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultarRequerimentos frmConsulta = new frmConsultarRequerimentos();
+            frmConsulta.MdiParent = this;
+            frmConsulta.StartPosition = FormStartPosition.CenterScreen;
+            frmConsulta.Show();
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            string Usuario="Jonathan";
+            this.tsslUser.Text = "Bem vindo " + Usuario;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            this.tsslData.Text = System.DateTime.Now.ToString();
         }
     }
 }

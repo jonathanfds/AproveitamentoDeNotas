@@ -58,6 +58,7 @@
             this.gpbMateriaReq = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.gpbMateriaInfo.SuspendLayout();
             this.gpbMateriaReq.SuspendLayout();
             this.SuspendLayout();
@@ -65,10 +66,10 @@
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(613, 106);
+            this.btnCancelar.Location = new System.Drawing.Point(613, 147);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(108, 35);
+            this.btnCancelar.Size = new System.Drawing.Size(148, 35);
             this.btnCancelar.TabIndex = 31;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -80,10 +81,11 @@
             this.btnReprovar.Location = new System.Drawing.Point(613, 65);
             this.btnReprovar.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.btnReprovar.Name = "btnReprovar";
-            this.btnReprovar.Size = new System.Drawing.Size(108, 35);
+            this.btnReprovar.Size = new System.Drawing.Size(148, 35);
             this.btnReprovar.TabIndex = 38;
             this.btnReprovar.Text = "Reprovar";
             this.btnReprovar.UseVisualStyleBackColor = true;
+            this.btnReprovar.Click += new System.EventHandler(this.btnReprovar_Click);
             // 
             // btnAprovar
             // 
@@ -91,7 +93,7 @@
             this.btnAprovar.Location = new System.Drawing.Point(613, 24);
             this.btnAprovar.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.btnAprovar.Name = "btnAprovar";
-            this.btnAprovar.Size = new System.Drawing.Size(108, 35);
+            this.btnAprovar.Size = new System.Drawing.Size(148, 35);
             this.btnAprovar.TabIndex = 37;
             this.btnAprovar.Text = "Aprovar";
             this.btnAprovar.UseVisualStyleBackColor = true;
@@ -394,11 +396,24 @@
             this.label3.TabIndex = 41;
             this.label3.Text = "Ano/Semestre:";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(613, 106);
+            this.button1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(148, 35);
+            this.button1.TabIndex = 40;
+            this.button1.Text = "Encaminhar p/ Exame";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmComparar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(733, 711);
+            this.ClientSize = new System.Drawing.Size(773, 711);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.gpbMateriaInfo);
             this.Controls.Add(this.btnReprovar);
             this.Controls.Add(this.btnAprovar);
@@ -407,6 +422,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.Name = "frmComparar";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Comparar Disciplinas";
             this.gpbMateriaInfo.ResumeLayout(false);
             this.gpbMateriaInfo.PerformLayout();
@@ -447,5 +463,6 @@
         private System.Windows.Forms.GroupBox gpbMateriaReq;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
     }
 }

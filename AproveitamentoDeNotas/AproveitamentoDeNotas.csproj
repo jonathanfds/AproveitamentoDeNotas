@@ -47,6 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="formMotivoExame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formMotivoExame.Designer.cs">
+      <DependentUpon>formMotivoExame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formMotivoRecusa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formMotivoRecusa.Designer.cs">
+      <DependentUpon>formMotivoRecusa.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCadastroMateria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +100,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="formMotivoExame.resx">
+      <DependentUpon>formMotivoExame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formMotivoRecusa.resx">
+      <DependentUpon>formMotivoRecusa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCadastroMateria.resx">
       <DependentUpon>frmCadastroMateria.cs</DependentUpon>
     </EmbeddedResource>
