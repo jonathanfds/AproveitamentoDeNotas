@@ -45,8 +45,8 @@ namespace AproveitamentoDeNotas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            formMotivoExame frmMotivo = new formMotivoExame();
-            frmMotivo.Show();
+           frmMotivoExame frmMotivo = new frmMotivoExame();
+           frmMotivo.Show();
         }
     }
 }

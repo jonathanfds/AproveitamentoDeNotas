@@ -10,12 +10,6 @@ using System.Windows.Forms;
 
 namespace AproveitamentoDeNotas
 {
-    public enum ListaDeForms
-    {
-        Form_Consultar_Materia,
-        Form_Adicionar_Materia,
-        Form_Comparar_Materias
-    };
     public partial class frmMain : Form
     {
         public frmMain()
@@ -25,7 +19,7 @@ namespace AproveitamentoDeNotas
         private void CadDisciplinasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCadastroMateria frmCadMateria = new frmCadastroMateria();
-            frmCadMateria.MdiParent = this;
+            //frmCadMateria.MdiParent = this;
             frmCadMateria.StartPosition = FormStartPosition.CenterScreen;
             frmCadMateria.Show();
         }
@@ -33,7 +27,7 @@ namespace AproveitamentoDeNotas
         private void CadAproveitamentoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmNovoAproveitamento frmNovoAprov = new frmNovoAproveitamento();
-            frmNovoAprov.MdiParent = this;
+            //frmNovoAprov.MdiParent = this;
             frmNovoAprov.StartPosition = FormStartPosition.CenterScreen;
             frmNovoAprov.Show();
         }
@@ -41,7 +35,7 @@ namespace AproveitamentoDeNotas
         private void aproveitamentosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmConsultarRequerimentos frmConsulta = new frmConsultarRequerimentos();
-            frmConsulta.MdiParent = this;
+            //frmConsulta.MdiParent = this;
             frmConsulta.StartPosition = FormStartPosition.CenterScreen;
             frmConsulta.Show();
         }
@@ -55,6 +49,11 @@ namespace AproveitamentoDeNotas
         private void timer1_Tick(object sender, EventArgs e)
         {
             this.tsslData.Text = System.DateTime.Now.ToString();
+        }
+
+        private void materiaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

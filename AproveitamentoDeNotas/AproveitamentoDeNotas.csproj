@@ -47,12 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="formMotivoExame.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formMotivoExame.Designer.cs">
-      <DependentUpon>formMotivoExame.cs</DependentUpon>
-    </Compile>
     <Compile Include="formMotivoRecusa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +83,12 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMotivoExame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMotivoExame.Designer.cs">
+      <DependentUpon>frmMotivoExame.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmNovoAproveitamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,9 +100,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="formMotivoExame.resx">
-      <DependentUpon>formMotivoExame.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="formMotivoRecusa.resx">
       <DependentUpon>formMotivoRecusa.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMotivoExame.resx">
+      <DependentUpon>frmMotivoExame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNovoAproveitamento.resx">
       <DependentUpon>frmNovoAproveitamento.cs</DependentUpon>

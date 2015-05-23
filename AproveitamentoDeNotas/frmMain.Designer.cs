@@ -95,6 +95,7 @@
             this.materiaToolStripMenuItem.Name = "materiaToolStripMenuItem";
             this.materiaToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.materiaToolStripMenuItem.Text = "Cadastro";
+            this.materiaToolStripMenuItem.Click += new System.EventHandler(this.materiaToolStripMenuItem_Click);
             // 
             // CadAproveitamentoToolStripMenuItem
             // 
@@ -163,7 +164,7 @@
             // toolStripStatusLabel2
             // 
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(688, 17);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(719, 17);
             this.toolStripStatusLabel2.Spring = true;
             // 
             // tsslData

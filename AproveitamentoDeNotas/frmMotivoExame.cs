@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace AproveitamentoDeNotas
 {
-    public partial class formMotivoExame : Form
+    public partial class frmMotivoExame : Form
     {
-        public formMotivoExame()
+        public frmMotivoExame()
         {
             InitializeComponent();
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

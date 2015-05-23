@@ -423,7 +423,7 @@
             this.Name = "frmComparar";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Comparar Disciplinas";
+            this.Text = "Aprovar Aproveitamento";
             this.gpbMateriaInfo.ResumeLayout(false);
             this.gpbMateriaInfo.PerformLayout();
             this.gpbMateriaReq.ResumeLayout(false);
