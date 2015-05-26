@@ -47,6 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsBase.cs" />
+    <Compile Include="clsFuncoesBase.cs" />
+    <Compile Include="clsGlobal.cs" />
     <Compile Include="formMotivoRecusa.cs">
       <SubType>Form</SubType>
     </Compile>

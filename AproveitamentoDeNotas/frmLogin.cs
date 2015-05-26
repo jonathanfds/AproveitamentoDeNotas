@@ -11,18 +11,45 @@ using System.Windows.Forms;
 namespace AproveitamentoDeNotas
 {
     public partial class frmLogin : Form
-    {
+    {        
         public frmLogin()
         {
             InitializeComponent();
         }
 
+
+        private bool ChecarUsuario(string pUser,string pPassword)
+        {
+            TB_USUARIOS lUsuario = clsFuncoesBase.getUsuarios(pUser, pPassword);
+            if (lUsuario != null)
+            {
+                clsGlobal.UsuarioLogado = lUsuario;
+                return true;
+            }
+            else
+            {
+                return false;                
+            }
+        }
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            if (txtUser.Text.ToLower() == "adm" && txtSenha.Text.ToLower() == "123")
+            string lUser = this.txtUser.Text;
+            string lPassword = this.txtSenha.Text;
+            if (!string.IsNullOrEmpty(lUser) && !string.IsNullOrEmpty(lPassword))
             {
-                new frmMain().Show();
-                this.Visible = false;
+                if (ChecarUsuario(lUser,lPassword))
+                {
+                    new frmMain().Show();
+                    this.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("Usuário ou senha inválidos!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Preencha usuário e senha.");
             }
         }
 
