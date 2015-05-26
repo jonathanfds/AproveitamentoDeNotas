@@ -8,7 +8,7 @@ namespace AproveitamentoDeNotas
 {
     public class clsGlobal
     {
-        public static TB_USUARIOS UsuarioLogado {get;set;}
+        public static tb_usuarios UsuarioLogado {get;set;}
         public static string ConnectionString = @"server=localhost\sqlexpress;database=db_aproveitamento;user=sa;pwd=123456";
     }
 }

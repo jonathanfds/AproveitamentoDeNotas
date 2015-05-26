@@ -16,5 +16,10 @@ namespace AproveitamentoDeNotas
         {
             InitializeComponent();
         }
+
+        private void btnSalvarInst_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

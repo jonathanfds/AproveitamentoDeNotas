@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Core.EntityClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,23 +18,24 @@ namespace AproveitamentoDeNotas
             InitializeComponent();
         }
 
-
         private bool ChecarUsuario(string pUser,string pPassword)
         {
-            TB_USUARIOS lUsuario = clsFuncoesBase.getUsuarios(pUser, pPassword);
+            tb_usuarios lUsuario=clsFuncoesBase.getUsuarios(pUser, pPassword);
             if (lUsuario != null)
             {
                 clsGlobal.UsuarioLogado = lUsuario;
                 return true;
             }
-            else
+            else            
                 return false;
         }
+
         private void LimparTextBox() 
         {
             this.txtUser.Clear();
             this.txtSenha.Clear();
         }
+
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             string lUser = this.txtUser.Text;

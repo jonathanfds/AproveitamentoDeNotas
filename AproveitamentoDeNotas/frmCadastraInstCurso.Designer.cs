@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.txtNomeMateria = new System.Windows.Forms.TextBox();
+            this.btnSalvarInst = new System.Windows.Forms.Button();
+            this.txtNomeInstituicao = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -45,8 +45,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.txtNomeMateria);
+            this.groupBox1.Controls.Add(this.btnSalvarInst);
+            this.groupBox1.Controls.Add(this.txtNomeInstituicao);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -55,22 +55,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Instituição";
             // 
-            // button1
+            // btnSalvarInst
             // 
-            this.button1.Location = new System.Drawing.Point(334, 58);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(83, 30);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Salvar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSalvarInst.Location = new System.Drawing.Point(334, 58);
+            this.btnSalvarInst.Name = "btnSalvarInst";
+            this.btnSalvarInst.Size = new System.Drawing.Size(83, 30);
+            this.btnSalvarInst.TabIndex = 14;
+            this.btnSalvarInst.Text = "Salvar";
+            this.btnSalvarInst.UseVisualStyleBackColor = true;
+            this.btnSalvarInst.Click += new System.EventHandler(this.btnSalvarInst_Click);
             // 
-            // txtNomeMateria
+            // txtNomeInstituicao
             // 
-            this.txtNomeMateria.Location = new System.Drawing.Point(91, 27);
-            this.txtNomeMateria.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtNomeMateria.Name = "txtNomeMateria";
-            this.txtNomeMateria.Size = new System.Drawing.Size(326, 25);
-            this.txtNomeMateria.TabIndex = 13;
+            this.txtNomeInstituicao.Location = new System.Drawing.Point(91, 27);
+            this.txtNomeInstituicao.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtNomeInstituicao.Name = "txtNomeInstituicao";
+            this.txtNomeInstituicao.Size = new System.Drawing.Size(326, 25);
+            this.txtNomeInstituicao.TabIndex = 13;
             // 
             // label1
             // 
@@ -178,12 +179,12 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtNomeMateria;
+        private System.Windows.Forms.TextBox txtNomeInstituicao;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSalvarInst;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbInstituicao;
         private System.Windows.Forms.Button button2;
