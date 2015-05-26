@@ -27,9 +27,12 @@ namespace AproveitamentoDeNotas
                 return true;
             }
             else
-            {
-                return false;                
-            }
+                return false;
+        }
+        private void LimparTextBox() 
+        {
+            this.txtUser.Clear();
+            this.txtSenha.Clear();
         }
         private void btnEntrar_Click(object sender, EventArgs e)
         {
@@ -40,22 +43,19 @@ namespace AproveitamentoDeNotas
                 if (ChecarUsuario(lUser,lPassword))
                 {
                     new frmMain().Show();
+                    LimparTextBox();
                     this.Visible = false;
                 }
                 else
-                {
                     MessageBox.Show("Usuário ou senha inválidos!");
-                }
             }
             else
-            {
                 MessageBox.Show("Preencha usuário e senha.");
-            }
         }
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void frmLogin_Load(object sender, EventArgs e)

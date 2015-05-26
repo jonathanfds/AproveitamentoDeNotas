@@ -230,6 +230,5 @@ namespace AproveitamentoDeNotas
             get{ return _id_funcao_usuario;}
             set{ _id_funcao_usuario = value;}
         }
-    }
-    
+    }    
 }

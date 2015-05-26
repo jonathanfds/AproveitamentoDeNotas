@@ -55,5 +55,10 @@ namespace AproveitamentoDeNotas
         {
 
         }
+
+        private void usuárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

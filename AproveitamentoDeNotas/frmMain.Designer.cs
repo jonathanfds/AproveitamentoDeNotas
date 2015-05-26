@@ -70,8 +70,8 @@
             this.aproveitamentosToolStripMenuItem,
             this.disciplinasToolStripMenuItem1});
             this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
-            this.consultarToolStripMenuItem.Text = "Consultar";
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
+            this.consultarToolStripMenuItem.Text = "Consultar/Alterar";
             // 
             // aproveitamentosToolStripMenuItem
             // 
@@ -116,6 +116,7 @@
             this.usuárioToolStripMenuItem.Name = "usuárioToolStripMenuItem";
             this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.usuárioToolStripMenuItem.Text = "Usuário";
+            this.usuárioToolStripMenuItem.Click += new System.EventHandler(this.usuárioToolStripMenuItem_Click);
             // 
             // configuraçõesToolStripMenuItem
             // 

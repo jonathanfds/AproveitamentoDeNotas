@@ -250,7 +250,7 @@
             // lblDescricaoReq_text
             // 
             this.lblDescricaoReq_text.AutoSize = true;
-            this.lblDescricaoReq_text.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescricaoReq_text.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblDescricaoReq_text.Location = new System.Drawing.Point(9, 249);
             this.lblDescricaoReq_text.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblDescricaoReq_text.Name = "lblDescricaoReq_text";
@@ -262,7 +262,7 @@
             // lblCargaHorariaReq_text
             // 
             this.lblCargaHorariaReq_text.AutoSize = true;
-            this.lblCargaHorariaReq_text.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCargaHorariaReq_text.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblCargaHorariaReq_text.Location = new System.Drawing.Point(8, 162);
             this.lblCargaHorariaReq_text.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblCargaHorariaReq_text.Name = "lblCargaHorariaReq_text";
@@ -273,7 +273,7 @@
             // lblInstituicaoReq_text
             // 
             this.lblInstituicaoReq_text.AutoSize = true;
-            this.lblInstituicaoReq_text.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInstituicaoReq_text.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblInstituicaoReq_text.Location = new System.Drawing.Point(8, 77);
             this.lblInstituicaoReq_text.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblInstituicaoReq_text.Name = "lblInstituicaoReq_text";
@@ -284,7 +284,7 @@
             // lblCursoReq_text
             // 
             this.lblCursoReq_text.AutoSize = true;
-            this.lblCursoReq_text.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCursoReq_text.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblCursoReq_text.Location = new System.Drawing.Point(9, 120);
             this.lblCursoReq_text.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblCursoReq_text.Name = "lblCursoReq_text";
@@ -295,7 +295,7 @@
             // lblNomeReq_text
             // 
             this.lblNomeReq_text.AutoSize = true;
-            this.lblNomeReq_text.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeReq_text.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblNomeReq_text.Location = new System.Drawing.Point(8, 35);
             this.lblNomeReq_text.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblNomeReq_text.Name = "lblNomeReq_text";
@@ -388,7 +388,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(8, 204);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";

@@ -56,6 +56,18 @@
     <Compile Include="formMotivoRecusa.Designer.cs">
       <DependentUpon>formMotivoRecusa.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCadastraInstCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastraInstCurso.Designer.cs">
+      <DependentUpon>frmCadastraInstCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastrarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastrarUsuario.Designer.cs">
+      <DependentUpon>frmCadastrarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCadastroMateria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +117,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="formMotivoRecusa.resx">
       <DependentUpon>formMotivoRecusa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastraInstCurso.resx">
+      <DependentUpon>frmCadastraInstCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastrarUsuario.resx">
+      <DependentUpon>frmCadastrarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCadastroMateria.resx">
       <DependentUpon>frmCadastroMateria.cs</DependentUpon>

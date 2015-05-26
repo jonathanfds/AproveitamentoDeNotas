@@ -63,7 +63,7 @@
             // 
             this.txtUser.Location = new System.Drawing.Point(101, 101);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(297, 27);
+            this.txtUser.Size = new System.Drawing.Size(302, 27);
             this.txtUser.TabIndex = 2;
             this.txtUser.Text = "adm";
             // 
@@ -72,7 +72,7 @@
             this.txtSenha.Location = new System.Drawing.Point(101, 140);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
-            this.txtSenha.Size = new System.Drawing.Size(297, 27);
+            this.txtSenha.Size = new System.Drawing.Size(302, 27);
             this.txtSenha.TabIndex = 3;
             this.txtSenha.Text = "123";
             // 
@@ -83,9 +83,9 @@
             this.btnEntrar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnEntrar.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntrar.Location = new System.Drawing.Point(178, 173);
+            this.btnEntrar.Location = new System.Drawing.Point(231, 173);
             this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(107, 32);
+            this.btnEntrar.Size = new System.Drawing.Size(83, 30);
             this.btnEntrar.TabIndex = 4;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = false;
@@ -98,9 +98,9 @@
             this.btnSair.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnSair.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(291, 173);
+            this.btnSair.Location = new System.Drawing.Point(320, 173);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(107, 32);
+            this.btnSair.Size = new System.Drawing.Size(83, 30);
             this.btnSair.TabIndex = 5;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = false;
@@ -120,7 +120,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(109, 33);
+            this.label3.Location = new System.Drawing.Point(106, 33);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(297, 32);
@@ -134,7 +134,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.CancelButton = this.btnSair;
-            this.ClientSize = new System.Drawing.Size(416, 216);
+            this.ClientSize = new System.Drawing.Size(410, 209);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSair);

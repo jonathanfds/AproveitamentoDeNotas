@@ -79,14 +79,58 @@ namespace AproveitamentoDeNotas
             SqlCommand lSqlComm = lSqlconn.CreateCommand();
             lSqlComm.CommandText = "DELETE FROM tb_usuarios where id_user=" + pUsuario.id_user + "";
             if (lSqlComm.ExecuteNonQuery() > 0)
-            {
                 lReturn = true;
-            }
             lSqlconn.Close();
             lSqlconn.Dispose();
             return lReturn;
 
         }
         #endregion
+
+        #region --Funcoes Instituto
+        public static List<TB_INSTITUTO> getInstitutos()
+        {
+            List<TB_INSTITUTO> lTodosInstitutos = null;
+            SqlConnection lSqlconn = new SqlConnection();
+            lSqlconn.ConnectionString = clsGlobal.ConnectionString;
+            lSqlconn.Open();
+            SqlCommand lSqlComm = lSqlconn.CreateCommand();
+            lSqlComm.CommandText = "SELECT * FROM tb_instituto";
+            using (SqlDataReader dr = lSqlComm.ExecuteReader())
+            {
+                if (dr.HasRows)
+                {
+                    lTodosInstitutos = new List<TB_INSTITUTO>();
+                    while (dr.Read())
+                    {
+                        TB_INSTITUTO lInstituto = new TB_INSTITUTO();
+                        lInstituto.id_instituto = Convert.ToInt32(dr["id_instituto"].ToString());
+                        lInstituto.nome_instituto = dr["nome_instituto"].ToString();
+                        lTodosInstitutos.Add(lInstituto);
+                    }
+                }
+            }
+            lSqlconn.Close();
+            lSqlconn.Dispose();
+            return lTodosInstitutos;
+        }
+        public bool InserirInstituto(string pNomeInstituto)
+        {
+            bool lReturn = false;
+            SqlConnection lSqlconn = new SqlConnection();
+            lSqlconn.ConnectionString = clsGlobal.ConnectionString;
+            lSqlconn.Open();
+            SqlCommand lSqlComm = lSqlconn.CreateCommand();
+            lSqlComm.CommandText = "insert into tb_instituto values('" + pNomeInstituto + "')";
+            if (lSqlComm.ExecuteNonQuery() > 0)            
+                lReturn = true;
+            lSqlconn.Close();
+            lSqlconn.Dispose();
+            return lReturn;
+        }
+        #endregion
+
+
     }
+
 }
