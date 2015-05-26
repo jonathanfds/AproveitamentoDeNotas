@@ -12,7 +12,7 @@ namespace AproveitamentoDeNotas
         #region --Funcoes do Usuário
         public static db_aproveitamentoEntities gEntityBase = new db_aproveitamentoEntities();
 
-        public static tb_usuarios getUsuarios(string pUser, string pSenha)
+        public static tb_usuarios getUsuario(string pUser, string pSenha)
         {
             try
             {
@@ -89,10 +89,43 @@ namespace AproveitamentoDeNotas
                 return false;
             }
         }
+       
+        #endregion       
 
-        #endregion
+        public static List<tb_instituto> getInstituicoes()
+        {
+            try
+            {
+                List<tb_instituto> lInstituicoes = null;
+                gEntityBase.Database.Connection.ConnectionString = clsGlobal.ConnectionString;
+                lInstituicoes = gEntityBase.tb_instituto.ToList();
+                gEntityBase.Database.Connection.Close();
+                return lInstituicoes;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
 
-
+        public static bool insertInstituicao(tb_instituto pInstituto)
+        {
+            try
+            {
+                gEntityBase.Database.Connection.ConnectionString = clsGlobal.ConnectionString;
+                gEntityBase.tb_instituto.Add(pInstituto);
+                int numRows = gEntityBase.SaveChanges();
+                gEntityBase.Database.Connection.Close();
+                if (numRows > 0)
+                    return true;
+                else
+                    return false;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
     }
 
 }

@@ -60,5 +60,12 @@ namespace AproveitamentoDeNotas
         {
 
         }
+
+        private void intituicaoCursosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCadastraInstCurso frmInstCurso = new frmCadastraInstCurso();
+            frmInstCurso.StartPosition = FormStartPosition.CenterScreen;
+            frmInstCurso.Show();
+        }
     }
 }

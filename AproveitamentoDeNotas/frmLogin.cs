@@ -20,7 +20,7 @@ namespace AproveitamentoDeNotas
 
         private bool ChecarUsuario(string pUser,string pPassword)
         {
-            tb_usuarios lUsuario=clsFuncoesBase.getUsuarios(pUser, pPassword);
+            tb_usuarios lUsuario=clsFuncoesBase.getUsuario(pUser, pPassword);
             if (lUsuario != null)
             {
                 clsGlobal.UsuarioLogado = lUsuario;

@@ -46,6 +46,7 @@
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslData = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.intituicaoCursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -91,7 +92,8 @@
             this.materiaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.CadAproveitamentoToolStripMenuItem,
             this.CadDisciplinasToolStripMenuItem,
-            this.usuárioToolStripMenuItem});
+            this.usuárioToolStripMenuItem,
+            this.intituicaoCursosToolStripMenuItem});
             this.materiaToolStripMenuItem.Name = "materiaToolStripMenuItem";
             this.materiaToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.materiaToolStripMenuItem.Text = "Cadastro";
@@ -100,21 +102,21 @@
             // CadAproveitamentoToolStripMenuItem
             // 
             this.CadAproveitamentoToolStripMenuItem.Name = "CadAproveitamentoToolStripMenuItem";
-            this.CadAproveitamentoToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.CadAproveitamentoToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.CadAproveitamentoToolStripMenuItem.Text = "Aproveitamento";
             this.CadAproveitamentoToolStripMenuItem.Click += new System.EventHandler(this.CadAproveitamentoToolStripMenuItem_Click);
             // 
             // CadDisciplinasToolStripMenuItem
             // 
             this.CadDisciplinasToolStripMenuItem.Name = "CadDisciplinasToolStripMenuItem";
-            this.CadDisciplinasToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.CadDisciplinasToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.CadDisciplinasToolStripMenuItem.Text = "Disciplinas";
             this.CadDisciplinasToolStripMenuItem.Click += new System.EventHandler(this.CadDisciplinasToolStripMenuItem_Click);
             // 
             // usuárioToolStripMenuItem
             // 
             this.usuárioToolStripMenuItem.Name = "usuárioToolStripMenuItem";
-            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.usuárioToolStripMenuItem.Text = "Usuário";
             this.usuárioToolStripMenuItem.Click += new System.EventHandler(this.usuárioToolStripMenuItem_Click);
             // 
@@ -179,6 +181,13 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // intituicaoCursosToolStripMenuItem
+            // 
+            this.intituicaoCursosToolStripMenuItem.Name = "intituicaoCursosToolStripMenuItem";
+            this.intituicaoCursosToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.intituicaoCursosToolStripMenuItem.Text = "Intituicao/Cursos";
+            this.intituicaoCursosToolStripMenuItem.Click += new System.EventHandler(this.intituicaoCursosToolStripMenuItem_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -222,6 +231,7 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.ToolStripStatusLabel tsslData;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolStripMenuItem intituicaoCursosToolStripMenuItem;
 
 
     }
