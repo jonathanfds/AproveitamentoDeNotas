@@ -10,7 +10,7 @@ namespace AproveitamentoDeNotas
     class clsFuncoesBase
     {
         #region --Funcoes do Usuário
-        public static db_aproveitamentoEntities gEntityBase = new db_aproveitamentoEntities();
+        public static db_aproveitamento gEntityBase = new db_aproveitamento();
 
         public static tb_usuarios getUsuario(string pUser, string pSenha)
         {
@@ -36,10 +36,7 @@ namespace AproveitamentoDeNotas
                 gEntityBase.tb_usuarios.Add(pUsuario);
                 int numRows = gEntityBase.SaveChanges();
                 gEntityBase.Database.Connection.Close();
-                if (numRows > 0)
-                    return true;
-                else
-                    return false;
+                return (numRows > 0);
             }
             catch (Exception ex)
             {
@@ -55,10 +52,7 @@ namespace AproveitamentoDeNotas
                 gEntityBase.tb_usuarios.Remove(pUsuario);
                 int numRows = gEntityBase.SaveChanges();
                 gEntityBase.Database.Connection.Close();
-                if (numRows > 0)
-                    return true;
-                else
-                    return false;
+                return (numRows > 0);
             }
             catch (Exception ex)
             {
@@ -79,10 +73,7 @@ namespace AproveitamentoDeNotas
 
                 int numRows = gEntityBase.SaveChanges();
                 gEntityBase.Database.Connection.Close();
-                if (numRows > 0)
-                    return true;
-                else
-                    return false;
+                return (numRows > 0);
             }
             catch (Exception ex)
             {
@@ -116,14 +107,92 @@ namespace AproveitamentoDeNotas
                 gEntityBase.tb_instituto.Add(pInstituto);
                 int numRows = gEntityBase.SaveChanges();
                 gEntityBase.Database.Connection.Close();
-                if (numRows > 0)
-                    return true;
-                else
-                    return false;
+                return (numRows > 0);
             }
             catch (Exception ex)
             {
                 return false;
+            }
+        }
+
+        public static List<tb_curso> getCursos()
+        {
+            try
+            {
+                List<tb_curso> lCursos = null;
+                gEntityBase.Database.Connection.ConnectionString = clsGlobal.ConnectionString;
+                lCursos = gEntityBase.tb_curso.ToList();
+                gEntityBase.Database.Connection.Close();
+                return lCursos;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        public static tb_curso getCurso(int pId)
+        {
+            try
+            {
+                tb_curso lCurso = null;
+                gEntityBase.Database.Connection.ConnectionString = clsGlobal.ConnectionString;
+                lCurso = gEntityBase.tb_curso.ToList().Find(T => T.id_curso.Equals(pId));
+                gEntityBase.Database.Connection.Close();
+                return lCurso;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        public static bool insertCurso(tb_curso pCurso)
+        {
+            try
+            {
+                gEntityBase.Database.Connection.ConnectionString = clsGlobal.ConnectionString;
+                gEntityBase.tb_curso.Add(pCurso);
+                int numRows = gEntityBase.SaveChanges();
+                gEntityBase.Database.Connection.Close();
+                return (numRows > 0);
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
+        public static bool deleteCurso(tb_curso pCurso)
+        {
+            try
+            {
+                gEntityBase.Database.Connection.ConnectionString = clsGlobal.ConnectionString;
+                gEntityBase.tb_curso.Remove(pCurso);
+                int numRows = gEntityBase.SaveChanges();
+                gEntityBase.Database.Connection.Close();
+                return (numRows > 0);
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
+        public static List<tb_curso> getCursosInstituicao(int pIdInst)
+        {
+            try
+            {
+                List<tb_curso> lCursos = null;
+
+
+
+                return lCursos;
+
+            }
+            catch (Exception ex)
+            {
+                return null;
             }
         }
     }

@@ -32,16 +32,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="PictureBoxZoom">
-      <HintPath>..\..\..\..\Documents\Visual Studio 2013\Projects\PictureBoxZoom\PictureBoxZoom\bin\Debug\PictureBoxZoom.dll</HintPath>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -60,6 +55,21 @@
   <ItemGroup>
     <Compile Include="clsFuncoesBase.cs" />
     <Compile Include="clsGlobal.cs" />
+    <Compile Include="db_aproveitamento.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_aproveitamento.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="db_aproveitamento.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_aproveitamento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="db_aproveitamento.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_aproveitamento.edmx</DependentUpon>
+    </Compile>
     <Compile Include="formMotivoRecusa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,49 +136,34 @@
     <Compile Include="frmNovoAproveitamento.Designer.cs">
       <DependentUpon>frmNovoAproveitamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model_db_aproveitamento.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model_db_aproveitamento.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model_db_aproveitamento.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model_db_aproveitamento.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model_db_aproveitamento.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model_db_aproveitamento.edmx</DependentUpon>
-    </Compile>
     <Compile Include="PictureBoxZoom.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sysdiagrams.cs">
-      <DependentUpon>Model_db_aproveitamento.tt</DependentUpon>
-    </Compile>
     <Compile Include="tb_aproveitamento.cs">
-      <DependentUpon>Model_db_aproveitamento.tt</DependentUpon>
+      <DependentUpon>db_aproveitamento.tt</DependentUpon>
     </Compile>
     <Compile Include="tb_curso.cs">
-      <DependentUpon>Model_db_aproveitamento.tt</DependentUpon>
+      <DependentUpon>db_aproveitamento.tt</DependentUpon>
     </Compile>
     <Compile Include="tb_disciplina.cs">
-      <DependentUpon>Model_db_aproveitamento.tt</DependentUpon>
+      <DependentUpon>db_aproveitamento.tt</DependentUpon>
     </Compile>
     <Compile Include="tb_funcao_usuario.cs">
-      <DependentUpon>Model_db_aproveitamento.tt</DependentUpon>
+      <DependentUpon>db_aproveitamento.tt</DependentUpon>
     </Compile>
     <Compile Include="tb_instituto.cs">
-      <DependentUpon>Model_db_aproveitamento.tt</DependentUpon>
+      <DependentUpon>db_aproveitamento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_instituto_curso.cs">
+      <DependentUpon>db_aproveitamento.tt</DependentUpon>
     </Compile>
     <Compile Include="tb_situacao_aprov.cs">
-      <DependentUpon>Model_db_aproveitamento.tt</DependentUpon>
+      <DependentUpon>db_aproveitamento.tt</DependentUpon>
     </Compile>
     <Compile Include="tb_usuarios.cs">
-      <DependentUpon>Model_db_aproveitamento.tt</DependentUpon>
+      <DependentUpon>db_aproveitamento.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="formMotivoRecusa.resx">
       <DependentUpon>formMotivoRecusa.cs</DependentUpon>
@@ -212,23 +207,23 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EntityDeploy Include="Model_db_aproveitamento.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model_db_aproveitamento.Designer.cs</LastGenOutput>
-    </EntityDeploy>
     <None Include="App.Config" />
-    <None Include="Model_db_aproveitamento.Context.tt">
+    <EntityDeploy Include="db_aproveitamento.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>db_aproveitamento.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="db_aproveitamento.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model_db_aproveitamento.edmx</DependentUpon>
-      <LastGenOutput>Model_db_aproveitamento.Context.cs</LastGenOutput>
+      <DependentUpon>db_aproveitamento.edmx</DependentUpon>
+      <LastGenOutput>db_aproveitamento.Context.cs</LastGenOutput>
     </None>
-    <None Include="Model_db_aproveitamento.edmx.diagram">
-      <DependentUpon>Model_db_aproveitamento.edmx</DependentUpon>
+    <None Include="db_aproveitamento.edmx.diagram">
+      <DependentUpon>db_aproveitamento.edmx</DependentUpon>
     </None>
-    <None Include="Model_db_aproveitamento.tt">
+    <None Include="db_aproveitamento.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model_db_aproveitamento.edmx</DependentUpon>
-      <LastGenOutput>Model_db_aproveitamento.cs</LastGenOutput>
+      <DependentUpon>db_aproveitamento.edmx</DependentUpon>
+      <LastGenOutput>db_aproveitamento.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

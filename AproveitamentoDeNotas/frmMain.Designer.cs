@@ -37,6 +37,7 @@
             this.CadAproveitamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CadDisciplinasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.intituicaoCursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,7 +47,7 @@
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslData = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.intituicaoCursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cursoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -91,9 +92,10 @@
             // 
             this.materiaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.CadAproveitamentoToolStripMenuItem,
-            this.CadDisciplinasToolStripMenuItem,
+            this.cursoToolStripMenuItem,
+            this.intituicaoCursosToolStripMenuItem,
             this.usuárioToolStripMenuItem,
-            this.intituicaoCursosToolStripMenuItem});
+            this.CadDisciplinasToolStripMenuItem});
             this.materiaToolStripMenuItem.Name = "materiaToolStripMenuItem";
             this.materiaToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.materiaToolStripMenuItem.Text = "Cadastro";
@@ -119,6 +121,13 @@
             this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.usuárioToolStripMenuItem.Text = "Usuário";
             this.usuárioToolStripMenuItem.Click += new System.EventHandler(this.usuárioToolStripMenuItem_Click);
+            // 
+            // intituicaoCursosToolStripMenuItem
+            // 
+            this.intituicaoCursosToolStripMenuItem.Name = "intituicaoCursosToolStripMenuItem";
+            this.intituicaoCursosToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.intituicaoCursosToolStripMenuItem.Text = "Instituição";
+            this.intituicaoCursosToolStripMenuItem.Click += new System.EventHandler(this.intituicaoCursosToolStripMenuItem_Click);
             // 
             // configuraçõesToolStripMenuItem
             // 
@@ -181,12 +190,12 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // intituicaoCursosToolStripMenuItem
+            // cursoToolStripMenuItem
             // 
-            this.intituicaoCursosToolStripMenuItem.Name = "intituicaoCursosToolStripMenuItem";
-            this.intituicaoCursosToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
-            this.intituicaoCursosToolStripMenuItem.Text = "Intituicao/Cursos";
-            this.intituicaoCursosToolStripMenuItem.Click += new System.EventHandler(this.intituicaoCursosToolStripMenuItem_Click);
+            this.cursoToolStripMenuItem.Name = "cursoToolStripMenuItem";
+            this.cursoToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.cursoToolStripMenuItem.Text = "Curso";
+            this.cursoToolStripMenuItem.Click += new System.EventHandler(this.cursoToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -232,6 +241,7 @@
         private System.Windows.Forms.ToolStripStatusLabel tsslData;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStripMenuItem intituicaoCursosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cursoToolStripMenuItem;
 
 
     }

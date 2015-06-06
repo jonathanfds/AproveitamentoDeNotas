@@ -4,17 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="db_aproveitamentoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
-        </EntityType>
+      <Schema Namespace="db_aproveitamentoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tb_aproveitamento">
           <Key>
             <PropertyRef Name="id_aprov" />
@@ -27,7 +17,6 @@
           <Property Name="id_disciplina_atual" Type="int" Nullable="false" />
           <Property Name="cod_disciplina_origem" Type="int" Nullable="false" />
           <Property Name="id_situacao_aprov" Type="tinyint" Nullable="false" />
-          <Property Name="id_usuario" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="tb_curso">
           <Key>
@@ -35,7 +24,6 @@
           </Key>
           <Property Name="id_curso" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nome_curso" Type="varchar" MaxLength="150" Nullable="false" />
-          <Property Name="id_instituto" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="tb_disciplina">
           <Key>
@@ -46,15 +34,14 @@
           <Property Name="carga_horaria" Type="int" Nullable="false" />
           <Property Name="ano_semestre" Type="varchar" MaxLength="7" Nullable="false" />
           <Property Name="descricao" Type="text" Nullable="false" />
-          <Property Name="id_curso" Type="int" Nullable="false" />
-          <Property Name="id_instituto" Type="int" Nullable="false" />
+          <Property Name="id_instituto_curso" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="tb_funcao_usuario">
           <Key>
             <PropertyRef Name="id_funcao_usuario" />
           </Key>
           <Property Name="id_funcao_usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="funcao" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="funcao" Type="varchar" MaxLength="150" Nullable="false" />
         </EntityType>
         <EntityType Name="tb_instituto">
           <Key>
@@ -62,6 +49,14 @@
           </Key>
           <Property Name="id_instituto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nome_instituto" Type="varchar" MaxLength="150" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_instituto_curso">
+          <Key>
+            <PropertyRef Name="id_inst_curso" />
+          </Key>
+          <Property Name="id_inst_curso" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_instituo" Type="int" Nullable="false" />
+          <Property Name="id_curso" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="tb_situacao_aprov">
           <Key>
@@ -79,7 +74,7 @@
           <Property Name="pass_user" Type="varchar" MaxLength="150" Nullable="false" />
           <Property Name="id_funcao_usuario" Type="int" />
         </EntityType>
-        <Association Name="FK__tb_aprove__id_si__412EB0B6">
+        <Association Name="FK__tb_aprove__id_si__2C3393D0">
           <End Role="tb_situacao_aprov" Type="Self.tb_situacao_aprov" Multiplicity="1" />
           <End Role="tb_aproveitamento" Type="Self.tb_aproveitamento" Multiplicity="*" />
           <ReferentialConstraint>
@@ -91,55 +86,43 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tb_aprove__id_us__4222D4EF">
-          <End Role="tb_usuarios" Type="Self.tb_usuarios" Multiplicity="1" />
-          <End Role="tb_aproveitamento" Type="Self.tb_aproveitamento" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_usuarios">
-              <PropertyRef Name="id_user" />
-            </Principal>
-            <Dependent Role="tb_aproveitamento">
-              <PropertyRef Name="id_usuario" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__tb_curso__id_ins__07F6335A">
-          <End Role="tb_instituto" Type="Self.tb_instituto" Multiplicity="1" />
-          <End Role="tb_curso" Type="Self.tb_curso" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_instituto">
-              <PropertyRef Name="id_instituto" />
-            </Principal>
-            <Dependent Role="tb_curso">
-              <PropertyRef Name="id_instituto" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__tb_discip__id_cu__0CBAE877">
-          <End Role="tb_curso" Type="Self.tb_curso" Multiplicity="1" />
+        <Association Name="FK__tb_discip__id_in__1FCDBCEB">
+          <End Role="tb_instituto_curso" Type="Self.tb_instituto_curso" Multiplicity="1" />
           <End Role="tb_disciplina" Type="Self.tb_disciplina" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_instituto_curso">
+              <PropertyRef Name="id_inst_curso" />
+            </Principal>
+            <Dependent Role="tb_disciplina">
+              <PropertyRef Name="id_instituto_curso" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tb_instit__id_cu__1B0907CE">
+          <End Role="tb_curso" Type="Self.tb_curso" Multiplicity="1" />
+          <End Role="tb_instituto_curso" Type="Self.tb_instituto_curso" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tb_curso">
               <PropertyRef Name="id_curso" />
             </Principal>
-            <Dependent Role="tb_disciplina">
+            <Dependent Role="tb_instituto_curso">
               <PropertyRef Name="id_curso" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tb_discip__id_in__0DAF0CB0">
+        <Association Name="FK__tb_instit__id_in__1A14E395">
           <End Role="tb_instituto" Type="Self.tb_instituto" Multiplicity="1" />
-          <End Role="tb_disciplina" Type="Self.tb_disciplina" Multiplicity="*" />
+          <End Role="tb_instituto_curso" Type="Self.tb_instituto_curso" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tb_instituto">
               <PropertyRef Name="id_instituto" />
             </Principal>
-            <Dependent Role="tb_disciplina">
-              <PropertyRef Name="id_instituto" />
+            <Dependent Role="tb_instituto_curso">
+              <PropertyRef Name="id_instituo" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tb_usuari__id_fu__2F10007B">
+        <Association Name="FK__tb_usuari__id_fu__15502E78">
           <End Role="tb_funcao_usuario" Type="Self.tb_funcao_usuario" Multiplicity="0..1" />
           <End Role="tb_usuarios" Type="Self.tb_usuarios" Multiplicity="*" />
           <ReferentialConstraint>
@@ -152,53 +135,40 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="db_aproveitamentoModelStoreContainer">
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tb_aproveitamento" EntityType="Self.tb_aproveitamento" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tb_curso" EntityType="Self.tb_curso" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tb_disciplina" EntityType="Self.tb_disciplina" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tb_funcao_usuario" EntityType="Self.tb_funcao_usuario" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tb_instituto" EntityType="Self.tb_instituto" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_instituto_curso" EntityType="Self.tb_instituto_curso" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tb_situacao_aprov" EntityType="Self.tb_situacao_aprov" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tb_usuarios" EntityType="Self.tb_usuarios" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__tb_aprove__id_si__412EB0B6" Association="Self.FK__tb_aprove__id_si__412EB0B6">
+          <AssociationSet Name="FK__tb_aprove__id_si__2C3393D0" Association="Self.FK__tb_aprove__id_si__2C3393D0">
             <End Role="tb_situacao_aprov" EntitySet="tb_situacao_aprov" />
             <End Role="tb_aproveitamento" EntitySet="tb_aproveitamento" />
           </AssociationSet>
-          <AssociationSet Name="FK__tb_aprove__id_us__4222D4EF" Association="Self.FK__tb_aprove__id_us__4222D4EF">
-            <End Role="tb_usuarios" EntitySet="tb_usuarios" />
-            <End Role="tb_aproveitamento" EntitySet="tb_aproveitamento" />
-          </AssociationSet>
-          <AssociationSet Name="FK__tb_curso__id_ins__07F6335A" Association="Self.FK__tb_curso__id_ins__07F6335A">
-            <End Role="tb_instituto" EntitySet="tb_instituto" />
-            <End Role="tb_curso" EntitySet="tb_curso" />
-          </AssociationSet>
-          <AssociationSet Name="FK__tb_discip__id_cu__0CBAE877" Association="Self.FK__tb_discip__id_cu__0CBAE877">
-            <End Role="tb_curso" EntitySet="tb_curso" />
+          <AssociationSet Name="FK__tb_discip__id_in__1FCDBCEB" Association="Self.FK__tb_discip__id_in__1FCDBCEB">
+            <End Role="tb_instituto_curso" EntitySet="tb_instituto_curso" />
             <End Role="tb_disciplina" EntitySet="tb_disciplina" />
           </AssociationSet>
-          <AssociationSet Name="FK__tb_discip__id_in__0DAF0CB0" Association="Self.FK__tb_discip__id_in__0DAF0CB0">
-            <End Role="tb_instituto" EntitySet="tb_instituto" />
-            <End Role="tb_disciplina" EntitySet="tb_disciplina" />
+          <AssociationSet Name="FK__tb_instit__id_cu__1B0907CE" Association="Self.FK__tb_instit__id_cu__1B0907CE">
+            <End Role="tb_curso" EntitySet="tb_curso" />
+            <End Role="tb_instituto_curso" EntitySet="tb_instituto_curso" />
           </AssociationSet>
-          <AssociationSet Name="FK__tb_usuari__id_fu__2F10007B" Association="Self.FK__tb_usuari__id_fu__2F10007B">
+          <AssociationSet Name="FK__tb_instit__id_in__1A14E395" Association="Self.FK__tb_instit__id_in__1A14E395">
+            <End Role="tb_instituto" EntitySet="tb_instituto" />
+            <End Role="tb_instituto_curso" EntitySet="tb_instituto_curso" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tb_usuari__id_fu__15502E78" Association="Self.FK__tb_usuari__id_fu__15502E78">
             <End Role="tb_funcao_usuario" EntitySet="tb_funcao_usuario" />
             <End Role="tb_usuarios" EntitySet="tb_usuarios" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="db_aproveitamentoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-        </EntityType>
         <EntityType Name="tb_aproveitamento">
           <Key>
             <PropertyRef Name="id_aprov" />
@@ -211,9 +181,7 @@
           <Property Name="id_disciplina_atual" Type="Int32" Nullable="false" />
           <Property Name="cod_disciplina_origem" Type="Int32" Nullable="false" />
           <Property Name="id_situacao_aprov" Type="Byte" Nullable="false" />
-          <Property Name="id_usuario" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="tb_situacao_aprov" Relationship="Self.FK__tb_aprove__id_si__412EB0B6" FromRole="tb_aproveitamento" ToRole="tb_situacao_aprov" />
-          <NavigationProperty Name="tb_usuarios" Relationship="Self.FK__tb_aprove__id_us__4222D4EF" FromRole="tb_aproveitamento" ToRole="tb_usuarios" />
+          <NavigationProperty Name="tb_situacao_aprov" Relationship="Self.FK__tb_aprove__id_si__2C3393D0" FromRole="tb_aproveitamento" ToRole="tb_situacao_aprov" />
         </EntityType>
         <EntityType Name="tb_curso">
           <Key>
@@ -221,9 +189,7 @@
           </Key>
           <Property Name="id_curso" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nome_curso" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="id_instituto" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="tb_instituto" Relationship="Self.FK__tb_curso__id_ins__07F6335A" FromRole="tb_curso" ToRole="tb_instituto" />
-          <NavigationProperty Name="tb_disciplina" Relationship="Self.FK__tb_discip__id_cu__0CBAE877" FromRole="tb_curso" ToRole="tb_disciplina" />
+          <NavigationProperty Name="tb_instituto_curso" Relationship="Self.FK__tb_instit__id_cu__1B0907CE" FromRole="tb_curso" ToRole="tb_instituto_curso" />
         </EntityType>
         <EntityType Name="tb_disciplina">
           <Key>
@@ -234,18 +200,16 @@
           <Property Name="carga_horaria" Type="Int32" Nullable="false" />
           <Property Name="ano_semestre" Type="String" MaxLength="7" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="descricao" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="id_curso" Type="Int32" Nullable="false" />
-          <Property Name="id_instituto" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="tb_curso" Relationship="Self.FK__tb_discip__id_cu__0CBAE877" FromRole="tb_disciplina" ToRole="tb_curso" />
-          <NavigationProperty Name="tb_instituto" Relationship="Self.FK__tb_discip__id_in__0DAF0CB0" FromRole="tb_disciplina" ToRole="tb_instituto" />
+          <Property Name="id_instituto_curso" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tb_instituto_curso" Relationship="Self.FK__tb_discip__id_in__1FCDBCEB" FromRole="tb_disciplina" ToRole="tb_instituto_curso" />
         </EntityType>
         <EntityType Name="tb_funcao_usuario">
           <Key>
             <PropertyRef Name="id_funcao_usuario" />
           </Key>
           <Property Name="id_funcao_usuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="funcao" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="tb_usuarios" Relationship="Self.FK__tb_usuari__id_fu__2F10007B" FromRole="tb_funcao_usuario" ToRole="tb_usuarios" />
+          <Property Name="funcao" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_usuarios" Relationship="Self.FK__tb_usuari__id_fu__15502E78" FromRole="tb_funcao_usuario" ToRole="tb_usuarios" />
         </EntityType>
         <EntityType Name="tb_instituto">
           <Key>
@@ -253,8 +217,18 @@
           </Key>
           <Property Name="id_instituto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nome_instituto" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="tb_curso" Relationship="Self.FK__tb_curso__id_ins__07F6335A" FromRole="tb_instituto" ToRole="tb_curso" />
-          <NavigationProperty Name="tb_disciplina" Relationship="Self.FK__tb_discip__id_in__0DAF0CB0" FromRole="tb_instituto" ToRole="tb_disciplina" />
+          <NavigationProperty Name="tb_instituto_curso" Relationship="Self.FK__tb_instit__id_in__1A14E395" FromRole="tb_instituto" ToRole="tb_instituto_curso" />
+        </EntityType>
+        <EntityType Name="tb_instituto_curso">
+          <Key>
+            <PropertyRef Name="id_inst_curso" />
+          </Key>
+          <Property Name="id_inst_curso" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_instituo" Type="Int32" Nullable="false" />
+          <Property Name="id_curso" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tb_curso" Relationship="Self.FK__tb_instit__id_cu__1B0907CE" FromRole="tb_instituto_curso" ToRole="tb_curso" />
+          <NavigationProperty Name="tb_disciplina" Relationship="Self.FK__tb_discip__id_in__1FCDBCEB" FromRole="tb_instituto_curso" ToRole="tb_disciplina" />
+          <NavigationProperty Name="tb_instituto" Relationship="Self.FK__tb_instit__id_in__1A14E395" FromRole="tb_instituto_curso" ToRole="tb_instituto" />
         </EntityType>
         <EntityType Name="tb_situacao_aprov">
           <Key>
@@ -262,7 +236,7 @@
           </Key>
           <Property Name="id_situacao_aprov" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nome_situacao_aprov" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="tb_aproveitamento" Relationship="Self.FK__tb_aprove__id_si__412EB0B6" FromRole="tb_situacao_aprov" ToRole="tb_aproveitamento" />
+          <NavigationProperty Name="tb_aproveitamento" Relationship="Self.FK__tb_aprove__id_si__2C3393D0" FromRole="tb_situacao_aprov" ToRole="tb_aproveitamento" />
         </EntityType>
         <EntityType Name="tb_usuarios">
           <Key>
@@ -272,10 +246,9 @@
           <Property Name="nome_user" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="pass_user" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="id_funcao_usuario" Type="Int32" />
-          <NavigationProperty Name="tb_aproveitamento" Relationship="Self.FK__tb_aprove__id_us__4222D4EF" FromRole="tb_usuarios" ToRole="tb_aproveitamento" />
-          <NavigationProperty Name="tb_funcao_usuario" Relationship="Self.FK__tb_usuari__id_fu__2F10007B" FromRole="tb_usuarios" ToRole="tb_funcao_usuario" />
+          <NavigationProperty Name="tb_funcao_usuario" Relationship="Self.FK__tb_usuari__id_fu__15502E78" FromRole="tb_usuarios" ToRole="tb_funcao_usuario" />
         </EntityType>
-        <Association Name="FK__tb_aprove__id_si__412EB0B6">
+        <Association Name="FK__tb_aprove__id_si__2C3393D0">
           <End Role="tb_situacao_aprov" Type="Self.tb_situacao_aprov" Multiplicity="1" />
           <End Role="tb_aproveitamento" Type="Self.tb_aproveitamento" Multiplicity="*" />
           <ReferentialConstraint>
@@ -287,55 +260,31 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tb_aprove__id_us__4222D4EF">
-          <End Role="tb_usuarios" Type="Self.tb_usuarios" Multiplicity="1" />
-          <End Role="tb_aproveitamento" Type="Self.tb_aproveitamento" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_usuarios">
-              <PropertyRef Name="id_user" />
-            </Principal>
-            <Dependent Role="tb_aproveitamento">
-              <PropertyRef Name="id_usuario" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__tb_curso__id_ins__07F6335A">
-          <End Role="tb_instituto" Type="Self.tb_instituto" Multiplicity="1" />
-          <End Role="tb_curso" Type="Self.tb_curso" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_instituto">
-              <PropertyRef Name="id_instituto" />
-            </Principal>
-            <Dependent Role="tb_curso">
-              <PropertyRef Name="id_instituto" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__tb_discip__id_cu__0CBAE877">
+        <Association Name="FK__tb_instit__id_cu__1B0907CE">
           <End Role="tb_curso" Type="Self.tb_curso" Multiplicity="1" />
-          <End Role="tb_disciplina" Type="Self.tb_disciplina" Multiplicity="*" />
+          <End Role="tb_instituto_curso" Type="Self.tb_instituto_curso" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tb_curso">
               <PropertyRef Name="id_curso" />
             </Principal>
-            <Dependent Role="tb_disciplina">
+            <Dependent Role="tb_instituto_curso">
               <PropertyRef Name="id_curso" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tb_discip__id_in__0DAF0CB0">
-          <End Role="tb_instituto" Type="Self.tb_instituto" Multiplicity="1" />
+        <Association Name="FK__tb_discip__id_in__1FCDBCEB">
+          <End Role="tb_instituto_curso" Type="Self.tb_instituto_curso" Multiplicity="1" />
           <End Role="tb_disciplina" Type="Self.tb_disciplina" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="tb_instituto">
-              <PropertyRef Name="id_instituto" />
+            <Principal Role="tb_instituto_curso">
+              <PropertyRef Name="id_inst_curso" />
             </Principal>
             <Dependent Role="tb_disciplina">
-              <PropertyRef Name="id_instituto" />
+              <PropertyRef Name="id_instituto_curso" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tb_usuari__id_fu__2F10007B">
+        <Association Name="FK__tb_usuari__id_fu__15502E78">
           <End Role="tb_funcao_usuario" Type="Self.tb_funcao_usuario" Multiplicity="0..1" />
           <End Role="tb_usuarios" Type="Self.tb_usuarios" Multiplicity="*" />
           <ReferentialConstraint>
@@ -347,38 +296,46 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="db_aproveitamentoEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+        <Association Name="FK__tb_instit__id_in__1A14E395">
+          <End Role="tb_instituto" Type="Self.tb_instituto" Multiplicity="1" />
+          <End Role="tb_instituto_curso" Type="Self.tb_instituto_curso" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_instituto">
+              <PropertyRef Name="id_instituto" />
+            </Principal>
+            <Dependent Role="tb_instituto_curso">
+              <PropertyRef Name="id_instituo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="db_aproveitamento" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="tb_aproveitamento" EntityType="Self.tb_aproveitamento" />
           <EntitySet Name="tb_curso" EntityType="Self.tb_curso" />
           <EntitySet Name="tb_disciplina" EntityType="Self.tb_disciplina" />
           <EntitySet Name="tb_funcao_usuario" EntityType="Self.tb_funcao_usuario" />
           <EntitySet Name="tb_instituto" EntityType="Self.tb_instituto" />
+          <EntitySet Name="tb_instituto_curso" EntityType="Self.tb_instituto_curso" />
           <EntitySet Name="tb_situacao_aprov" EntityType="Self.tb_situacao_aprov" />
           <EntitySet Name="tb_usuarios" EntityType="Self.tb_usuarios" />
-          <AssociationSet Name="FK__tb_aprove__id_si__412EB0B6" Association="Self.FK__tb_aprove__id_si__412EB0B6">
+          <AssociationSet Name="FK__tb_aprove__id_si__2C3393D0" Association="Self.FK__tb_aprove__id_si__2C3393D0">
             <End Role="tb_situacao_aprov" EntitySet="tb_situacao_aprov" />
             <End Role="tb_aproveitamento" EntitySet="tb_aproveitamento" />
           </AssociationSet>
-          <AssociationSet Name="FK__tb_aprove__id_us__4222D4EF" Association="Self.FK__tb_aprove__id_us__4222D4EF">
-            <End Role="tb_usuarios" EntitySet="tb_usuarios" />
-            <End Role="tb_aproveitamento" EntitySet="tb_aproveitamento" />
-          </AssociationSet>
-          <AssociationSet Name="FK__tb_curso__id_ins__07F6335A" Association="Self.FK__tb_curso__id_ins__07F6335A">
-            <End Role="tb_instituto" EntitySet="tb_instituto" />
+          <AssociationSet Name="FK__tb_instit__id_cu__1B0907CE" Association="Self.FK__tb_instit__id_cu__1B0907CE">
             <End Role="tb_curso" EntitySet="tb_curso" />
+            <End Role="tb_instituto_curso" EntitySet="tb_instituto_curso" />
           </AssociationSet>
-          <AssociationSet Name="FK__tb_discip__id_cu__0CBAE877" Association="Self.FK__tb_discip__id_cu__0CBAE877">
-            <End Role="tb_curso" EntitySet="tb_curso" />
+          <AssociationSet Name="FK__tb_discip__id_in__1FCDBCEB" Association="Self.FK__tb_discip__id_in__1FCDBCEB">
+            <End Role="tb_instituto_curso" EntitySet="tb_instituto_curso" />
             <End Role="tb_disciplina" EntitySet="tb_disciplina" />
           </AssociationSet>
-          <AssociationSet Name="FK__tb_discip__id_in__0DAF0CB0" Association="Self.FK__tb_discip__id_in__0DAF0CB0">
-            <End Role="tb_instituto" EntitySet="tb_instituto" />
-            <End Role="tb_disciplina" EntitySet="tb_disciplina" />
-          </AssociationSet>
-          <AssociationSet Name="FK__tb_usuari__id_fu__2F10007B" Association="Self.FK__tb_usuari__id_fu__2F10007B">
+          <AssociationSet Name="FK__tb_usuari__id_fu__15502E78" Association="Self.FK__tb_usuari__id_fu__15502E78">
             <End Role="tb_funcao_usuario" EntitySet="tb_funcao_usuario" />
             <End Role="tb_usuarios" EntitySet="tb_usuarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tb_instit__id_in__1A14E395" Association="Self.FK__tb_instit__id_in__1A14E395">
+            <End Role="tb_instituto" EntitySet="tb_instituto" />
+            <End Role="tb_instituto_curso" EntitySet="tb_instituto_curso" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -386,18 +343,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="db_aproveitamentoModelStoreContainer" CdmEntityContainer="db_aproveitamentoEntities">
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="db_aproveitamentoModel.sysdiagrams">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
+        <EntityContainerMapping StorageEntityContainer="db_aproveitamentoModelStoreContainer" CdmEntityContainer="db_aproveitamento">
           <EntitySetMapping Name="tb_aproveitamento">
             <EntityTypeMapping TypeName="db_aproveitamentoModel.tb_aproveitamento">
               <MappingFragment StoreEntitySet="tb_aproveitamento">
@@ -409,7 +355,6 @@
                 <ScalarProperty Name="id_disciplina_atual" ColumnName="id_disciplina_atual" />
                 <ScalarProperty Name="cod_disciplina_origem" ColumnName="cod_disciplina_origem" />
                 <ScalarProperty Name="id_situacao_aprov" ColumnName="id_situacao_aprov" />
-                <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -418,7 +363,6 @@
               <MappingFragment StoreEntitySet="tb_curso">
                 <ScalarProperty Name="id_curso" ColumnName="id_curso" />
                 <ScalarProperty Name="nome_curso" ColumnName="nome_curso" />
-                <ScalarProperty Name="id_instituto" ColumnName="id_instituto" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -430,8 +374,7 @@
                 <ScalarProperty Name="carga_horaria" ColumnName="carga_horaria" />
                 <ScalarProperty Name="ano_semestre" ColumnName="ano_semestre" />
                 <ScalarProperty Name="descricao" ColumnName="descricao" />
-                <ScalarProperty Name="id_curso" ColumnName="id_curso" />
-                <ScalarProperty Name="id_instituto" ColumnName="id_instituto" />
+                <ScalarProperty Name="id_instituto_curso" ColumnName="id_instituto_curso" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -448,6 +391,15 @@
               <MappingFragment StoreEntitySet="tb_instituto">
                 <ScalarProperty Name="id_instituto" ColumnName="id_instituto" />
                 <ScalarProperty Name="nome_instituto" ColumnName="nome_instituto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_instituto_curso">
+            <EntityTypeMapping TypeName="db_aproveitamentoModel.tb_instituto_curso">
+              <MappingFragment StoreEntitySet="tb_instituto_curso">
+                <ScalarProperty Name="id_inst_curso" ColumnName="id_inst_curso" />
+                <ScalarProperty Name="id_instituo" ColumnName="id_instituo" />
+                <ScalarProperty Name="id_curso" ColumnName="id_curso" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

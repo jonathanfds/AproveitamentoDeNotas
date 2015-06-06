@@ -14,17 +14,11 @@ namespace AproveitamentoDeNotas
     
     public partial class tb_usuarios
     {
-        public tb_usuarios()
-        {
-            this.tb_aproveitamento = new HashSet<tb_aproveitamento>();
-        }
-    
         public int id_user { get; set; }
         public string nome_user { get; set; }
         public string pass_user { get; set; }
         public Nullable<int> id_funcao_usuario { get; set; }
     
-        public virtual ICollection<tb_aproveitamento> tb_aproveitamento { get; set; }
         public virtual tb_funcao_usuario tb_funcao_usuario { get; set; }
     }
 }

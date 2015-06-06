@@ -31,14 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastraCurso));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.clmIdInstituicao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmCurso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmDelete = new System.Windows.Forms.DataGridViewImageColumn();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSalvarCurso = new System.Windows.Forms.Button();
             this.txtNomeCurso = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.clmIdInstituicao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmCurso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmDelete = new System.Windows.Forms.DataGridViewImageColumn();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -68,12 +68,35 @@
             this.dataGridView1.Location = new System.Drawing.Point(10, 24);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 43;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(468, 187);
             this.dataGridView1.TabIndex = 15;
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
+            // 
+            // clmIdInstituicao
+            // 
+            this.clmIdInstituicao.HeaderText = "ID";
+            this.clmIdInstituicao.Name = "clmIdInstituicao";
+            this.clmIdInstituicao.Width = 50;
+            // 
+            // clmCurso
+            // 
+            this.clmCurso.HeaderText = "Nome do Curso";
+            this.clmCurso.Name = "clmCurso";
+            this.clmCurso.Width = 350;
+            // 
+            // clmDelete
+            // 
+            this.clmDelete.HeaderText = "Excluir";
+            this.clmDelete.Image = ((System.Drawing.Image)(resources.GetObject("clmDelete.Image")));
+            this.clmDelete.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.clmDelete.Name = "clmDelete";
+            this.clmDelete.ReadOnly = true;
+            this.clmDelete.Width = 65;
             // 
             // button3
             // 
@@ -125,26 +148,6 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Nome:";
             // 
-            // clmIdInstituicao
-            // 
-            this.clmIdInstituicao.HeaderText = "ID";
-            this.clmIdInstituicao.Name = "clmIdInstituicao";
-            this.clmIdInstituicao.Width = 50;
-            // 
-            // clmCurso
-            // 
-            this.clmCurso.HeaderText = "Nome do Curso";
-            this.clmCurso.Name = "clmCurso";
-            this.clmCurso.Width = 350;
-            // 
-            // clmDelete
-            // 
-            this.clmDelete.HeaderText = "Excluir";
-            this.clmDelete.Image = ((System.Drawing.Image)(resources.GetObject("clmDelete.Image")));
-            this.clmDelete.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.clmDelete.Name = "clmDelete";
-            this.clmDelete.Width = 65;
-            // 
             // frmCadastraCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -158,6 +161,7 @@
             this.Name = "frmCadastraCurso";
             this.ShowIcon = false;
             this.Text = "Cadastrar Curso";
+            this.Load += new System.EventHandler(this.frmCadastraCurso_Load);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);

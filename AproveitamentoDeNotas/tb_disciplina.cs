@@ -19,10 +19,8 @@ namespace AproveitamentoDeNotas
         public int carga_horaria { get; set; }
         public string ano_semestre { get; set; }
         public string descricao { get; set; }
-        public int id_curso { get; set; }
-        public int id_instituto { get; set; }
+        public int id_instituto_curso { get; set; }
     
-        public virtual tb_curso tb_curso { get; set; }
-        public virtual tb_instituto tb_instituto { get; set; }
+        public virtual tb_instituto_curso tb_instituto_curso { get; set; }
     }
 }

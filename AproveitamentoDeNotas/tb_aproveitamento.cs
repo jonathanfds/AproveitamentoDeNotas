@@ -22,9 +22,7 @@ namespace AproveitamentoDeNotas
         public int id_disciplina_atual { get; set; }
         public int cod_disciplina_origem { get; set; }
         public byte id_situacao_aprov { get; set; }
-        public int id_usuario { get; set; }
     
         public virtual tb_situacao_aprov tb_situacao_aprov { get; set; }
-        public virtual tb_usuarios tb_usuarios { get; set; }
     }
 }

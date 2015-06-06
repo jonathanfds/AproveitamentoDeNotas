@@ -13,10 +13,10 @@ namespace AproveitamentoDeNotas
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class db_aproveitamentoEntities : DbContext
+    public partial class db_aproveitamento : DbContext
     {
-        public db_aproveitamentoEntities()
-            : base("name=db_aproveitamentoEntities")
+        public db_aproveitamento()
+            : base("name=db_aproveitamento")
         {
         }
     
@@ -25,12 +25,12 @@ namespace AproveitamentoDeNotas
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<tb_aproveitamento> tb_aproveitamento { get; set; }
         public virtual DbSet<tb_curso> tb_curso { get; set; }
         public virtual DbSet<tb_disciplina> tb_disciplina { get; set; }
         public virtual DbSet<tb_funcao_usuario> tb_funcao_usuario { get; set; }
         public virtual DbSet<tb_instituto> tb_instituto { get; set; }
+        public virtual DbSet<tb_instituto_curso> tb_instituto_curso { get; set; }
         public virtual DbSet<tb_situacao_aprov> tb_situacao_aprov { get; set; }
         public virtual DbSet<tb_usuarios> tb_usuarios { get; set; }
     }

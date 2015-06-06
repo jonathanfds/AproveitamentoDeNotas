@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9c2b900ba81e4514983b768130f4bb33" Name="Diagram1">
+        <EntityTypeShape EntityType="db_aproveitamentoModel.tb_aproveitamento" Width="1.5" PointX="10" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_aproveitamentoModel.tb_curso" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_aproveitamentoModel.tb_disciplina" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_aproveitamentoModel.tb_funcao_usuario" Width="1.5" PointX="2.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_aproveitamentoModel.tb_instituto" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_aproveitamentoModel.tb_instituto_curso" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_aproveitamentoModel.tb_situacao_aprov" Width="1.5" PointX="7.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_aproveitamentoModel.tb_usuarios" Width="1.5" PointX="5" PointY="4.875" IsExpanded="true" />
+        <AssociationConnector Association="db_aproveitamentoModel.FK__tb_aprove__id_si__2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="db_aproveitamentoModel.FK__tb_instit__id_cu__1B0907CE" ManuallyRouted="false" />
+        <AssociationConnector Association="db_aproveitamentoModel.FK__tb_discip__id_in__1FCDBCEB" ManuallyRouted="false" />
+        <AssociationConnector Association="db_aproveitamentoModel.FK__tb_usuari__id_fu__15502E78" ManuallyRouted="false" />
+        <AssociationConnector Association="db_aproveitamentoModel.FK__tb_instit__id_in__1A14E395" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

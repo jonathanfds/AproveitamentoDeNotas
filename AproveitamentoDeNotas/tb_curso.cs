@@ -16,14 +16,12 @@ namespace AproveitamentoDeNotas
     {
         public tb_curso()
         {
-            this.tb_disciplina = new HashSet<tb_disciplina>();
+            this.tb_instituto_curso = new HashSet<tb_instituto_curso>();
         }
     
         public int id_curso { get; set; }
         public string nome_curso { get; set; }
-        public int id_instituto { get; set; }
     
-        public virtual tb_instituto tb_instituto { get; set; }
-        public virtual ICollection<tb_disciplina> tb_disciplina { get; set; }
+        public virtual ICollection<tb_instituto_curso> tb_instituto_curso { get; set; }
     }
 }
