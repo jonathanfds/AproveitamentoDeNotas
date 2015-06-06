@@ -183,16 +183,39 @@ namespace AproveitamentoDeNotas
         {
             try
             {
-                List<tb_curso> lCursos = null;
-
-
-
+                List<tb_curso> lCursos = new List<tb_curso>();
+                gEntityBase.Database.Connection.ConnectionString = clsGlobal.ConnectionString;
+                List<tb_instituto_curso> lListInstCurso = gEntityBase.tb_instituto_curso.Where(T => T.id_instituo == pIdInst).ToList();
+                foreach (tb_instituto_curso CursoInst in lListInstCurso)
+                {
+                    lCursos.Add(CursoInst.tb_curso);                
+                }
+                gEntityBase.Database.Connection.Close();
                 return lCursos;
 
             }
             catch (Exception ex)
             {
                 return null;
+            }
+        }
+
+        public static bool insertCursoInstituicao(int pIdInst,int pIdCurso)
+        {
+            try
+            {
+                tb_instituto_curso lInstCurso = new tb_instituto_curso();
+                lInstCurso.id_curso = pIdCurso;
+                lInstCurso.id_instituo = pIdInst;
+
+                gEntityBase.tb_instituto_curso.Add(lInstCurso);
+                int numRows = gEntityBase.SaveChanges();
+                gEntityBase.Database.Connection.Close();
+                return (numRows > 0);
+            }
+            catch (Exception ex)
+            {
+                return false;
             }
         }
     }

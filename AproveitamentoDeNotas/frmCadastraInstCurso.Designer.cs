@@ -39,7 +39,6 @@
             this.clmInstituicao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmDelete = new System.Windows.Forms.DataGridViewImageColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.lstCursoCadastrados = new System.Windows.Forms.ListBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.lstCursosInst = new System.Windows.Forms.ListBox();
@@ -118,24 +117,28 @@
             this.dgvInstituicao.Location = new System.Drawing.Point(10, 24);
             this.dgvInstituicao.MultiSelect = false;
             this.dgvInstituicao.Name = "dgvInstituicao";
+            this.dgvInstituicao.ReadOnly = true;
             this.dgvInstituicao.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvInstituicao.RowHeadersVisible = false;
             this.dgvInstituicao.RowHeadersWidth = 43;
             this.dgvInstituicao.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvInstituicao.Size = new System.Drawing.Size(468, 187);
             this.dgvInstituicao.TabIndex = 15;
-            this.dgvInstituicao.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInstituicao_CellContentDoubleClick);
+            this.dgvInstituicao.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInstituicao_CellClick);
+            this.dgvInstituicao.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInstituicao_CellDoubleClick);
             // 
             // clmIdInstituicao
             // 
             this.clmIdInstituicao.HeaderText = "ID";
             this.clmIdInstituicao.Name = "clmIdInstituicao";
+            this.clmIdInstituicao.ReadOnly = true;
             this.clmIdInstituicao.Width = 50;
             // 
             // clmInstituicao
             // 
             this.clmInstituicao.HeaderText = "Nome da Instituicao";
             this.clmInstituicao.Name = "clmInstituicao";
+            this.clmInstituicao.ReadOnly = true;
             this.clmInstituicao.Width = 350;
             // 
             // clmDelete
@@ -144,6 +147,7 @@
             this.clmDelete.Image = ((System.Drawing.Image)(resources.GetObject("clmDelete.Image")));
             this.clmDelete.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.clmDelete.Name = "clmDelete";
+            this.clmDelete.ReadOnly = true;
             this.clmDelete.Width = 65;
             // 
             // groupBox3
@@ -155,15 +159,6 @@
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Lista de Instiuições";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(332, 575);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(83, 30);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Salvar";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // lstCursoCadastrados
             // 
@@ -177,13 +172,13 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Enabled = false;
             this.btnAdd.Location = new System.Drawing.Point(203, 41);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(78, 30);
             this.btnAdd.TabIndex = 18;
             this.btnAdd.Text = "Adicionar";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // lstCursosInst
             // 
@@ -197,7 +192,6 @@
             // 
             // btnRemove
             // 
-            this.btnRemove.Enabled = false;
             this.btnRemove.Location = new System.Drawing.Point(203, 77);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(78, 30);
@@ -257,7 +251,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(521, 618);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.button3);
@@ -291,7 +284,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmIdInstituicao;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmInstituicao;
         private System.Windows.Forms.DataGridViewImageColumn clmDelete;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListBox lstCursoCadastrados;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.ListBox lstCursosInst;

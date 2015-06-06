@@ -16,6 +16,8 @@ namespace AproveitamentoDeNotas
         {
             InitializeComponent();
         }
+        private int _IdInstituicao;
+        private List<tb_curso> _ListadeCursos;
         private void btnSalvarInst_Click(object sender, EventArgs e)
         {
             string lNomeInstituicao = this.txtNomeInstituicao.Text;
@@ -42,9 +44,9 @@ namespace AproveitamentoDeNotas
 
         private void PreencheCursos()
         {
-            List<tb_curso> lListadeCursos = clsFuncoesBase.getCursos();
+            _ListadeCursos = clsFuncoesBase.getCursos();
             this.lstCursoCadastrados.Items.Clear();
-            foreach (tb_curso Curso in lListadeCursos)
+            foreach (tb_curso Curso in _ListadeCursos)
             {
                 this.lstCursoCadastrados.Items.Add(Curso.nome_curso);
             }
@@ -56,10 +58,51 @@ namespace AproveitamentoDeNotas
             this.PreencheCursos();
         }
 
-        private void dgvInstituicao_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void PreencheCursosInstituicao(int pIdInst)
         {
-            int idInstituicao = Convert.ToInt32(this.dgvInstituicao.Rows[e.RowIndex].Cells[0].Value);
+            Cursor.Current = Cursors.WaitCursor;
+            List<tb_curso> lCursos = clsFuncoesBase.getCursosInstituicao(pIdInst);
+            this.lstCursosInst.Items.Clear();
+            foreach (tb_curso Curso in lCursos)
+            {
+                this.lstCursosInst.Items.Add(Curso.nome_curso);
+            }
+            Cursor.Current = Cursors.Default;
+        }
 
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            string lNomeCurso = lstCursoCadastrados.SelectedItem.ToString();
+            tb_curso lCursoSelecionado = _ListadeCursos.Find(T => T.nome_curso.Equals(lNomeCurso));
+            if (!lstCursosInst.Items.Contains(lNomeCurso))
+            {
+                if (clsFuncoesBase.insertCursoInstituicao(this._IdInstituicao, lCursoSelecionado.id_curso))
+                {
+                    MessageBox.Show("Curso adicionado a instituição !");
+                    this.PreencheCursosInstituicao(_IdInstituicao);
+                }
+                else
+                {
+                    MessageBox.Show("Erro ao adicionar curso a instituição !");
+                }
+            }
+        }
+
+        private void dgvInstituicao_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //_IdInstituicao = Convert.ToInt32(this.dgvInstituicao.Rows[e.RowIndex].Cells[0].Value);
+            //this.PreencheCursosInstituicao(_IdInstituicao);
+        }
+
+        private void dgvInstituicao_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            _IdInstituicao = Convert.ToInt32(this.dgvInstituicao.Rows[e.RowIndex].Cells[0].Value);
+            if (e.ColumnIndex != 2)
+                this.PreencheCursosInstituicao(_IdInstituicao);
+            else
+            { 
+                //EXCLUIR
+            }
         }
         
     }

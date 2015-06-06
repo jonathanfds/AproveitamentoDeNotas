@@ -74,5 +74,10 @@ namespace AproveitamentoDeNotas
             frmCurso.StartPosition = FormStartPosition.CenterScreen;
             frmCurso.Show();
         }
+
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            new frmLogin().Show();
+        }
     }
 }
