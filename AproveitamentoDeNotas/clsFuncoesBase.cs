@@ -131,6 +131,22 @@ namespace AproveitamentoDeNotas
             }
         }
 
+        public static List<tb_curso> getCursos(int pIdInst)
+        {
+            try
+            {
+                List<tb_curso> lCursos = null;
+                gEntityBase.Database.Connection.ConnectionString = clsGlobal.ConnectionString;
+                lCursos = gEntityBase.tb_curso.ToList();
+                gEntityBase.Database.Connection.Close();
+                return lCursos;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
         public static tb_curso getCurso(int pId)
         {
             try
@@ -218,6 +234,57 @@ namespace AproveitamentoDeNotas
                 return false;
             }
         }
+
+        public static tb_instituto_curso getInstituoCurso(int pIdCurso, int pIdInstituto)
+        {
+            try
+            {
+                tb_instituto_curso lInstituoCurso = null;
+                gEntityBase.Database.Connection.ConnectionString = clsGlobal.ConnectionString;
+                lInstituoCurso = gEntityBase.tb_instituto_curso.ToList().Find(T => 
+                    T.id_curso.Equals(pIdCurso) &&
+                    T.id_instituo.Equals(pIdInstituto));
+                gEntityBase.Database.Connection.Close();
+                return lInstituoCurso;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        public static bool insertDisciplina(tb_disciplina pDisciplina)
+        {
+            try
+            {
+                gEntityBase.Database.Connection.ConnectionString = clsGlobal.ConnectionString;
+                gEntityBase.tb_disciplina.Add(pDisciplina);
+                int numRows = gEntityBase.SaveChanges();
+                gEntityBase.Database.Connection.Close();
+                return (numRows > 0);
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
+        public static List<tb_disciplina> getDisciplinas(int pIdInstCurso)
+        {
+            try
+            {
+                List<tb_disciplina> lDisciplinas = new List<tb_disciplina>();
+                gEntityBase.Database.Connection.ConnectionString = clsGlobal.ConnectionString;
+                lDisciplinas = gEntityBase.tb_disciplina.Where(T => T.id_instituto_curso == pIdInstCurso).ToList();
+                return lDisciplinas;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+
+        }
+
     }
 
 }

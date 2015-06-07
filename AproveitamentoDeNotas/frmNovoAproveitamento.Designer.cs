@@ -29,92 +29,88 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtDescricaoOrigem = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtAnoSemestre = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.cmbCurso = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.cmbCursoOrigem = new System.Windows.Forms.ComboBox();
             this.txtCargaHoraria = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.cmbInstituicao = new System.Windows.Forms.ComboBox();
+            this.cmbInstituicaoOrigem = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtNomeMateria = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtRA = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbCursoAluno = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbDisciplinaAluno = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtNomeAluno = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.cmbDisciplinaOrigem = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.txtAnoSemestre);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.txtDescricaoOrigem);
+            this.groupBox1.Controls.Add(this.cmbDisciplinaOrigem);
             this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.cmbCurso);
-            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.cmbCursoOrigem);
+            this.groupBox1.Controls.Add(this.cmbInstituicaoOrigem);
             this.groupBox1.Controls.Add(this.txtCargaHoraria);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.cmbInstituicao);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.txtNomeMateria);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 101);
+            this.groupBox1.Location = new System.Drawing.Point(21, 87);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(603, 296);
+            this.groupBox1.Size = new System.Drawing.Size(460, 365);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Formação de Origem";
             // 
-            // textBox5
+            // txtDescricaoOrigem
             // 
-            this.textBox5.Location = new System.Drawing.Point(117, 170);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(467, 111);
-            this.textBox5.TabIndex = 31;
+            this.txtDescricaoOrigem.Location = new System.Drawing.Point(108, 242);
+            this.txtDescricaoOrigem.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtDescricaoOrigem.Multiline = true;
+            this.txtDescricaoOrigem.Name = "txtDescricaoOrigem";
+            this.txtDescricaoOrigem.Size = new System.Drawing.Size(345, 111);
+            this.txtDescricaoOrigem.TabIndex = 31;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(6, 173);
+            this.label8.Location = new System.Drawing.Point(7, 245);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(68, 17);
             this.label8.TabIndex = 30;
             this.label8.Text = "Descrição:";
             // 
-            // textBox4
+            // txtAnoSemestre
             // 
-            this.textBox4.Location = new System.Drawing.Point(378, 123);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(55, 25);
-            this.textBox4.TabIndex = 35;
+            this.txtAnoSemestre.Location = new System.Drawing.Point(109, 152);
+            this.txtAnoSemestre.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtAnoSemestre.Name = "txtAnoSemestre";
+            this.txtAnoSemestre.Size = new System.Drawing.Size(80, 25);
+            this.txtAnoSemestre.TabIndex = 35;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(271, 126);
+            this.label6.Location = new System.Drawing.Point(7, 155);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(93, 17);
@@ -125,101 +121,78 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(297, 83);
+            this.label11.Location = new System.Drawing.Point(7, 74);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(45, 17);
             this.label11.TabIndex = 27;
             this.label11.Text = "Curso:";
             // 
-            // textBox3
+            // cmbCursoOrigem
             // 
-            this.textBox3.Location = new System.Drawing.Point(117, 35);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(101, 25);
-            this.textBox3.TabIndex = 9;
-            // 
-            // cmbCurso
-            // 
-            this.cmbCurso.FormattingEnabled = true;
-            this.cmbCurso.Location = new System.Drawing.Point(376, 80);
-            this.cmbCurso.Name = "cmbCurso";
-            this.cmbCurso.Size = new System.Drawing.Size(196, 25);
-            this.cmbCurso.TabIndex = 33;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 38);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(97, 17);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Cód. Disciplina:";
+            this.cmbCursoOrigem.FormattingEnabled = true;
+            this.cmbCursoOrigem.Location = new System.Drawing.Point(108, 71);
+            this.cmbCursoOrigem.Name = "cmbCursoOrigem";
+            this.cmbCursoOrigem.Size = new System.Drawing.Size(196, 25);
+            this.cmbCursoOrigem.TabIndex = 33;
+            this.cmbCursoOrigem.SelectedIndexChanged += new System.EventHandler(this.cmbCursoOrigem_SelectedIndexChanged);
             // 
             // txtCargaHoraria
             // 
-            this.txtCargaHoraria.Location = new System.Drawing.Point(117, 120);
+            this.txtCargaHoraria.Location = new System.Drawing.Point(109, 197);
             this.txtCargaHoraria.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtCargaHoraria.Name = "txtCargaHoraria";
-            this.txtCargaHoraria.Size = new System.Drawing.Size(55, 25);
+            this.txtCargaHoraria.Size = new System.Drawing.Size(80, 25);
             this.txtCargaHoraria.TabIndex = 29;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(6, 123);
+            this.label10.Location = new System.Drawing.Point(3, 200);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(94, 17);
             this.label10.TabIndex = 28;
             this.label10.Text = "Carga Horária:";
             // 
-            // cmbInstituicao
+            // cmbInstituicaoOrigem
             // 
-            this.cmbInstituicao.FormattingEnabled = true;
-            this.cmbInstituicao.Location = new System.Drawing.Point(117, 75);
-            this.cmbInstituicao.Name = "cmbInstituicao";
-            this.cmbInstituicao.Size = new System.Drawing.Size(155, 25);
-            this.cmbInstituicao.TabIndex = 32;
+            this.cmbInstituicaoOrigem.FormattingEnabled = true;
+            this.cmbInstituicaoOrigem.Location = new System.Drawing.Point(109, 32);
+            this.cmbInstituicaoOrigem.Name = "cmbInstituicaoOrigem";
+            this.cmbInstituicaoOrigem.Size = new System.Drawing.Size(195, 25);
+            this.cmbInstituicaoOrigem.TabIndex = 32;
+            this.cmbInstituicaoOrigem.SelectedIndexChanged += new System.EventHandler(this.cmbInstituicaoOrigem_SelectedIndexChanged);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(6, 78);
+            this.label9.Location = new System.Drawing.Point(7, 35);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(69, 17);
             this.label9.TabIndex = 27;
             this.label9.Text = "Instituição:";
             // 
-            // txtNomeMateria
-            // 
-            this.txtNomeMateria.Location = new System.Drawing.Point(378, 35);
-            this.txtNomeMateria.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtNomeMateria.Name = "txtNomeMateria";
-            this.txtNomeMateria.Size = new System.Drawing.Size(206, 25);
-            this.txtNomeMateria.TabIndex = 26;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(297, 38);
+            this.label7.Location = new System.Drawing.Point(6, 114);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(66, 17);
             this.label7.TabIndex = 25;
             this.label7.Text = "Disciplina:";
             // 
-            // textBox1
+            // txtRA
             // 
-            this.textBox1.Location = new System.Drawing.Point(72, 15);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(218, 25);
-            this.textBox1.TabIndex = 8;
+            this.txtRA.Location = new System.Drawing.Point(72, 15);
+            this.txtRA.Name = "txtRA";
+            this.txtRA.Size = new System.Drawing.Size(166, 25);
+            this.txtRA.TabIndex = 8;
             // 
             // label3
             // 
@@ -231,54 +204,56 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "RA :";
             // 
-            // comboBox2
+            // cmbCursoAluno
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(72, 55);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(218, 25);
-            this.comboBox2.TabIndex = 6;
+            this.cmbCursoAluno.FormattingEnabled = true;
+            this.cmbCursoAluno.Location = new System.Drawing.Point(331, 15);
+            this.cmbCursoAluno.Name = "cmbCursoAluno";
+            this.cmbCursoAluno.Size = new System.Drawing.Size(150, 25);
+            this.cmbCursoAluno.TabIndex = 6;
+            this.cmbCursoAluno.SelectedIndexChanged += new System.EventHandler(this.cmbCursoAluno_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(305, 60);
+            this.label2.Location = new System.Drawing.Point(255, 58);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 17);
             this.label2.TabIndex = 5;
             this.label2.Text = "Disciplina :";
             // 
-            // comboBox1
+            // cmbDisciplinaAluno
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(388, 55);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(227, 25);
-            this.comboBox1.TabIndex = 4;
+            this.cmbDisciplinaAluno.FormattingEnabled = true;
+            this.cmbDisciplinaAluno.Location = new System.Drawing.Point(331, 55);
+            this.cmbDisciplinaAluno.Name = "cmbDisciplinaAluno";
+            this.cmbDisciplinaAluno.Size = new System.Drawing.Size(150, 25);
+            this.cmbDisciplinaAluno.TabIndex = 4;
+            this.cmbDisciplinaAluno.SelectedIndexChanged += new System.EventHandler(this.cmbDisciplinaAluno_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 60);
+            this.label1.Location = new System.Drawing.Point(255, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "Curso :";
             // 
-            // textBox2
+            // txtNomeAluno
             // 
-            this.textBox2.Location = new System.Drawing.Point(388, 15);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(227, 25);
-            this.textBox2.TabIndex = 10;
+            this.txtNomeAluno.Location = new System.Drawing.Point(72, 52);
+            this.txtNomeAluno.Name = "txtNomeAluno";
+            this.txtNomeAluno.Size = new System.Drawing.Size(166, 25);
+            this.txtNomeAluno.TabIndex = 10;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(309, 18);
+            this.label4.Location = new System.Drawing.Point(18, 55);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 17);
             this.label4.TabIndex = 9;
@@ -287,7 +262,7 @@
             // btnSalvar
             // 
             this.btnSalvar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(441, 404);
+            this.btnSalvar.Location = new System.Drawing.Point(307, 459);
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(83, 30);
@@ -295,32 +270,42 @@
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnCancelar
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(532, 404);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(83, 30);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(398, 459);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(83, 30);
+            this.btnCancelar.TabIndex = 21;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // cmbDisciplinaOrigem
+            // 
+            this.cmbDisciplinaOrigem.FormattingEnabled = true;
+            this.cmbDisciplinaOrigem.Location = new System.Drawing.Point(109, 111);
+            this.cmbDisciplinaOrigem.Name = "cmbDisciplinaOrigem";
+            this.cmbDisciplinaOrigem.Size = new System.Drawing.Size(195, 25);
+            this.cmbDisciplinaOrigem.TabIndex = 36;
+            this.cmbDisciplinaOrigem.SelectedIndexChanged += new System.EventHandler(this.cmbDisciplinaOrigem_SelectedIndexChanged);
             // 
             // frmNovoAproveitamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(625, 441);
+            this.ClientSize = new System.Drawing.Size(493, 498);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.cmbCursoAluno);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.txtNomeAluno);
+            this.Controls.Add(this.cmbDisciplinaAluno);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtRA);
             this.Controls.Add(this.label3);
             this.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -338,29 +323,27 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbCursoAluno;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbDisciplinaAluno;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtRA;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtNomeAluno;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.TextBox txtDescricaoOrigem;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtAnoSemestre;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox cmbCurso;
+        private System.Windows.Forms.ComboBox cmbCursoOrigem;
         private System.Windows.Forms.TextBox txtCargaHoraria;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox cmbInstituicao;
+        private System.Windows.Forms.ComboBox cmbInstituicaoOrigem;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtNomeMateria;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cmbDisciplinaOrigem;
     }
 }

@@ -30,7 +30,7 @@
         {
             this.button2 = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtCargaHoraria = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,7 +40,7 @@
             this.cmbInstituicao = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbCurso = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtAnoSemestre = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -67,14 +67,14 @@
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // textBox4
+            // txtDescricao
             // 
-            this.textBox4.Location = new System.Drawing.Point(116, 235);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(355, 140);
-            this.textBox4.TabIndex = 17;
+            this.txtDescricao.Location = new System.Drawing.Point(116, 235);
+            this.txtDescricao.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtDescricao.Multiline = true;
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(355, 140);
+            this.txtDescricao.TabIndex = 17;
             // 
             // label4
             // 
@@ -92,7 +92,7 @@
             this.txtCargaHoraria.Location = new System.Drawing.Point(118, 143);
             this.txtCargaHoraria.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtCargaHoraria.Name = "txtCargaHoraria";
-            this.txtCargaHoraria.Size = new System.Drawing.Size(55, 25);
+            this.txtCargaHoraria.Size = new System.Drawing.Size(69, 25);
             this.txtCargaHoraria.TabIndex = 15;
             // 
             // label3
@@ -138,11 +138,13 @@
             // 
             // cmbInstituicao
             // 
+            this.cmbInstituicao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbInstituicao.FormattingEnabled = true;
             this.cmbInstituicao.Location = new System.Drawing.Point(118, 59);
             this.cmbInstituicao.Name = "cmbInstituicao";
             this.cmbInstituicao.Size = new System.Drawing.Size(353, 25);
             this.cmbInstituicao.TabIndex = 20;
+            this.cmbInstituicao.SelectedIndexChanged += new System.EventHandler(this.cmbInstituicao_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -157,19 +159,21 @@
             // 
             // cmbCurso
             // 
+            this.cmbCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCurso.FormattingEnabled = true;
             this.cmbCurso.Location = new System.Drawing.Point(118, 101);
             this.cmbCurso.Name = "cmbCurso";
             this.cmbCurso.Size = new System.Drawing.Size(273, 25);
             this.cmbCurso.TabIndex = 22;
+            this.cmbCurso.SelectedIndexChanged += new System.EventHandler(this.cmbCurso_SelectedIndexChanged);
             // 
-            // textBox1
+            // txtAnoSemestre
             // 
-            this.textBox1.Location = new System.Drawing.Point(118, 184);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(55, 25);
-            this.textBox1.TabIndex = 24;
+            this.txtAnoSemestre.Location = new System.Drawing.Point(118, 184);
+            this.txtAnoSemestre.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtAnoSemestre.Name = "txtAnoSemestre";
+            this.txtAnoSemestre.Size = new System.Drawing.Size(69, 25);
+            this.txtAnoSemestre.TabIndex = 24;
             // 
             // label6
             // 
@@ -187,12 +191,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(481, 419);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtAnoSemestre);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtNomeMateria);
             this.Controls.Add(this.cmbCurso);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -206,6 +210,7 @@
             this.Name = "frmCadastroMateria";
             this.ShowIcon = false;
             this.Text = "Cadastro de Disciplinas";
+            this.Load += new System.EventHandler(this.frmCadastroMateria_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,7 +220,7 @@
 
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtCargaHoraria;
         private System.Windows.Forms.Label label3;
@@ -225,7 +230,7 @@
         private System.Windows.Forms.ComboBox cmbInstituicao;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbCurso;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtAnoSemestre;
         private System.Windows.Forms.Label label6;
     }
 }
