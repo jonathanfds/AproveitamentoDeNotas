@@ -57,12 +57,17 @@ namespace AproveitamentoDeNotas
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

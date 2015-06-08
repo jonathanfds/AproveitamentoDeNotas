@@ -276,6 +276,7 @@ namespace AproveitamentoDeNotas
                 List<tb_disciplina> lDisciplinas = new List<tb_disciplina>();
                 gEntityBase.Database.Connection.ConnectionString = clsGlobal.ConnectionString;
                 lDisciplinas = gEntityBase.tb_disciplina.Where(T => T.id_instituto_curso == pIdInstCurso).ToList();
+                gEntityBase.Database.Connection.Close();
                 return lDisciplinas;
             }
             catch (Exception ex)
@@ -285,6 +286,35 @@ namespace AproveitamentoDeNotas
 
         }
 
-    }
+        public static bool insertAproveitamento(tb_aproveitamento pAproveitamento)
+        {
+            try
+            {
+                gEntityBase.Database.Connection.ConnectionString = clsGlobal.ConnectionString;
+                gEntityBase.tb_aproveitamento.Add(pAproveitamento);
+                int numRows = gEntityBase.SaveChanges();
+                gEntityBase.Database.Connection.Close();
+                return (numRows > 0);
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
 
+        public static List<tb_situacao_aprov> getSituacoes()
+        {
+            try
+            {
+                gEntityBase.Database.Connection.ConnectionString = clsGlobal.ConnectionString;
+                List<tb_situacao_aprov> lSituacoes = gEntityBase.tb_situacao_aprov.ToList();
+                gEntityBase.Database.Connection.Close();
+                return lSituacoes;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+    }
 }

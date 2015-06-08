@@ -25,6 +25,7 @@ namespace AproveitamentoDeNotas
         int _IdCursoOrigem;
         int _IdDisciplinaAluno;
         int _IdDisciplinaOrigem;
+
         private void frmNovoAproveitamento_Load(object sender, EventArgs e)
         {
             PreencheCursosInstituicao(_IdInstituicao, cmbCursoAluno);
@@ -100,6 +101,23 @@ namespace AproveitamentoDeNotas
             this.txtAnoSemestre.Text = Disciplina.ano_semestre;
             this.txtCargaHoraria.Text = Disciplina.carga_horaria.ToString();
             this.txtDescricaoOrigem.Text = Disciplina.descricao;
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            tb_aproveitamento lAproveitamento = new tb_aproveitamento();
+            lAproveitamento.dt_aprov = System.DateTime.Now;
+            lAproveitamento.nome_aluno = txtNomeAluno.Text;
+            lAproveitamento.ra_aluno = txtRA.Text;
+            lAproveitamento.id_disciplina_atual = _IdDisciplinaAluno;
+            lAproveitamento.cod_disciplina_origem = _IdDisciplinaOrigem;
+            lAproveitamento.tb_situacao_aprov = clsFuncoesBase.getSituacoes().Find(t => t.nome_situacao_aprov.Equals("Aberto"));
+            if (clsFuncoesBase.insertAproveitamento(lAproveitamento)) {
+                MessageBox.Show("Aproveitamento cadastrado com sucesso !");
+            }
+            else {
+                MessageBox.Show("Erro ao cadastrar aproveitamento !");
+            }
         }
     }
 }
