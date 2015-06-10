@@ -18,17 +18,15 @@ namespace AproveitamentoDeNotas
         }
         List<tb_curso> _ListadeCursos;
         List<tb_disciplina> _ListaDisciplinas;
-        List<tb_instituto> _lListaInsts;
-        int _IdInstituicao = 1;
-        int _IdInstituicaoOrigem = 1;
+        List<tb_instituto> _lListaInsts;        
+        int _IdInstituicaoOrigem ;
         int _IdCurso;
         int _IdCursoOrigem;
         int _IdDisciplinaAluno;
         int _IdDisciplinaOrigem;
-
         private void frmNovoAproveitamento_Load(object sender, EventArgs e)
         {
-            PreencheCursosInstituicao(_IdInstituicao, cmbCursoAluno);
+            PreencheCursosInstituicao(clsGlobal.ID_INSTITUICAO_PADRAO, cmbCursoAluno);
             PreencheInstituicoes();
         }
         private void PreencheCursosInstituicao(int pIdInst,ComboBox pCmbCursos)
@@ -53,13 +51,14 @@ namespace AproveitamentoDeNotas
             if (cmbCursoAluno.SelectedItem != null)
             {
                 _IdCurso = _ListadeCursos.Find(T => T.nome_curso.Equals(cmbCursoAluno.SelectedItem)).id_curso;
-                PreencheDisciplinas(cmbDisciplinaAluno,_IdCurso,_IdInstituicao);
+                PreencheDisciplinas(cmbDisciplinaAluno, _IdCurso, clsGlobal.ID_INSTITUICAO_PADRAO);
             }            
         }
         private void PreencheDisciplinas(ComboBox pCmbDisciplinas,int pIdCurso,int pIdInst)
         {
-            int IdInstCurso = clsFuncoesBase.getInstituoCurso(pIdCurso, pIdInst).id_inst_curso;
-            _ListaDisciplinas = clsFuncoesBase.getDisciplinas(IdInstCurso);
+
+            int IdInstituicaoCurso = clsFuncoesBase.getInstituoCurso(pIdCurso, pIdInst).id_inst_curso;            
+            _ListaDisciplinas = clsFuncoesBase.getDisciplinas(IdInstituicaoCurso);
             pCmbDisciplinas.Items.Clear();
             foreach (tb_disciplina Disciplina in _ListaDisciplinas)
             {
@@ -109,13 +108,15 @@ namespace AproveitamentoDeNotas
             lAproveitamento.dt_aprov = System.DateTime.Now;
             lAproveitamento.nome_aluno = txtNomeAluno.Text;
             lAproveitamento.ra_aluno = txtRA.Text;
+            lAproveitamento.id_curso_atual = _IdCurso;
             lAproveitamento.id_disciplina_atual = _IdDisciplinaAluno;
             lAproveitamento.cod_disciplina_origem = _IdDisciplinaOrigem;
             lAproveitamento.tb_situacao_aprov = clsFuncoesBase.getSituacoes().Find(t => t.nome_situacao_aprov.Equals("Aberto"));
             if (clsFuncoesBase.insertAproveitamento(lAproveitamento)) {
                 MessageBox.Show("Aproveitamento cadastrado com sucesso !");
             }
-            else {
+            else 
+            {
                 MessageBox.Show("Erro ao cadastrar aproveitamento !");
             }
         }

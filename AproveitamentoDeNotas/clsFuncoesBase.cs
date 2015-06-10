@@ -316,5 +316,35 @@ namespace AproveitamentoDeNotas
                 return null;
             }
         }
+
+        public static List<tb_aproveitamento> getAproveitamentos()
+        {
+            try
+            {
+                gEntityBase.Database.Connection.ConnectionString = clsGlobal.ConnectionString;
+                List<tb_aproveitamento> lAproveitamentos = gEntityBase.tb_aproveitamento.ToList();
+                gEntityBase.Database.Connection.Close();
+                return lAproveitamentos;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+        public static string getSituacaoNome(tb_situacao_aprov pSituacao)
+        {
+            try
+            {
+                gEntityBase.Database.Connection.ConnectionString = clsGlobal.ConnectionString;
+                string lSituacao = gEntityBase.tb_situacao_aprov.ToList().Find
+                    (t => t.id_situacao_aprov.Equals(pSituacao.id_situacao_aprov)).nome_situacao_aprov;
+                gEntityBase.Database.Connection.Close();
+                return lSituacao;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }       
     }
 }
