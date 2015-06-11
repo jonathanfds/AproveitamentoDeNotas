@@ -67,5 +67,15 @@ namespace AproveitamentoDeNotas
                 
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frmCadastraCurso_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.DialogResult = System.Windows.Forms.DialogResult.OK;
+        }
+
     }
 }

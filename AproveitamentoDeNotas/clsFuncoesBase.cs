@@ -98,6 +98,21 @@ namespace AproveitamentoDeNotas
                 return null;
             }
         }
+        public static tb_instituto getInstituicao(int pIdInstituicao)
+        {
+            try
+            {
+                tb_instituto lInstituicao = null;
+                gEntityBase.Database.Connection.ConnectionString = clsGlobal.ConnectionString;
+                lInstituicao = gEntityBase.tb_instituto.ToList().Find(t => t.id_instituto.Equals(pIdInstituicao));
+                gEntityBase.Database.Connection.Close();
+                return lInstituicao;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
 
         public static bool insertInstituicao(tb_instituto pInstituto)
         {
@@ -253,6 +268,43 @@ namespace AproveitamentoDeNotas
             }
         }
 
+        public static String[] getNomeInstituoCurso(int pIdCurso, int pIdInstituto)
+        {
+            try
+            {
+                tb_instituto_curso lInstituoCurso = null;
+                String[] Curso_Instituicao = new String[2];
+                gEntityBase.Database.Connection.ConnectionString = clsGlobal.ConnectionString;
+                lInstituoCurso = gEntityBase.tb_instituto_curso.ToList().Find(T => T.id_curso.Equals(pIdCurso) && T.id_instituo.Equals(pIdInstituto));
+                Curso_Instituicao[0] = getCurso(lInstituoCurso.id_curso).nome_curso;
+                Curso_Instituicao[1] = getInstituicao(lInstituoCurso.id_instituo).nome_instituto;
+                gEntityBase.Database.Connection.Close();
+                return Curso_Instituicao;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+        public static String[] getNomeInstituoCurso(int pIdInstituto_Curso)
+        {
+            try
+            {
+                tb_instituto_curso lInstituoCurso = null;
+                String[] Curso_Instituicao = new String[2];
+                gEntityBase.Database.Connection.ConnectionString = clsGlobal.ConnectionString;
+                lInstituoCurso = gEntityBase.tb_instituto_curso.ToList().Find(T => T.id_inst_curso.Equals(pIdInstituto_Curso));
+                Curso_Instituicao[0] = getCurso(lInstituoCurso.id_curso).nome_curso;
+                Curso_Instituicao[1] = getInstituicao(lInstituoCurso.id_instituo).nome_instituto;
+                gEntityBase.Database.Connection.Close();
+                return Curso_Instituicao;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
         public static bool insertDisciplina(tb_disciplina pDisciplina)
         {
             try
@@ -276,6 +328,23 @@ namespace AproveitamentoDeNotas
                 List<tb_disciplina> lDisciplinas = new List<tb_disciplina>();
                 gEntityBase.Database.Connection.ConnectionString = clsGlobal.ConnectionString;
                 lDisciplinas = gEntityBase.tb_disciplina.Where(T => T.id_instituto_curso == pIdInstCurso).ToList();
+                gEntityBase.Database.Connection.Close();
+                return lDisciplinas;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+
+        }
+
+        public static tb_disciplina getDisciplina(int pIdDisciplina)
+        {
+            try
+            {
+                tb_disciplina lDisciplinas = new tb_disciplina();
+                gEntityBase.Database.Connection.ConnectionString = clsGlobal.ConnectionString;
+                lDisciplinas = gEntityBase.tb_disciplina.ToList().Find(T => T.id_disciplina == pIdDisciplina);
                 gEntityBase.Database.Connection.Close();
                 return lDisciplinas;
             }
@@ -345,6 +414,22 @@ namespace AproveitamentoDeNotas
             {
                 return null;
             }
-        }       
+        }
+
+        public static List<tb_funcao_usuario> getFuncaoUsuario()
+        {
+            try
+            {
+                gEntityBase.Database.Connection.ConnectionString = clsGlobal.ConnectionString;
+                List<tb_funcao_usuario> FuncaoUsuario = gEntityBase.tb_funcao_usuario.ToList();
+                gEntityBase.Database.Connection.Close();
+                return FuncaoUsuario;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        
+        }
     }
 }

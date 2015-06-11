@@ -100,8 +100,9 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(83, 30);
             this.button3.TabIndex = 15;
-            this.button3.Text = "Cancelar";
+            this.button3.Text = "Fechar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // dgvInstituicao
             // 
@@ -208,6 +209,7 @@
             this.lklNovoCurso.TabIndex = 21;
             this.lklNovoCurso.TabStop = true;
             this.lklNovoCurso.Text = "Novo Curso";
+            this.lklNovoCurso.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lklNovoCurso_LinkClicked);
             // 
             // label2
             // 
@@ -261,6 +263,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastrar Instituição";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmCadastraInstCurso_FormClosing);
             this.Load += new System.EventHandler(this.frmCadastraInstCurso_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

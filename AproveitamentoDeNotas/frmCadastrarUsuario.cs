@@ -16,5 +16,36 @@ namespace AproveitamentoDeNotas
         {
             InitializeComponent();
         }
+        List<tb_funcao_usuario> _FuncoesUser;
+        private void frmCadastrarUsuario_Load(object sender, EventArgs e)
+        {
+            PreencheFuncoes();
+        }
+        private void PreencheFuncoes()
+        {
+            this.cmbFuncoes.Items.Clear();
+            _FuncoesUser =clsFuncoesBase.getFuncaoUsuario();
+            foreach (tb_funcao_usuario Funcao in _FuncoesUser)
+            {
+                this.cmbFuncoes.Items.Add(Funcao.funcao);
+            }
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            tb_usuarios Usuario = new tb_usuarios();
+            Usuario.nome_user = txtUser.Text;
+            Usuario.pass_user = txtSenha.Text;
+            Usuario.tb_funcao_usuario = _FuncoesUser.Find(t => t.funcao.Equals(cmbFuncoes.SelectedText));
+            if (clsFuncoesBase.insertUsuario(Usuario))
+            {
+                MessageBox.Show("Usuario cadastrado !");
+            }
+            else
+            {
+                MessageBox.Show("Erro ao cadastrar usuario !");
+            }
+
+        }
     }
 }

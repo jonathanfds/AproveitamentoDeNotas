@@ -42,6 +42,7 @@
             this.cmbCurso = new System.Windows.Forms.ComboBox();
             this.txtAnoSemestre = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // button2
@@ -52,7 +53,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(83, 30);
             this.button2.TabIndex = 19;
-            this.button2.Text = "Cancelar";
+            this.button2.Text = "Fechar";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // btnSalvar
@@ -142,7 +143,7 @@
             this.cmbInstituicao.FormattingEnabled = true;
             this.cmbInstituicao.Location = new System.Drawing.Point(118, 59);
             this.cmbInstituicao.Name = "cmbInstituicao";
-            this.cmbInstituicao.Size = new System.Drawing.Size(353, 25);
+            this.cmbInstituicao.Size = new System.Drawing.Size(302, 25);
             this.cmbInstituicao.TabIndex = 20;
             this.cmbInstituicao.SelectedIndexChanged += new System.EventHandler(this.cmbInstituicao_SelectedIndexChanged);
             // 
@@ -186,11 +187,24 @@
             this.label6.TabIndex = 23;
             this.label6.Text = "Ano/Semestre:";
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Location = new System.Drawing.Point(424, 62);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(45, 20);
+            this.linkLabel1.TabIndex = 25;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Novo";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // frmCadastroMateria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(481, 419);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.txtAnoSemestre);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtNomeMateria);
@@ -210,6 +224,7 @@
             this.Name = "frmCadastroMateria";
             this.ShowIcon = false;
             this.Text = "Cadastro de Disciplinas";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmCadastroMateria_FormClosing);
             this.Load += new System.EventHandler(this.frmCadastroMateria_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -232,5 +247,6 @@
         private System.Windows.Forms.ComboBox cmbCurso;
         private System.Windows.Forms.TextBox txtAnoSemestre;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

@@ -81,12 +81,14 @@
             // 
             this.clmIdInstituicao.HeaderText = "ID";
             this.clmIdInstituicao.Name = "clmIdInstituicao";
+            this.clmIdInstituicao.ReadOnly = true;
             this.clmIdInstituicao.Width = 50;
             // 
             // clmCurso
             // 
             this.clmCurso.HeaderText = "Nome do Curso";
             this.clmCurso.Name = "clmCurso";
+            this.clmCurso.ReadOnly = true;
             this.clmCurso.Width = 350;
             // 
             // clmDelete
@@ -104,8 +106,9 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(83, 30);
             this.button3.TabIndex = 18;
-            this.button3.Text = "Cancelar";
+            this.button3.Text = "Fechar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // groupBox1
             // 
@@ -161,6 +164,7 @@
             this.Name = "frmCadastraCurso";
             this.ShowIcon = false;
             this.Text = "Cadastrar Curso";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmCadastraCurso_FormClosing);
             this.Load += new System.EventHandler(this.frmCadastraCurso_Load);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

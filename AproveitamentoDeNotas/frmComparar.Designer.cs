@@ -33,7 +33,7 @@
             this.btnReprovar = new System.Windows.Forms.Button();
             this.btnAprovar = new System.Windows.Forms.Button();
             this.gpbMateriaInfo = new System.Windows.Forms.GroupBox();
-            this.lblAnoSemestreInfo = new System.Windows.Forms.Label();
+            this.lblAnoSemInfo = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblDescricaoInfo = new System.Windows.Forms.Label();
             this.lblCargaHorariaInfo = new System.Windows.Forms.Label();
@@ -56,7 +56,7 @@
             this.lblCargaHorariaReq = new System.Windows.Forms.Label();
             this.lblDescricaoReq = new System.Windows.Forms.Label();
             this.gpbMateriaReq = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblAnoSemReq = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.gpbMateriaInfo.SuspendLayout();
@@ -101,7 +101,7 @@
             // 
             // gpbMateriaInfo
             // 
-            this.gpbMateriaInfo.Controls.Add(this.lblAnoSemestreInfo);
+            this.gpbMateriaInfo.Controls.Add(this.lblAnoSemInfo);
             this.gpbMateriaInfo.Controls.Add(this.label2);
             this.gpbMateriaInfo.Controls.Add(this.lblDescricaoInfo);
             this.gpbMateriaInfo.Controls.Add(this.lblCargaHorariaInfo);
@@ -119,17 +119,17 @@
             this.gpbMateriaInfo.Size = new System.Drawing.Size(599, 343);
             this.gpbMateriaInfo.TabIndex = 39;
             this.gpbMateriaInfo.TabStop = false;
-            this.gpbMateriaInfo.Text = "Disciplina Informada";
+            this.gpbMateriaInfo.Text = "Disciplina Origem";
             // 
-            // lblAnoSemestreInfo
+            // lblAnoSemInfo
             // 
-            this.lblAnoSemestreInfo.AutoSize = true;
-            this.lblAnoSemestreInfo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnoSemestreInfo.Location = new System.Drawing.Point(120, 210);
-            this.lblAnoSemestreInfo.Name = "lblAnoSemestreInfo";
-            this.lblAnoSemestreInfo.Size = new System.Drawing.Size(48, 17);
-            this.lblAnoSemestreInfo.TabIndex = 40;
-            this.lblAnoSemestreInfo.Text = "2013/1";
+            this.lblAnoSemInfo.AutoSize = true;
+            this.lblAnoSemInfo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnoSemInfo.Location = new System.Drawing.Point(120, 210);
+            this.lblAnoSemInfo.Name = "lblAnoSemInfo";
+            this.lblAnoSemInfo.Size = new System.Drawing.Size(48, 17);
+            this.lblAnoSemInfo.TabIndex = 40;
+            this.lblAnoSemInfo.Text = "2013/1";
             // 
             // label2
             // 
@@ -355,7 +355,7 @@
             // gpbMateriaReq
             // 
             this.gpbMateriaReq.BackColor = System.Drawing.SystemColors.Control;
-            this.gpbMateriaReq.Controls.Add(this.label1);
+            this.gpbMateriaReq.Controls.Add(this.lblAnoSemReq);
             this.gpbMateriaReq.Controls.Add(this.label3);
             this.gpbMateriaReq.Controls.Add(this.lblDescricaoReq);
             this.gpbMateriaReq.Controls.Add(this.lblCargaHorariaReq);
@@ -375,15 +375,15 @@
             this.gpbMateriaReq.TabStop = false;
             this.gpbMateriaReq.Text = "Disciplina Requerida";
             // 
-            // label1
+            // lblAnoSemReq
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(120, 204);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 17);
-            this.label1.TabIndex = 42;
-            this.label1.Text = "2014/2";
+            this.lblAnoSemReq.AutoSize = true;
+            this.lblAnoSemReq.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnoSemReq.Location = new System.Drawing.Point(120, 204);
+            this.lblAnoSemReq.Name = "lblAnoSemReq";
+            this.lblAnoSemReq.Size = new System.Drawing.Size(48, 17);
+            this.lblAnoSemReq.TabIndex = 42;
+            this.lblAnoSemReq.Text = "2014/2";
             // 
             // label3
             // 
@@ -424,6 +424,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Aprovar Aproveitamento";
+            this.Load += new System.EventHandler(this.frmComparar_Load);
             this.gpbMateriaInfo.ResumeLayout(false);
             this.gpbMateriaInfo.PerformLayout();
             this.gpbMateriaReq.ResumeLayout(false);
@@ -448,7 +449,7 @@
         private System.Windows.Forms.Label lblInstituicaoInfo_text;
         private System.Windows.Forms.Label lblCargaHorariaInfo_text;
         private System.Windows.Forms.Label lblDescricaoInfo_text;
-        private System.Windows.Forms.Label lblAnoSemestreInfo;
+        private System.Windows.Forms.Label lblAnoSemInfo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblDescricaoReq_text;
         private System.Windows.Forms.Label lblCargaHorariaReq_text;
@@ -461,7 +462,7 @@
         private System.Windows.Forms.Label lblCargaHorariaReq;
         private System.Windows.Forms.Label lblDescricaoReq;
         private System.Windows.Forms.GroupBox gpbMateriaReq;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblAnoSemReq;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
     }

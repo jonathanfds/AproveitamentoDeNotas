@@ -69,6 +69,8 @@ namespace AproveitamentoDeNotas
         private void cmbDisciplinaAluno_SelectedIndexChanged(object sender, EventArgs e)
         {
             _IdDisciplinaAluno = _ListaDisciplinas.Find(T => T.nome_disciplina.Equals(cmbDisciplinaAluno.SelectedItem)).id_disciplina;
+            cmbInstituicaoOrigem.Enabled = true;
+            lklNovoInst.Enabled = true;
         }
         private void PreencheInstituicoes()
         {
@@ -85,12 +87,16 @@ namespace AproveitamentoDeNotas
         {
             _IdInstituicaoOrigem = _lListaInsts.Find(t => t.nome_instituto.Equals(cmbInstituicaoOrigem.SelectedItem)).id_instituto;
             PreencheCursosInstituicao(_IdInstituicaoOrigem, cmbCursoOrigem);
+            cmbCursoOrigem.Enabled = true;
+            lklNovoCurso.Enabled = true;
         }
 
         private void cmbCursoOrigem_SelectedIndexChanged(object sender, EventArgs e)
         {
             _IdCursoOrigem=_ListadeCursos.Find(t=>t.nome_curso.Equals(cmbCursoOrigem.SelectedItem)).id_curso;
             PreencheDisciplinas(cmbDisciplinaOrigem, _IdCursoOrigem, _IdInstituicaoOrigem);
+            cmbDisciplinaOrigem.Enabled = true;
+            lklNovoDisciplina.Enabled = true;
         }
 
         private void cmbDisciplinaOrigem_SelectedIndexChanged(object sender, EventArgs e)
@@ -118,6 +124,32 @@ namespace AproveitamentoDeNotas
             else 
             {
                 MessageBox.Show("Erro ao cadastrar aproveitamento !");
+            }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (new frmCadastraInstCurso().ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                PreencheInstituicoes();
+            }
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (new frmCadastroMateria().ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                _IdCursoOrigem = _ListadeCursos.Find(t => t.nome_curso.Equals(cmbCursoOrigem.SelectedItem)).id_curso;
+                PreencheDisciplinas(cmbDisciplinaOrigem, _IdCursoOrigem, _IdInstituicaoOrigem);
+            }
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (new frmCadastraCurso().ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                _IdInstituicaoOrigem = _lListaInsts.Find(t => t.nome_instituto.Equals(cmbInstituicaoOrigem.SelectedItem)).id_instituto;
+                PreencheCursosInstituicao(_IdInstituicaoOrigem, cmbCursoOrigem);
             }
         }
     }

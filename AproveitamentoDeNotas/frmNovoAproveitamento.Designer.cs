@@ -51,11 +51,17 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.lklNovoInst = new System.Windows.Forms.LinkLabel();
+            this.lklNovoCurso = new System.Windows.Forms.LinkLabel();
+            this.lklNovoDisciplina = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lklNovoDisciplina);
+            this.groupBox1.Controls.Add(this.lklNovoCurso);
+            this.groupBox1.Controls.Add(this.lklNovoInst);
             this.groupBox1.Controls.Add(this.txtAnoSemestre);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtDescricaoOrigem);
@@ -80,9 +86,11 @@
             // 
             // txtAnoSemestre
             // 
+            this.txtAnoSemestre.Enabled = false;
             this.txtAnoSemestre.Location = new System.Drawing.Point(109, 152);
             this.txtAnoSemestre.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtAnoSemestre.Name = "txtAnoSemestre";
+            this.txtAnoSemestre.ReadOnly = true;
             this.txtAnoSemestre.Size = new System.Drawing.Size(80, 25);
             this.txtAnoSemestre.TabIndex = 35;
             // 
@@ -99,15 +107,18 @@
             // 
             // txtDescricaoOrigem
             // 
+            this.txtDescricaoOrigem.Enabled = false;
             this.txtDescricaoOrigem.Location = new System.Drawing.Point(108, 197);
             this.txtDescricaoOrigem.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtDescricaoOrigem.Multiline = true;
             this.txtDescricaoOrigem.Name = "txtDescricaoOrigem";
+            this.txtDescricaoOrigem.ReadOnly = true;
             this.txtDescricaoOrigem.Size = new System.Drawing.Size(371, 111);
             this.txtDescricaoOrigem.TabIndex = 31;
             // 
             // cmbDisciplinaOrigem
             // 
+            this.cmbDisciplinaOrigem.Enabled = false;
             this.cmbDisciplinaOrigem.FormattingEnabled = true;
             this.cmbDisciplinaOrigem.Location = new System.Drawing.Point(109, 111);
             this.cmbDisciplinaOrigem.Name = "cmbDisciplinaOrigem";
@@ -128,6 +139,7 @@
             // 
             // cmbCursoOrigem
             // 
+            this.cmbCursoOrigem.Enabled = false;
             this.cmbCursoOrigem.FormattingEnabled = true;
             this.cmbCursoOrigem.Location = new System.Drawing.Point(108, 71);
             this.cmbCursoOrigem.Name = "cmbCursoOrigem";
@@ -137,6 +149,7 @@
             // 
             // cmbInstituicaoOrigem
             // 
+            this.cmbInstituicaoOrigem.Enabled = false;
             this.cmbInstituicaoOrigem.FormattingEnabled = true;
             this.cmbInstituicaoOrigem.Location = new System.Drawing.Point(109, 32);
             this.cmbInstituicaoOrigem.Name = "cmbInstituicaoOrigem";
@@ -146,9 +159,11 @@
             // 
             // txtCargaHoraria
             // 
+            this.txtCargaHoraria.Enabled = false;
             this.txtCargaHoraria.Location = new System.Drawing.Point(299, 152);
             this.txtCargaHoraria.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtCargaHoraria.Name = "txtCargaHoraria";
+            this.txtCargaHoraria.ReadOnly = true;
             this.txtCargaHoraria.Size = new System.Drawing.Size(80, 25);
             this.txtCargaHoraria.TabIndex = 29;
             // 
@@ -292,6 +307,42 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // lklNovoInst
+            // 
+            this.lklNovoInst.AutoSize = true;
+            this.lklNovoInst.Enabled = false;
+            this.lklNovoInst.Location = new System.Drawing.Point(385, 32);
+            this.lklNovoInst.Name = "lklNovoInst";
+            this.lklNovoInst.Size = new System.Drawing.Size(41, 17);
+            this.lklNovoInst.TabIndex = 37;
+            this.lklNovoInst.TabStop = true;
+            this.lklNovoInst.Text = "Novo";
+            this.lklNovoInst.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // lklNovoCurso
+            // 
+            this.lklNovoCurso.AutoSize = true;
+            this.lklNovoCurso.Enabled = false;
+            this.lklNovoCurso.Location = new System.Drawing.Point(385, 71);
+            this.lklNovoCurso.Name = "lklNovoCurso";
+            this.lklNovoCurso.Size = new System.Drawing.Size(41, 17);
+            this.lklNovoCurso.TabIndex = 38;
+            this.lklNovoCurso.TabStop = true;
+            this.lklNovoCurso.Text = "Novo";
+            this.lklNovoCurso.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            // 
+            // lklNovoDisciplina
+            // 
+            this.lklNovoDisciplina.AutoSize = true;
+            this.lklNovoDisciplina.Enabled = false;
+            this.lklNovoDisciplina.Location = new System.Drawing.Point(385, 114);
+            this.lklNovoDisciplina.Name = "lklNovoDisciplina";
+            this.lklNovoDisciplina.Size = new System.Drawing.Size(41, 17);
+            this.lklNovoDisciplina.TabIndex = 39;
+            this.lklNovoDisciplina.TabStop = true;
+            this.lklNovoDisciplina.Text = "Novo";
+            this.lklNovoDisciplina.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
+            // 
             // frmNovoAproveitamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -346,5 +397,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cmbDisciplinaOrigem;
+        private System.Windows.Forms.LinkLabel lklNovoDisciplina;
+        private System.Windows.Forms.LinkLabel lklNovoCurso;
+        private System.Windows.Forms.LinkLabel lklNovoInst;
     }
 }

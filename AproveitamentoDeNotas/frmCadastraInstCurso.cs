@@ -104,6 +104,24 @@ namespace AproveitamentoDeNotas
                 //EXCLUIR
             }
         }
+
+        private void lklNovoCurso_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (new frmCadastraCurso().ShowDialog() == DialogResult.OK)
+            {
+                this.PreencheCursos();
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frmCadastraInstCurso_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.DialogResult = System.Windows.Forms.DialogResult.OK;
+        }
         
     }
 }

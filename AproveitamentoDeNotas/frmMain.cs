@@ -58,7 +58,9 @@ namespace AproveitamentoDeNotas
 
         private void usuárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmCadastrarUsuario frmCaduser = new frmCadastrarUsuario();
+            frmCaduser.StartPosition = FormStartPosition.CenterScreen;
+            frmCaduser.Show();
         }
 
         private void intituicaoCursosToolStripMenuItem_Click(object sender, EventArgs e)

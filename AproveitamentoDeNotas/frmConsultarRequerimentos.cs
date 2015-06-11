@@ -22,9 +22,6 @@ namespace AproveitamentoDeNotas
         private void frmConsultarRequerimentos_Load(object sender, EventArgs e)
         {
             PreencherGrid();
-            //string[] ArraytoGrid = new string[] { "132054","1430481423035", "Jonathan Freire da Silva",
-            //    "Análise e Desenvolvimento de Sistemas","Finalizada" };             
-            //this.dataGridView1.Rows.Add(ArraytoGrid);
         }
         private void PreencherGrid()
         {
@@ -53,8 +50,21 @@ namespace AproveitamentoDeNotas
         
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            frmComparar FormCompare = new frmComparar();
+
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int IdAprov = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+            tb_aproveitamento lAproveitamento = _Aproveitamentos.Find(t => t.id_aprov.Equals(IdAprov));
+            frmComparar FormCompare = new frmComparar(lAproveitamento);
             FormCompare.Show();
+
         }
     }
 }
