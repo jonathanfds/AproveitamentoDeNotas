@@ -18,22 +18,28 @@ namespace AproveitamentoDeNotas
             
         }
         List<tb_aproveitamento> _Aproveitamentos;
+        List<tb_curso> _ListCursos;
+        List<tb_situacao_aprov> _ListSituacao;
 
         private void frmConsultarRequerimentos_Load(object sender, EventArgs e)
         {
-            PreencherGrid();
-        }
-        private void PreencherGrid()
-        {
             _Aproveitamentos = clsFuncoesBase.getAproveitamentos();
+            PreencheSituacoes();
+            PreencherGrid(_Aproveitamentos);
+        }
+        private void PreencherGrid(List<tb_aproveitamento> pAproveitamento)
+        {            
             string Codigo, RA, Nome, Curso, Status;
-            foreach (tb_aproveitamento AProv in _Aproveitamentos)
+            dataGridView1.Rows.Clear();
+            foreach (tb_aproveitamento AProv in pAproveitamento)
             {
                 Codigo = AProv.id_aprov.ToString();
                 RA = AProv.ra_aluno.ToString();
                 Nome = AProv.nome_aluno;
-                Curso = clsFuncoesBase.getCurso(AProv.id_curso_atual).nome_curso;
-                Status = clsFuncoesBase.getSituacaoNome(AProv.tb_situacao_aprov);
+                tb_curso tbCurso = clsFuncoesBase.getCurso(AProv.id_curso_atual);
+                tb_situacao_aprov tbSituacao = AProv.tb_situacao_aprov;
+                Curso = tbCurso.nome_curso;
+                Status = clsFuncoesBase.getSituacaoNome(tbSituacao);
                 string[] ArraytoGrid = new string[] { Codigo, RA, Nome, Curso, Status };
                 this.dataGridView1.Rows.Add(ArraytoGrid);
             }
@@ -55,7 +61,27 @@ namespace AproveitamentoDeNotas
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
+            string nome = txtNome.Text;
+            string ra = txtRA.Text;
+            string situacao = cmbSituacao.SelectedItem.ToString();
 
+            if (!string.IsNullOrEmpty(nome))
+            {
+                PreencherGrid(_Aproveitamentos.Where(t=>t.nome_aluno.Contains(nome)).ToList());
+                return;
+            }
+            else if (!string.IsNullOrEmpty(ra))
+            {
+                PreencherGrid(_Aproveitamentos.Where(t => t.ra_aluno.Equals(ra)).ToList());
+                return;
+            }
+            else if (!string.IsNullOrEmpty(situacao))
+            {
+
+                PreencherGrid(_Aproveitamentos.Where(t => t.tb_situacao_aprov.Equals(clsFuncoesBase.getSituacoes()
+                    .Find(t2=>t2.nome_situacao_aprov.Equals(situacao)))).ToList());
+                return;
+            }
         }
 
         private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)

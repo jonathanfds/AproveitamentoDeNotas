@@ -431,5 +431,24 @@ namespace AproveitamentoDeNotas
             }
         
         }
+
+        public static bool updateAproveitamento(tb_aproveitamento pAproveitamento)
+        {
+            try
+            {
+                gEntityBase.Database.Connection.ConnectionString = clsGlobal.ConnectionString;
+                tb_aproveitamento lAproveitamento = gEntityBase.tb_aproveitamento.ToList().Find(T => T.id_aprov.Equals(pAproveitamento.id_aprov));
+
+                lAproveitamento.tb_situacao_aprov = pAproveitamento.tb_situacao_aprov;                
+
+                int numRows = gEntityBase.SaveChanges();
+                gEntityBase.Database.Connection.Close();
+                return (numRows > 0);
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
     }
 }
