@@ -81,5 +81,10 @@ namespace AproveitamentoDeNotas
         {
             new frmLogin().Show();
         }
+
+        private void configuraçõesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmConfig().Show();
+        }
     }
 }

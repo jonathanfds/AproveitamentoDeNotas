@@ -107,5 +107,10 @@ namespace AproveitamentoDeNotas
         {
             this.DialogResult = System.Windows.Forms.DialogResult.OK;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

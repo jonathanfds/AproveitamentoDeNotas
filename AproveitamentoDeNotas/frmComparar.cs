@@ -21,12 +21,26 @@ namespace AproveitamentoDeNotas
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
         }
 
         private void btnAprovar_Click(object sender, EventArgs e)
         {
-
+            AtualizarAproveitamento(SITUACOES_APROVEITAMENTO.Aprovado);
+        }
+        private void AtualizarAproveitamento(SITUACOES_APROVEITAMENTO pSituacao)
+        {
+            tb_situacao_aprov Situacao = clsFuncoesBase.getSituacoes().Find(t => t.nome_situacao_aprov.Equals(pSituacao.ToString()));
+            _Aproveitamento.tb_situacao_aprov = Situacao;
+            if( clsFuncoesBase.updateAproveitamento(_Aproveitamento))
+            {
+                MessageBox.Show("O Aproveitamento de estudo foi finalizado !");
+            }
+            else
+            {
+                MessageBox.Show("Erro ao finalizar aproveitamento, tente novamente.");
+            }
+            this.DialogResult = System.Windows.Forms.DialogResult.Yes;
         }
 
         private void lblDescricaoInfo_Click(object sender, EventArgs e)
@@ -41,14 +55,12 @@ namespace AproveitamentoDeNotas
 
         private void btnReprovar_Click(object sender, EventArgs e)
         {
-            formMotivoRecusa frmMotivo = new formMotivoRecusa();
-            frmMotivo.Show();
+            AtualizarAproveitamento(SITUACOES_APROVEITAMENTO.Rejeitado);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-           frmMotivoExame frmMotivo = new frmMotivoExame();
-           frmMotivo.Show();
+           AtualizarAproveitamento(SITUACOES_APROVEITAMENTO.Encaminhado);
         }
 
         private void frmComparar_Load(object sender, EventArgs e)
@@ -72,15 +84,12 @@ namespace AproveitamentoDeNotas
 
                 string[] Curso_Disciplina_Nomes_Origem = clsFuncoesBase.getNomeInstituoCurso(lDisciplinaOrigem.id_instituto_curso);
 
-
                 this.lblNomeMateriaInfo.Text = lDisciplinaOrigem.nome_disciplina;
                 this.lblCursoInfo.Text = Curso_Disciplina_Nomes_Origem[0];
                 this.lblInstituicaoInfo.Text = Curso_Disciplina_Nomes_Origem[1];
                 this.lblCargaHorariaInfo.Text = lDisciplinaOrigem.carga_horaria.ToString();
                 this.lblAnoSemInfo.Text = lDisciplinaOrigem.ano_semestre.ToString();
                 this.lblDescricaoInfo.Text = lDisciplinaOrigem.descricao;
-
-
             }
         }
     }

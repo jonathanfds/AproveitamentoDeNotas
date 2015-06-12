@@ -81,7 +81,7 @@ namespace AproveitamentoDeNotas
             }
         }
        
-        #endregion       
+        #endregion
 
         public static List<tb_instituto> getInstituicoes()
         {
@@ -98,6 +98,7 @@ namespace AproveitamentoDeNotas
                 return null;
             }
         }
+
         public static tb_instituto getInstituicao(int pIdInstituicao)
         {
             try
@@ -286,6 +287,7 @@ namespace AproveitamentoDeNotas
                 return null;
             }
         }
+
         public static String[] getNomeInstituoCurso(int pIdInstituto_Curso)
         {
             try
@@ -400,6 +402,7 @@ namespace AproveitamentoDeNotas
                 return null;
             }
         }
+
         public static string getSituacaoNome(tb_situacao_aprov pSituacao)
         {
             try

@@ -89,8 +89,12 @@ namespace AproveitamentoDeNotas
             int IdAprov = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
             tb_aproveitamento lAproveitamento = _Aproveitamentos.Find(t => t.id_aprov.Equals(IdAprov));
             frmComparar FormCompare = new frmComparar(lAproveitamento);
-            FormCompare.Show();
-
+            if (FormCompare.ShowDialog() == System.Windows.Forms.DialogResult.Yes)
+            {
+                _Aproveitamentos = clsFuncoesBase.getAproveitamentos();
+                PreencheSituacoes();
+                PreencherGrid(_Aproveitamentos);
+            }
         }
     }
 }

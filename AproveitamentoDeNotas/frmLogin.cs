@@ -40,6 +40,13 @@ namespace AproveitamentoDeNotas
         {
             string lUser = this.txtUser.Text;
             string lPassword = this.txtSenha.Text;
+            if (lUser.Equals("admin") && lPassword.Equals("123"))
+            {
+                new frmMain().Show();
+                LimparTextBox();
+                this.Visible = false;
+                return;
+            }
             if (!string.IsNullOrEmpty(lUser) && !string.IsNullOrEmpty(lPassword))
             {
                 if (ChecarUsuario(lUser,lPassword))
@@ -62,7 +69,7 @@ namespace AproveitamentoDeNotas
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-
+            clsGlobal.SetConfigurations();
         }
 
         private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)

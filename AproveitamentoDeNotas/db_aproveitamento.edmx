@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="db_aproveitamentoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="db_aproveitamentoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tb_aproveitamento">
           <Key>
             <PropertyRef Name="id_aprov" />
@@ -135,14 +135,14 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="db_aproveitamentoModelStoreContainer">
-          <EntitySet Name="tb_aproveitamento" EntityType="Self.tb_aproveitamento" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="tb_curso" EntityType="Self.tb_curso" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="tb_disciplina" EntityType="Self.tb_disciplina" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="tb_funcao_usuario" EntityType="Self.tb_funcao_usuario" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="tb_instituto" EntityType="Self.tb_instituto" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="tb_instituto_curso" EntityType="Self.tb_instituto_curso" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="tb_situacao_aprov" EntityType="Self.tb_situacao_aprov" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="tb_usuarios" EntityType="Self.tb_usuarios" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_aproveitamento" EntityType="Self.tb_aproveitamento" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tb_curso" EntityType="Self.tb_curso" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tb_disciplina" EntityType="Self.tb_disciplina" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tb_funcao_usuario" EntityType="Self.tb_funcao_usuario" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tb_instituto" EntityType="Self.tb_instituto" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tb_instituto_curso" EntityType="Self.tb_instituto_curso" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tb_situacao_aprov" EntityType="Self.tb_situacao_aprov" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tb_usuarios" EntityType="Self.tb_usuarios" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
           <AssociationSet Name="FK__tb_aprove__id_si__2C3393D0" Association="Self.FK__tb_aprove__id_si__2C3393D0">
             <End Role="tb_situacao_aprov" EntitySet="tb_situacao_aprov" />
             <End Role="tb_aproveitamento" EntitySet="tb_aproveitamento" />
@@ -168,12 +168,12 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="db_aproveitamentoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="db_aproveitamentoModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
         <EntityType Name="tb_aproveitamento">
           <Key>
             <PropertyRef Name="id_aprov" />
           </Key>
-          <Property Name="id_aprov" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_aprov" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="dt_aprov" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="ra_aluno" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="nome_aluno" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
@@ -187,7 +187,7 @@
           <Key>
             <PropertyRef Name="id_curso" />
           </Key>
-          <Property Name="id_curso" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_curso" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="nome_curso" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="tb_instituto_curso" Relationship="Self.FK__tb_instit__id_cu__1B0907CE" FromRole="tb_curso" ToRole="tb_instituto_curso" />
         </EntityType>
@@ -195,7 +195,7 @@
           <Key>
             <PropertyRef Name="id_disciplina" />
           </Key>
-          <Property Name="id_disciplina" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_disciplina" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="nome_disciplina" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="carga_horaria" Type="Int32" Nullable="false" />
           <Property Name="ano_semestre" Type="String" MaxLength="7" FixedLength="false" Unicode="false" Nullable="false" />
@@ -207,7 +207,7 @@
           <Key>
             <PropertyRef Name="id_funcao_usuario" />
           </Key>
-          <Property Name="id_funcao_usuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_funcao_usuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="funcao" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="tb_usuarios" Relationship="Self.FK__tb_usuari__id_fu__15502E78" FromRole="tb_funcao_usuario" ToRole="tb_usuarios" />
         </EntityType>
@@ -215,7 +215,7 @@
           <Key>
             <PropertyRef Name="id_instituto" />
           </Key>
-          <Property Name="id_instituto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_instituto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="nome_instituto" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="tb_instituto_curso" Relationship="Self.FK__tb_instit__id_in__1A14E395" FromRole="tb_instituto" ToRole="tb_instituto_curso" />
         </EntityType>
@@ -223,7 +223,7 @@
           <Key>
             <PropertyRef Name="id_inst_curso" />
           </Key>
-          <Property Name="id_inst_curso" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_inst_curso" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="id_instituo" Type="Int32" Nullable="false" />
           <Property Name="id_curso" Type="Int32" Nullable="false" />
           <NavigationProperty Name="tb_curso" Relationship="Self.FK__tb_instit__id_cu__1B0907CE" FromRole="tb_instituto_curso" ToRole="tb_curso" />
@@ -234,7 +234,7 @@
           <Key>
             <PropertyRef Name="id_situacao_aprov" />
           </Key>
-          <Property Name="id_situacao_aprov" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_situacao_aprov" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="nome_situacao_aprov" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="tb_aproveitamento" Relationship="Self.FK__tb_aprove__id_si__2C3393D0" FromRole="tb_situacao_aprov" ToRole="tb_aproveitamento" />
         </EntityType>
@@ -242,7 +242,7 @@
           <Key>
             <PropertyRef Name="id_user" />
           </Key>
-          <Property Name="id_user" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_user" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="nome_user" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="pass_user" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="id_funcao_usuario" Type="Int32" />
@@ -308,7 +308,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="db_aproveitamento" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="db_aproveitamento" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
           <EntitySet Name="tb_aproveitamento" EntityType="Self.tb_aproveitamento" />
           <EntitySet Name="tb_curso" EntityType="Self.tb_curso" />
           <EntitySet Name="tb_disciplina" EntityType="Self.tb_disciplina" />
@@ -426,22 +426,22 @@
     </edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
-  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
-    <Connection>
-      <DesignerInfoPropertySet>
-        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
-      </DesignerInfoPropertySet>
-    </Connection>
-    <Options>
-      <DesignerInfoPropertySet>
-        <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="false" />
-        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
-        <DesignerProperty Name="UseLegacyProvider" Value="false" />
-        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
-      </DesignerInfoPropertySet>
-    </Options>
+  <edmx:Designer>
+    <edmx:Connection>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <edmx:DesignerProperty Name="EnablePluralization" Value="false" />
+        <edmx:DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <edmx:DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <edmx:DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Options>
     <!-- Diagram content (shape and connector positions) -->
-    <Diagrams></Diagrams>
-  </Designer>
+    <edmx:Diagrams />
+  </edmx:Designer>
 </edmx:Edmx>
