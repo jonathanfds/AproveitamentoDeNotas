@@ -76,5 +76,10 @@ namespace AproveitamentoDeNotas
         {
             Application.Exit();
         }
+
+        private void lklConfig_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            new frmConfig(true).Show();
+        }
     }
 }

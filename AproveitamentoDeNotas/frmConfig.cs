@@ -13,9 +13,11 @@ namespace AproveitamentoDeNotas
 {
     public partial class frmConfig : Form
     {
-        public frmConfig()
+        bool _isFromLogin = false;
+        public frmConfig(bool isFromLogin)
         {
             InitializeComponent();
+            this._isFromLogin = isFromLogin;
         }
         List<tb_instituto>_ListaInsts;
 
@@ -28,15 +30,22 @@ namespace AproveitamentoDeNotas
             try
             {
                 _ListaInsts = new List<tb_instituto>();
-                _ListaInsts = clsFuncoesBase.getInstituicoes();
-                if (_ListaInsts != null)
+                if (!_isFromLogin)
                 {
-                    this.cmbInstituicao.Items.Clear();
-                    foreach (tb_instituto Instituto in _ListaInsts)
+                    _ListaInsts = clsFuncoesBase.getInstituicoes();
+                    if (_ListaInsts != null)
                     {
-                        this.cmbInstituicao.Items.Add(Instituto.nome_instituto);
+                        this.cmbInstituicao.Items.Clear();
+                        foreach (tb_instituto Instituto in _ListaInsts)
+                        {
+                            this.cmbInstituicao.Items.Add(Instituto.nome_instituto);
+                        }
+                        this.cmbInstituicao.SelectedItem = clsFuncoesBase.getInstituicao(clsGlobal.ID_INSTITUICAO_PADRAO).nome_instituto;
                     }
-                    this.cmbInstituicao.SelectedItem = clsFuncoesBase.getInstituicao(clsGlobal.ID_INSTITUICAO_PADRAO).nome_instituto;
+                    else
+                    {
+                        cmbInstituicao.Enabled = false;
+                    }
                 }
                 else
                 {

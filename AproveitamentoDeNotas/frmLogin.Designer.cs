@@ -36,6 +36,7 @@
             this.btnSair = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lklConfig = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -129,6 +130,17 @@
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             // 
+            // lklConfig
+            // 
+            this.lklConfig.AutoSize = true;
+            this.lklConfig.Location = new System.Drawing.Point(230, 224);
+            this.lklConfig.Name = "lklConfig";
+            this.lklConfig.Size = new System.Drawing.Size(104, 20);
+            this.lklConfig.TabIndex = 9;
+            this.lklConfig.TabStop = true;
+            this.lklConfig.Text = "Configurações";
+            this.lklConfig.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lklConfig_LinkClicked);
+            // 
             // frmLogin
             // 
             this.AcceptButton = this.btnEntrar;
@@ -136,7 +148,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.CancelButton = this.btnSair;
-            this.ClientSize = new System.Drawing.Size(346, 232);
+            this.ClientSize = new System.Drawing.Size(346, 251);
+            this.Controls.Add(this.lklConfig);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label3);
             this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -164,5 +177,6 @@
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.LinkLabel lklConfig;
     }
 }

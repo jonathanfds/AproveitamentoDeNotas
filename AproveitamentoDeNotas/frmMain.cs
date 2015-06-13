@@ -84,7 +84,7 @@ namespace AproveitamentoDeNotas
 
         private void configuraçõesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new frmConfig().Show();
+            new frmConfig(false).Show();
         }
 
         private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
