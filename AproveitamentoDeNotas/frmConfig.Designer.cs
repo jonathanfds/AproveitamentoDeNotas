@@ -98,6 +98,7 @@
             this.txtSenha.Location = new System.Drawing.Point(17, 235);
             this.txtSenha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(234, 25);
             this.txtSenha.TabIndex = 7;
             // 
@@ -121,6 +122,7 @@
             // 
             // cmbInstituicao
             // 
+            this.cmbInstituicao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbInstituicao.FormattingEnabled = true;
             this.cmbInstituicao.Location = new System.Drawing.Point(17, 303);
             this.cmbInstituicao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -171,6 +173,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmConfig";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Configurações";
             this.Load += new System.EventHandler(this.frmConfig_Load);
             this.ResumeLayout(false);

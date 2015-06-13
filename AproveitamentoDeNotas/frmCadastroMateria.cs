@@ -29,7 +29,8 @@ namespace AproveitamentoDeNotas
             lDisciplina.ano_semestre = txtAnoSemestre.Text;
             lDisciplina.carga_horaria = Convert.ToInt32(txtCargaHoraria.Text);
             lDisciplina.descricao = txtDescricao.Text;
-            lDisciplina.id_instituto_curso = lInstitutoCurso.id_inst_curso;
+            //lDisciplina.id_instituto_curso = lInstitutoCurso.id_inst_curso;
+            lDisciplina.tb_instituto_curso = clsFuncoesBase.getInstituoCurso(lIdCurso, lIdInstituto);
             if (clsFuncoesBase.insertDisciplina(lDisciplina))
             {
                 MessageBox.Show("Disciplina cadastrada com sucesso !");
@@ -44,13 +45,11 @@ namespace AproveitamentoDeNotas
         }
         private void LimparCampos()
         {
-            this.cmbCurso.Items.Clear();
-            this.cmbInstituicao.SelectedIndex = -1;
             this.txtAnoSemestre.Clear();
             this.txtCargaHoraria.Clear();
             this.txtDescricao.Clear();
             this.txtNomeMateria.Clear();
-            _ListadeCursos = null;
+            txtNomeMateria.Focus();
         }
 
         private void frmCadastroMateria_Load(object sender, EventArgs e)

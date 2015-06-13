@@ -61,9 +61,24 @@ namespace AproveitamentoDeNotas
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
+            
             string nome = txtNome.Text;
             string ra = txtRA.Text;
-            string situacao = cmbSituacao.SelectedItem.ToString();
+            string situacao=string.Empty;
+            int codigo = -1;
+            if(!string.IsNullOrEmpty(txtCod.Text))
+                codigo = Convert.ToInt32(txtCod.Text);
+
+            if (codigo > 0)
+            {
+                PreencherGrid(_Aproveitamentos.Where(t => t.id_aprov.Equals(codigo)).ToList());
+                return;
+            }
+
+            if (cmbSituacao.SelectedItem != null)
+            {
+                situacao = cmbSituacao.SelectedItem.ToString();
+            }
 
             if (!string.IsNullOrEmpty(nome))
             {
@@ -79,8 +94,14 @@ namespace AproveitamentoDeNotas
             {
 
                 PreencherGrid(_Aproveitamentos.Where(t => t.tb_situacao_aprov.Equals(clsFuncoesBase.getSituacoes()
-                    .Find(t2=>t2.nome_situacao_aprov.Equals(situacao)))).ToList());
+                    .Find(t2 => t2.nome_situacao_aprov.Equals(situacao)))).ToList());
                 return;
+            }
+            else
+            {
+                _Aproveitamentos = clsFuncoesBase.getAproveitamentos();
+                PreencheSituacoes();
+                PreencherGrid(_Aproveitamentos);
             }
         }
 

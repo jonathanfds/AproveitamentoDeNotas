@@ -52,7 +52,7 @@
             this.txtUser.Location = new System.Drawing.Point(92, 17);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(192, 25);
-            this.txtUser.TabIndex = 1;
+            this.txtUser.TabIndex = 0;
             // 
             // txtSenha
             // 
@@ -60,7 +60,7 @@
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(192, 25);
-            this.txtSenha.TabIndex = 3;
+            this.txtSenha.TabIndex = 1;
             // 
             // label2
             // 
@@ -78,7 +78,7 @@
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(83, 30);
-            this.btnSalvar.TabIndex = 22;
+            this.btnSalvar.TabIndex = 3;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -90,9 +90,10 @@
             this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(83, 30);
-            this.button2.TabIndex = 23;
+            this.button2.TabIndex = 4;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label4
             // 
@@ -110,7 +111,7 @@
             this.cmbFuncoes.Location = new System.Drawing.Point(92, 102);
             this.cmbFuncoes.Name = "cmbFuncoes";
             this.cmbFuncoes.Size = new System.Drawing.Size(192, 25);
-            this.cmbFuncoes.TabIndex = 25;
+            this.cmbFuncoes.TabIndex = 2;
             // 
             // frmCadastrarUsuario
             // 

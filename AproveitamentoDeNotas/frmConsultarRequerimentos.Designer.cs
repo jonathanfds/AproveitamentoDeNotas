@@ -44,6 +44,8 @@
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.cmbSituacao = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtCod = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,7 +69,7 @@
             this.clmNome,
             this.clmCurso,
             this.clmSituacao});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 51);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 62);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -125,7 +127,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 19);
+            this.label1.Location = new System.Drawing.Point(171, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 17);
             this.label1.TabIndex = 1;
@@ -133,23 +135,23 @@
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(68, 16);
+            this.txtNome.Location = new System.Drawing.Point(228, 16);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(200, 25);
-            this.txtNome.TabIndex = 2;
+            this.txtNome.TabIndex = 1;
             // 
             // txtRA
             // 
-            this.txtRA.Location = new System.Drawing.Point(311, 16);
+            this.txtRA.Location = new System.Drawing.Point(471, 16);
             this.txtRA.Name = "txtRA";
-            this.txtRA.Size = new System.Drawing.Size(172, 25);
-            this.txtRA.TabIndex = 4;
+            this.txtRA.Size = new System.Drawing.Size(130, 25);
+            this.txtRA.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(274, 19);
+            this.label2.Location = new System.Drawing.Point(434, 19);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(31, 17);
             this.label2.TabIndex = 3;
@@ -158,10 +160,10 @@
             // btnPesquisar
             // 
             this.btnPesquisar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnPesquisar.Location = new System.Drawing.Point(737, 12);
+            this.btnPesquisar.Location = new System.Drawing.Point(813, 12);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(83, 30);
-            this.btnPesquisar.TabIndex = 5;
+            this.btnPesquisar.TabIndex = 4;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
@@ -170,26 +172,46 @@
             // 
             this.cmbSituacao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSituacao.FormattingEnabled = true;
-            this.cmbSituacao.Location = new System.Drawing.Point(559, 16);
+            this.cmbSituacao.Location = new System.Drawing.Point(677, 16);
             this.cmbSituacao.Name = "cmbSituacao";
-            this.cmbSituacao.Size = new System.Drawing.Size(172, 25);
-            this.cmbSituacao.TabIndex = 9;
+            this.cmbSituacao.Size = new System.Drawing.Size(130, 25);
+            this.cmbSituacao.TabIndex = 3;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(489, 19);
+            this.label4.Location = new System.Drawing.Point(607, 19);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 17);
             this.label4.TabIndex = 8;
             this.label4.Text = "Situação :";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(9, 19);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 17);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Código :";
+            // 
+            // txtCod
+            // 
+            this.txtCod.Location = new System.Drawing.Point(73, 16);
+            this.txtCod.Name = "txtCod";
+            this.txtCod.Size = new System.Drawing.Size(79, 25);
+            this.txtCod.TabIndex = 0;
+            // 
             // frmConsultarRequerimentos
             // 
+            this.AcceptButton = this.btnPesquisar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(906, 387);
+            this.ClientSize = new System.Drawing.Size(906, 396);
+            this.Controls.Add(this.txtCod);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.cmbSituacao);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnPesquisar);
@@ -225,5 +247,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmNome;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCurso;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmSituacao;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtCod;
     }
 }

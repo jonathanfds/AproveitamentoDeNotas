@@ -61,7 +61,7 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(492, 63);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Instituição";
             // 
@@ -70,7 +70,7 @@
             this.btnSalvarInst.Location = new System.Drawing.Point(395, 20);
             this.btnSalvarInst.Name = "btnSalvarInst";
             this.btnSalvarInst.Size = new System.Drawing.Size(83, 30);
-            this.btnSalvarInst.TabIndex = 14;
+            this.btnSalvarInst.TabIndex = 0;
             this.btnSalvarInst.Text = "Cadastrar";
             this.btnSalvarInst.UseVisualStyleBackColor = true;
             this.btnSalvarInst.Click += new System.EventHandler(this.btnSalvarInst_Click);
@@ -81,7 +81,7 @@
             this.txtNomeInstituicao.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtNomeInstituicao.Name = "txtNomeInstituicao";
             this.txtNomeInstituicao.Size = new System.Drawing.Size(326, 25);
-            this.txtNomeInstituicao.TabIndex = 13;
+            this.txtNomeInstituicao.TabIndex = 2;
             // 
             // label1
             // 
@@ -99,7 +99,7 @@
             this.button3.Location = new System.Drawing.Point(421, 575);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(83, 30);
-            this.button3.TabIndex = 15;
+            this.button3.TabIndex = 3;
             this.button3.Text = "Fechar";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -176,7 +176,7 @@
             this.btnAdd.Location = new System.Drawing.Point(203, 41);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(78, 30);
-            this.btnAdd.TabIndex = 18;
+            this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Adicionar";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -196,7 +196,7 @@
             this.btnRemove.Location = new System.Drawing.Point(203, 77);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(78, 30);
-            this.btnRemove.TabIndex = 20;
+            this.btnRemove.TabIndex = 1;
             this.btnRemove.Text = "Remover";
             this.btnRemove.UseVisualStyleBackColor = true;
             // 
@@ -206,7 +206,7 @@
             this.lklNovoCurso.Location = new System.Drawing.Point(6, 235);
             this.lklNovoCurso.Name = "lklNovoCurso";
             this.lklNovoCurso.Size = new System.Drawing.Size(82, 19);
-            this.lklNovoCurso.TabIndex = 21;
+            this.lklNovoCurso.TabIndex = 2;
             this.lklNovoCurso.TabStop = true;
             this.lklNovoCurso.Text = "Novo Curso";
             this.lklNovoCurso.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lklNovoCurso_LinkClicked);
@@ -245,7 +245,7 @@
             this.groupBox2.Location = new System.Drawing.Point(12, 310);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(492, 259);
-            this.groupBox2.TabIndex = 18;
+            this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             // 
             // frmCadastraInstCurso

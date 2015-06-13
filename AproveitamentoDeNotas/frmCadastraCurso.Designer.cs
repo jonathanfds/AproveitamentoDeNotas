@@ -105,7 +105,7 @@
             this.button3.Location = new System.Drawing.Point(421, 320);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(83, 30);
-            this.button3.TabIndex = 18;
+            this.button3.TabIndex = 2;
             this.button3.Text = "Fechar";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -118,7 +118,7 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(492, 63);
-            this.groupBox1.TabIndex = 17;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Curso";
             // 
@@ -127,7 +127,7 @@
             this.btnSalvarCurso.Location = new System.Drawing.Point(395, 20);
             this.btnSalvarCurso.Name = "btnSalvarCurso";
             this.btnSalvarCurso.Size = new System.Drawing.Size(83, 30);
-            this.btnSalvarCurso.TabIndex = 14;
+            this.btnSalvarCurso.TabIndex = 1;
             this.btnSalvarCurso.Text = "Cadastrar";
             this.btnSalvarCurso.UseVisualStyleBackColor = true;
             this.btnSalvarCurso.Click += new System.EventHandler(this.btnSalvarCurso_Click);
@@ -138,7 +138,7 @@
             this.txtNomeCurso.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtNomeCurso.Name = "txtNomeCurso";
             this.txtNomeCurso.Size = new System.Drawing.Size(326, 25);
-            this.txtNomeCurso.TabIndex = 13;
+            this.txtNomeCurso.TabIndex = 0;
             // 
             // label1
             // 

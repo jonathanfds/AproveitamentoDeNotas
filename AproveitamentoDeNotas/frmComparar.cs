@@ -83,14 +83,13 @@ namespace AproveitamentoDeNotas
                 this.lblDescricaoReq.Text = lDisciplina.descricao;
 
                 string[] Curso_Disciplina_Nomes_Origem = clsFuncoesBase.getNomeInstituoCurso(lDisciplinaOrigem.id_instituto_curso);
-
                 this.lblNomeMateriaInfo.Text = lDisciplinaOrigem.nome_disciplina;
                 this.lblCursoInfo.Text = Curso_Disciplina_Nomes_Origem[0];
                 this.lblInstituicaoInfo.Text = Curso_Disciplina_Nomes_Origem[1];
                 this.lblCargaHorariaInfo.Text = lDisciplinaOrigem.carga_horaria.ToString();
                 this.lblAnoSemInfo.Text = lDisciplinaOrigem.ano_semestre.ToString();
                 this.lblDescricaoInfo.Text = lDisciplinaOrigem.descricao;
-            }
+            }            
         }
     }
 }

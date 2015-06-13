@@ -70,7 +70,7 @@
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(148, 35);
-            this.btnCancelar.TabIndex = 31;
+            this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancel_Click);
@@ -82,7 +82,7 @@
             this.btnReprovar.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.btnReprovar.Name = "btnReprovar";
             this.btnReprovar.Size = new System.Drawing.Size(148, 35);
-            this.btnReprovar.TabIndex = 38;
+            this.btnReprovar.TabIndex = 1;
             this.btnReprovar.Text = "Reprovar";
             this.btnReprovar.UseVisualStyleBackColor = true;
             this.btnReprovar.Click += new System.EventHandler(this.btnReprovar_Click);
@@ -94,7 +94,7 @@
             this.btnAprovar.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.btnAprovar.Name = "btnAprovar";
             this.btnAprovar.Size = new System.Drawing.Size(148, 35);
-            this.btnAprovar.TabIndex = 37;
+            this.btnAprovar.TabIndex = 0;
             this.btnAprovar.Text = "Aprovar";
             this.btnAprovar.UseVisualStyleBackColor = true;
             this.btnAprovar.Click += new System.EventHandler(this.btnAprovar_Click);
@@ -114,9 +114,9 @@
             this.gpbMateriaInfo.Controls.Add(this.lblCargaHorariaInfo_text);
             this.gpbMateriaInfo.Controls.Add(this.lblDescricaoInfo_text);
             this.gpbMateriaInfo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpbMateriaInfo.Location = new System.Drawing.Point(6, 362);
+            this.gpbMateriaInfo.Location = new System.Drawing.Point(6, 281);
             this.gpbMateriaInfo.Name = "gpbMateriaInfo";
-            this.gpbMateriaInfo.Size = new System.Drawing.Size(599, 343);
+            this.gpbMateriaInfo.Size = new System.Drawing.Size(599, 261);
             this.gpbMateriaInfo.TabIndex = 39;
             this.gpbMateriaInfo.TabStop = false;
             this.gpbMateriaInfo.Text = "Disciplina Origem";
@@ -125,7 +125,7 @@
             // 
             this.lblAnoSemInfo.AutoSize = true;
             this.lblAnoSemInfo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnoSemInfo.Location = new System.Drawing.Point(120, 210);
+            this.lblAnoSemInfo.Location = new System.Drawing.Point(120, 150);
             this.lblAnoSemInfo.Name = "lblAnoSemInfo";
             this.lblAnoSemInfo.Size = new System.Drawing.Size(48, 17);
             this.lblAnoSemInfo.TabIndex = 40;
@@ -135,7 +135,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(8, 210);
+            this.label2.Location = new System.Drawing.Point(8, 150);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 17);
@@ -145,9 +145,9 @@
             // lblDescricaoInfo
             // 
             this.lblDescricaoInfo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescricaoInfo.Location = new System.Drawing.Point(120, 247);
+            this.lblDescricaoInfo.Location = new System.Drawing.Point(120, 180);
             this.lblDescricaoInfo.Name = "lblDescricaoInfo";
-            this.lblDescricaoInfo.Size = new System.Drawing.Size(473, 86);
+            this.lblDescricaoInfo.Size = new System.Drawing.Size(473, 75);
             this.lblDescricaoInfo.TabIndex = 38;
             this.lblDescricaoInfo.Text = resources.GetString("lblDescricaoInfo.Text");
             this.lblDescricaoInfo.Click += new System.EventHandler(this.lblDescricaoInfo_Click);
@@ -156,7 +156,7 @@
             // 
             this.lblCargaHorariaInfo.AutoSize = true;
             this.lblCargaHorariaInfo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCargaHorariaInfo.Location = new System.Drawing.Point(120, 164);
+            this.lblCargaHorariaInfo.Location = new System.Drawing.Point(120, 120);
             this.lblCargaHorariaInfo.Name = "lblCargaHorariaInfo";
             this.lblCargaHorariaInfo.Size = new System.Drawing.Size(22, 17);
             this.lblCargaHorariaInfo.TabIndex = 37;
@@ -166,7 +166,7 @@
             // 
             this.lblCursoInfo.AutoSize = true;
             this.lblCursoInfo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCursoInfo.Location = new System.Drawing.Point(120, 120);
+            this.lblCursoInfo.Location = new System.Drawing.Point(120, 90);
             this.lblCursoInfo.Name = "lblCursoInfo";
             this.lblCursoInfo.Size = new System.Drawing.Size(235, 17);
             this.lblCursoInfo.TabIndex = 36;
@@ -176,7 +176,7 @@
             // 
             this.lblInstituicaoInfo.AutoSize = true;
             this.lblInstituicaoInfo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInstituicaoInfo.Location = new System.Drawing.Point(120, 77);
+            this.lblInstituicaoInfo.Location = new System.Drawing.Point(120, 60);
             this.lblInstituicaoInfo.Name = "lblInstituicaoInfo";
             this.lblInstituicaoInfo.Size = new System.Drawing.Size(98, 17);
             this.lblInstituicaoInfo.TabIndex = 35;
@@ -186,7 +186,7 @@
             // 
             this.lblNomeMateriaInfo.AutoSize = true;
             this.lblNomeMateriaInfo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeMateriaInfo.Location = new System.Drawing.Point(120, 35);
+            this.lblNomeMateriaInfo.Location = new System.Drawing.Point(120, 30);
             this.lblNomeMateriaInfo.Name = "lblNomeMateriaInfo";
             this.lblNomeMateriaInfo.Size = new System.Drawing.Size(255, 17);
             this.lblNomeMateriaInfo.TabIndex = 34;
@@ -196,7 +196,7 @@
             // 
             this.lblNomeInfo_text.AutoSize = true;
             this.lblNomeInfo_text.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeInfo_text.Location = new System.Drawing.Point(8, 35);
+            this.lblNomeInfo_text.Location = new System.Drawing.Point(9, 30);
             this.lblNomeInfo_text.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblNomeInfo_text.Name = "lblNomeInfo_text";
             this.lblNomeInfo_text.Size = new System.Drawing.Size(49, 17);
@@ -207,7 +207,7 @@
             // 
             this.lblCursoInfo_text.AutoSize = true;
             this.lblCursoInfo_text.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCursoInfo_text.Location = new System.Drawing.Point(8, 120);
+            this.lblCursoInfo_text.Location = new System.Drawing.Point(8, 90);
             this.lblCursoInfo_text.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblCursoInfo_text.Name = "lblCursoInfo_text";
             this.lblCursoInfo_text.Size = new System.Drawing.Size(47, 17);
@@ -218,7 +218,7 @@
             // 
             this.lblInstituicaoInfo_text.AutoSize = true;
             this.lblInstituicaoInfo_text.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInstituicaoInfo_text.Location = new System.Drawing.Point(9, 77);
+            this.lblInstituicaoInfo_text.Location = new System.Drawing.Point(9, 60);
             this.lblInstituicaoInfo_text.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblInstituicaoInfo_text.Name = "lblInstituicaoInfo_text";
             this.lblInstituicaoInfo_text.Size = new System.Drawing.Size(77, 17);
@@ -229,7 +229,7 @@
             // 
             this.lblCargaHorariaInfo_text.AutoSize = true;
             this.lblCargaHorariaInfo_text.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCargaHorariaInfo_text.Location = new System.Drawing.Point(8, 164);
+            this.lblCargaHorariaInfo_text.Location = new System.Drawing.Point(8, 120);
             this.lblCargaHorariaInfo_text.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblCargaHorariaInfo_text.Name = "lblCargaHorariaInfo_text";
             this.lblCargaHorariaInfo_text.Size = new System.Drawing.Size(97, 17);
@@ -240,7 +240,7 @@
             // 
             this.lblDescricaoInfo_text.AutoSize = true;
             this.lblDescricaoInfo_text.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescricaoInfo_text.Location = new System.Drawing.Point(9, 247);
+            this.lblDescricaoInfo_text.Location = new System.Drawing.Point(9, 180);
             this.lblDescricaoInfo_text.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblDescricaoInfo_text.Name = "lblDescricaoInfo_text";
             this.lblDescricaoInfo_text.Size = new System.Drawing.Size(71, 17);
@@ -251,7 +251,7 @@
             // 
             this.lblDescricaoReq_text.AutoSize = true;
             this.lblDescricaoReq_text.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblDescricaoReq_text.Location = new System.Drawing.Point(9, 249);
+            this.lblDescricaoReq_text.Location = new System.Drawing.Point(9, 180);
             this.lblDescricaoReq_text.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblDescricaoReq_text.Name = "lblDescricaoReq_text";
             this.lblDescricaoReq_text.Size = new System.Drawing.Size(71, 17);
@@ -263,7 +263,7 @@
             // 
             this.lblCargaHorariaReq_text.AutoSize = true;
             this.lblCargaHorariaReq_text.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblCargaHorariaReq_text.Location = new System.Drawing.Point(8, 162);
+            this.lblCargaHorariaReq_text.Location = new System.Drawing.Point(8, 120);
             this.lblCargaHorariaReq_text.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblCargaHorariaReq_text.Name = "lblCargaHorariaReq_text";
             this.lblCargaHorariaReq_text.Size = new System.Drawing.Size(97, 17);
@@ -274,7 +274,7 @@
             // 
             this.lblInstituicaoReq_text.AutoSize = true;
             this.lblInstituicaoReq_text.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblInstituicaoReq_text.Location = new System.Drawing.Point(8, 77);
+            this.lblInstituicaoReq_text.Location = new System.Drawing.Point(9, 60);
             this.lblInstituicaoReq_text.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblInstituicaoReq_text.Name = "lblInstituicaoReq_text";
             this.lblInstituicaoReq_text.Size = new System.Drawing.Size(77, 17);
@@ -285,7 +285,7 @@
             // 
             this.lblCursoReq_text.AutoSize = true;
             this.lblCursoReq_text.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblCursoReq_text.Location = new System.Drawing.Point(9, 120);
+            this.lblCursoReq_text.Location = new System.Drawing.Point(9, 90);
             this.lblCursoReq_text.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblCursoReq_text.Name = "lblCursoReq_text";
             this.lblCursoReq_text.Size = new System.Drawing.Size(47, 17);
@@ -296,7 +296,7 @@
             // 
             this.lblNomeReq_text.AutoSize = true;
             this.lblNomeReq_text.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblNomeReq_text.Location = new System.Drawing.Point(8, 35);
+            this.lblNomeReq_text.Location = new System.Drawing.Point(9, 30);
             this.lblNomeReq_text.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblNomeReq_text.Name = "lblNomeReq_text";
             this.lblNomeReq_text.Size = new System.Drawing.Size(49, 17);
@@ -307,7 +307,7 @@
             // 
             this.lblNomeMateriaReq.AutoSize = true;
             this.lblNomeMateriaReq.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeMateriaReq.Location = new System.Drawing.Point(120, 35);
+            this.lblNomeMateriaReq.Location = new System.Drawing.Point(120, 30);
             this.lblNomeMateriaReq.Name = "lblNomeMateriaReq";
             this.lblNomeMateriaReq.Size = new System.Drawing.Size(255, 17);
             this.lblNomeMateriaReq.TabIndex = 34;
@@ -317,7 +317,7 @@
             // 
             this.lblInstituicaoReq.AutoSize = true;
             this.lblInstituicaoReq.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInstituicaoReq.Location = new System.Drawing.Point(120, 77);
+            this.lblInstituicaoReq.Location = new System.Drawing.Point(120, 60);
             this.lblInstituicaoReq.Name = "lblInstituicaoReq";
             this.lblInstituicaoReq.Size = new System.Drawing.Size(126, 17);
             this.lblInstituicaoReq.TabIndex = 35;
@@ -327,7 +327,7 @@
             // 
             this.lblCursoReq.AutoSize = true;
             this.lblCursoReq.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCursoReq.Location = new System.Drawing.Point(120, 120);
+            this.lblCursoReq.Location = new System.Drawing.Point(120, 90);
             this.lblCursoReq.Name = "lblCursoReq";
             this.lblCursoReq.Size = new System.Drawing.Size(235, 17);
             this.lblCursoReq.TabIndex = 36;
@@ -337,7 +337,7 @@
             // 
             this.lblCargaHorariaReq.AutoSize = true;
             this.lblCargaHorariaReq.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCargaHorariaReq.Location = new System.Drawing.Point(120, 162);
+            this.lblCargaHorariaReq.Location = new System.Drawing.Point(120, 120);
             this.lblCargaHorariaReq.Name = "lblCargaHorariaReq";
             this.lblCargaHorariaReq.Size = new System.Drawing.Size(22, 17);
             this.lblCargaHorariaReq.TabIndex = 37;
@@ -346,9 +346,9 @@
             // lblDescricaoReq
             // 
             this.lblDescricaoReq.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescricaoReq.Location = new System.Drawing.Point(120, 249);
+            this.lblDescricaoReq.Location = new System.Drawing.Point(120, 180);
             this.lblDescricaoReq.Name = "lblDescricaoReq";
-            this.lblDescricaoReq.Size = new System.Drawing.Size(473, 86);
+            this.lblDescricaoReq.Size = new System.Drawing.Size(473, 75);
             this.lblDescricaoReq.TabIndex = 38;
             this.lblDescricaoReq.Text = resources.GetString("lblDescricaoReq.Text");
             // 
@@ -370,7 +370,7 @@
             this.gpbMateriaReq.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpbMateriaReq.Location = new System.Drawing.Point(6, 12);
             this.gpbMateriaReq.Name = "gpbMateriaReq";
-            this.gpbMateriaReq.Size = new System.Drawing.Size(599, 344);
+            this.gpbMateriaReq.Size = new System.Drawing.Size(599, 263);
             this.gpbMateriaReq.TabIndex = 35;
             this.gpbMateriaReq.TabStop = false;
             this.gpbMateriaReq.Text = "Disciplina Requerida";
@@ -379,7 +379,7 @@
             // 
             this.lblAnoSemReq.AutoSize = true;
             this.lblAnoSemReq.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnoSemReq.Location = new System.Drawing.Point(120, 204);
+            this.lblAnoSemReq.Location = new System.Drawing.Point(120, 150);
             this.lblAnoSemReq.Name = "lblAnoSemReq";
             this.lblAnoSemReq.Size = new System.Drawing.Size(48, 17);
             this.lblAnoSemReq.TabIndex = 42;
@@ -389,7 +389,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(8, 204);
+            this.label3.Location = new System.Drawing.Point(8, 150);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 17);
@@ -403,7 +403,7 @@
             this.button1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(148, 35);
-            this.button1.TabIndex = 40;
+            this.button1.TabIndex = 2;
             this.button1.Text = "Encaminhar p/ Exame";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -412,7 +412,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(773, 711);
+            this.ClientSize = new System.Drawing.Size(773, 551);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.gpbMateriaInfo);
             this.Controls.Add(this.btnReprovar);
@@ -423,7 +423,7 @@
             this.Name = "frmComparar";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Aprovar Aproveitamento";
+            this.Text = "Avaliar Aproveitamento";
             this.Load += new System.EventHandler(this.frmComparar_Load);
             this.gpbMateriaInfo.ResumeLayout(false);
             this.gpbMateriaInfo.PerformLayout();

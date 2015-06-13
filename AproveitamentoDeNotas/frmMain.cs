@@ -86,5 +86,18 @@ namespace AproveitamentoDeNotas
         {
             new frmConfig().Show();
         }
+
+        private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultarRequerimentos frmConsulta = new frmConsultarRequerimentos();
+            //frmConsulta.MdiParent = this;
+            frmConsulta.StartPosition = FormStartPosition.CenterScreen;
+            frmConsulta.Show();
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
