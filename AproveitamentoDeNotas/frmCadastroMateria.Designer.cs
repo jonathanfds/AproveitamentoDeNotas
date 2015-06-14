@@ -96,6 +96,8 @@
             this.txtCargaHoraria.Name = "txtCargaHoraria";
             this.txtCargaHoraria.Size = new System.Drawing.Size(69, 25);
             this.txtCargaHoraria.TabIndex = 3;
+            this.txtCargaHoraria.TextChanged += new System.EventHandler(this.txtCargaHoraria_TextChanged);
+            this.txtCargaHoraria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCargaHoraria_KeyPress);
             // 
             // label3
             // 
@@ -176,6 +178,8 @@
             this.txtAnoSemestre.Name = "txtAnoSemestre";
             this.txtAnoSemestre.Size = new System.Drawing.Size(69, 25);
             this.txtAnoSemestre.TabIndex = 4;
+            this.txtAnoSemestre.TextChanged += new System.EventHandler(this.txtAnoSemestre_TextChanged);
+            this.txtAnoSemestre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAnoSemestre_KeyPress);
             // 
             // label6
             // 
@@ -224,6 +228,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmCadastroMateria";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Disciplinas";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmCadastroMateria_FormClosing);
             this.Load += new System.EventHandler(this.frmCadastroMateria_Load);

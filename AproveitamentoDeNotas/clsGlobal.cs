@@ -31,4 +31,9 @@ namespace AproveitamentoDeNotas
         Rejeitado = 3,
         Encaminhado = 4
     }
+    public enum FUNCOES_USUARIOS
+    {
+        Administrador = 1,
+        Funcionário = 2
+    }
 }

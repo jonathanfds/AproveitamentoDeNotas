@@ -119,7 +119,7 @@ namespace AproveitamentoDeNotas
             lAproveitamento.cod_disciplina_origem = _IdDisciplinaOrigem;
             lAproveitamento.tb_situacao_aprov = clsFuncoesBase.getSituacoes().Find(t => t.nome_situacao_aprov.Equals(SITUACOES_APROVEITAMENTO.Pendente.ToString()));
             if (clsFuncoesBase.insertAproveitamento(lAproveitamento)) {
-                MessageBox.Show("Aproveitamento cadastrado com sucesso !");
+                MessageBox.Show("O aproveitamento" + lAproveitamento .id_aprov.ToString() + " foi cadastrado com sucesso !");
             }
             else 
             {
@@ -150,6 +150,14 @@ namespace AproveitamentoDeNotas
             {
                 _IdInstituicaoOrigem = _lListaInsts.Find(t => t.nome_instituto.Equals(cmbInstituicaoOrigem.SelectedItem)).id_instituto;
                 PreencheCursosInstituicao(_IdInstituicaoOrigem, cmbCursoOrigem);
+            }
+        }
+
+        private void txtRA_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
     }

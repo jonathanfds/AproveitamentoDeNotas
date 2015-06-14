@@ -111,5 +111,31 @@ namespace AproveitamentoDeNotas
         {
             this.Close();
         }
+
+        private void txtCargaHoraria_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAnoSemestre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAnoSemestre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCargaHoraria_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

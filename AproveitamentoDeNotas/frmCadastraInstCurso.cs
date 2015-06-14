@@ -122,6 +122,21 @@ namespace AproveitamentoDeNotas
         {
             this.DialogResult = System.Windows.Forms.DialogResult.OK;
         }
-        
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            string lNomeCurso = lstCursosInst.SelectedItem.ToString();
+            tb_curso lCursoSelecionado = _ListadeCursos.Find(T => T.nome_curso.Equals(lNomeCurso));
+
+            if (clsFuncoesBase.deleteCursoInstituicao(this._IdInstituicao, lCursoSelecionado.id_curso))
+            {
+                MessageBox.Show("Curso removiado da instituição !");
+                this.PreencheCursosInstituicao(_IdInstituicao);
+            }
+            else
+            {
+                MessageBox.Show("Erro ao remover curso da instituição !");
+            }
+        }        
     }
 }

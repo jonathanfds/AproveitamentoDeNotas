@@ -42,8 +42,12 @@ namespace AproveitamentoDeNotas
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            string Usuario="Jonathan";
+            string Usuario = clsGlobal.UsuarioLogado.nome_user;
             this.tsslUser.Text = "Bem vindo " + Usuario;
+            if (clsGlobal.UsuarioLogado.tb_funcao_usuario.funcao != FUNCOES_USUARIOS.Administrador.ToString())
+            {
+                consultarToolStripMenuItem.Enabled = false;
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)

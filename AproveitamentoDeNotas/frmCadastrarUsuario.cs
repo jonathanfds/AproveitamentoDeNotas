@@ -36,7 +36,7 @@ namespace AproveitamentoDeNotas
             tb_usuarios Usuario = new tb_usuarios();
             Usuario.nome_user = txtUser.Text;
             Usuario.pass_user = txtSenha.Text;
-            Usuario.tb_funcao_usuario = _FuncoesUser.Find(t => t.funcao.Equals(cmbFuncoes.SelectedText));
+            Usuario.tb_funcao_usuario = _FuncoesUser.Find(t => t.funcao.Equals(cmbFuncoes.SelectedItem));
             if (clsFuncoesBase.insertUsuario(Usuario))
             {
                 MessageBox.Show("Usuario cadastrado !");

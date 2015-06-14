@@ -163,6 +163,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmCadastraCurso";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastrar Curso";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmCadastraCurso_FormClosing);
             this.Load += new System.EventHandler(this.frmCadastraCurso_Load);

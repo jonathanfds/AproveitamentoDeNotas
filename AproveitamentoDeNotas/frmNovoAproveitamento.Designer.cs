@@ -256,6 +256,7 @@
             this.txtRA.Name = "txtRA";
             this.txtRA.Size = new System.Drawing.Size(162, 25);
             this.txtRA.TabIndex = 8;
+            this.txtRA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRA_KeyPress);
             // 
             // label3
             // 
@@ -368,6 +369,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmNovoAproveitamento";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Novo Aproveitamento";
             this.Load += new System.EventHandler(this.frmNovoAproveitamento_Load);
             this.groupBox1.ResumeLayout(false);

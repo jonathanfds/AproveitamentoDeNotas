@@ -250,6 +250,22 @@ namespace AproveitamentoDeNotas
                 return false;
             }
         }
+        public static bool deleteCursoInstituicao(int pIdInst, int pIdCurso)
+        {
+            try
+            {
+                tb_instituto_curso lInstCurso = new tb_instituto_curso();
+                lInstCurso = gEntityBase.tb_instituto_curso.ToList().Find(t => t.id_instituo == pIdInst && t.id_curso == pIdCurso);
+                gEntityBase.tb_instituto_curso.Remove(lInstCurso);
+                int numRows = gEntityBase.SaveChanges();
+                gEntityBase.Database.Connection.Close();
+                return (numRows > 0);
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
 
         public static tb_instituto_curso getInstituoCurso(int pIdCurso, int pIdInstituto)
         {

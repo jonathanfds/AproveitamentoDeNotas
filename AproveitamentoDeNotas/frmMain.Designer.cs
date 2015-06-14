@@ -71,11 +71,11 @@
             // materiaToolStripMenuItem
             // 
             this.materiaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.CadAproveitamentoToolStripMenuItem,
-            this.cursoToolStripMenuItem,
-            this.intituicaoCursosToolStripMenuItem,
             this.usuárioToolStripMenuItem,
-            this.CadDisciplinasToolStripMenuItem});
+            this.intituicaoCursosToolStripMenuItem,
+            this.cursoToolStripMenuItem,
+            this.CadDisciplinasToolStripMenuItem,
+            this.CadAproveitamentoToolStripMenuItem});
             this.materiaToolStripMenuItem.Name = "materiaToolStripMenuItem";
             this.materiaToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.materiaToolStripMenuItem.Text = "Cadastro";
