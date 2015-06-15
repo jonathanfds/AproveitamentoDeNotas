@@ -89,6 +89,22 @@ namespace AproveitamentoDeNotas
                 this.lblCargaHorariaInfo.Text = lDisciplinaOrigem.carga_horaria.ToString();
                 this.lblAnoSemInfo.Text = lDisciplinaOrigem.ano_semestre.ToString();
                 this.lblDescricaoInfo.Text = lDisciplinaOrigem.descricao;
+
+                if (clsFuncoesBase.getSituacaoNome(_Aproveitamento.tb_situacao_aprov).
+                    Equals(SITUACOES_APROVEITAMENTO.Aprovado.ToString()))
+                {
+                    this.btnAprovar.Enabled = false;
+                }
+                else if (clsFuncoesBase.getSituacaoNome(_Aproveitamento.tb_situacao_aprov).
+                    Equals(SITUACOES_APROVEITAMENTO.Rejeitado.ToString()))
+                {
+                    this.btnReprovar.Enabled = false;
+                }
+                else if (clsFuncoesBase.getSituacaoNome(_Aproveitamento.tb_situacao_aprov).
+                    Equals(SITUACOES_APROVEITAMENTO.Encaminhado.ToString()))
+                {
+                    this.btnEncaminhar.Enabled = false;
+                }
             }            
         }
     }
