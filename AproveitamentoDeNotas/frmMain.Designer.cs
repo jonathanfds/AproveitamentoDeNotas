@@ -32,11 +32,11 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.materiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.CadAproveitamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cursoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.intituicaoCursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.intituicaoCursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cursoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CadDisciplinasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CadAproveitamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -60,6 +60,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(970, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // consultarToolStripMenuItem
             // 
@@ -81,19 +82,12 @@
             this.materiaToolStripMenuItem.Text = "Cadastro";
             this.materiaToolStripMenuItem.Click += new System.EventHandler(this.materiaToolStripMenuItem_Click);
             // 
-            // CadAproveitamentoToolStripMenuItem
+            // usuárioToolStripMenuItem
             // 
-            this.CadAproveitamentoToolStripMenuItem.Name = "CadAproveitamentoToolStripMenuItem";
-            this.CadAproveitamentoToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.CadAproveitamentoToolStripMenuItem.Text = "Aproveitamento";
-            this.CadAproveitamentoToolStripMenuItem.Click += new System.EventHandler(this.CadAproveitamentoToolStripMenuItem_Click);
-            // 
-            // cursoToolStripMenuItem
-            // 
-            this.cursoToolStripMenuItem.Name = "cursoToolStripMenuItem";
-            this.cursoToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.cursoToolStripMenuItem.Text = "Curso";
-            this.cursoToolStripMenuItem.Click += new System.EventHandler(this.cursoToolStripMenuItem_Click);
+            this.usuárioToolStripMenuItem.Name = "usuárioToolStripMenuItem";
+            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.usuárioToolStripMenuItem.Text = "Usuário";
+            this.usuárioToolStripMenuItem.Click += new System.EventHandler(this.usuárioToolStripMenuItem_Click);
             // 
             // intituicaoCursosToolStripMenuItem
             // 
@@ -102,12 +96,12 @@
             this.intituicaoCursosToolStripMenuItem.Text = "Instituição";
             this.intituicaoCursosToolStripMenuItem.Click += new System.EventHandler(this.intituicaoCursosToolStripMenuItem_Click);
             // 
-            // usuárioToolStripMenuItem
+            // cursoToolStripMenuItem
             // 
-            this.usuárioToolStripMenuItem.Name = "usuárioToolStripMenuItem";
-            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.usuárioToolStripMenuItem.Text = "Usuário";
-            this.usuárioToolStripMenuItem.Click += new System.EventHandler(this.usuárioToolStripMenuItem_Click);
+            this.cursoToolStripMenuItem.Name = "cursoToolStripMenuItem";
+            this.cursoToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.cursoToolStripMenuItem.Text = "Curso";
+            this.cursoToolStripMenuItem.Click += new System.EventHandler(this.cursoToolStripMenuItem_Click);
             // 
             // CadDisciplinasToolStripMenuItem
             // 
@@ -115,6 +109,13 @@
             this.CadDisciplinasToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.CadDisciplinasToolStripMenuItem.Text = "Disciplinas";
             this.CadDisciplinasToolStripMenuItem.Click += new System.EventHandler(this.CadDisciplinasToolStripMenuItem_Click);
+            // 
+            // CadAproveitamentoToolStripMenuItem
+            // 
+            this.CadAproveitamentoToolStripMenuItem.Name = "CadAproveitamentoToolStripMenuItem";
+            this.CadAproveitamentoToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.CadAproveitamentoToolStripMenuItem.Text = "Aproveitamento";
+            this.CadAproveitamentoToolStripMenuItem.Click += new System.EventHandler(this.CadAproveitamentoToolStripMenuItem_Click);
             // 
             // configuraçõesToolStripMenuItem
             // 

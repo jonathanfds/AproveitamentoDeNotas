@@ -119,7 +119,7 @@ namespace AproveitamentoDeNotas
             lAproveitamento.cod_disciplina_origem = _IdDisciplinaOrigem;
             lAproveitamento.tb_situacao_aprov = clsFuncoesBase.getSituacoes().Find(t => t.nome_situacao_aprov.Equals(SITUACOES_APROVEITAMENTO.Pendente.ToString()));
             if (clsFuncoesBase.insertAproveitamento(lAproveitamento)) {
-                MessageBox.Show("O aproveitamento" + lAproveitamento .id_aprov.ToString() + " foi cadastrado com sucesso !");
+                MessageBox.Show("O aproveitamento '" + lAproveitamento .id_aprov.ToString() + "' foi cadastrado com sucesso !");
             }
             else 
             {

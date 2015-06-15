@@ -33,7 +33,7 @@ namespace AproveitamentoDeNotas
                 if (!_isFromLogin)
                 {
                     _ListaInsts = clsFuncoesBase.getInstituicoes();
-                    if (_ListaInsts != null)
+                    if (_ListaInsts != null && _ListaInsts.Count>0)
                     {
                         this.cmbInstituicao.Items.Clear();
                         foreach (tb_instituto Instituto in _ListaInsts)

@@ -47,6 +47,12 @@ namespace AproveitamentoDeNotas
             if (clsGlobal.UsuarioLogado.tb_funcao_usuario.funcao != FUNCOES_USUARIOS.Administrador.ToString())
             {
                 consultarToolStripMenuItem.Enabled = false;
+                usuárioToolStripMenuItem.Enabled = false;
+            }
+            else
+            {
+                consultarToolStripMenuItem.Enabled = true;
+                usuárioToolStripMenuItem.Enabled = true;
             }
         }
 
